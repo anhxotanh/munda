@@ -1,0 +1,49 @@
+/* Radio buttons and checkboxes common styles */
+
+.rcw-form {
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline {
+    position: relative;
+
+    label {
+      margin-bottom: 0;
+    }
+  }
+
+  .radio,
+  .radio-inline,
+  .checkbox,
+  .checkbox-inline {
+    label {
+      font-weight: @ff-font-weight;
+      color: @ff-text-color;
+    }
+  }
+
+  .radio-inline,
+  .checkbox-inline {
+    display: inline-block;
+  }
+
+  .radio-inline + .radio-inline,
+  .checkbox-inline + .checkbox-inline {
+    margin-left: @ff-line-height-computed;
+  }
+
+  // Hide the inputs
+  .radio input[type="radio"],
+  .radio-inline input[type="radio"],
+  .checkbox input[type="checkbox"],
+  .checkbox-inline input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    .ff-opacity(0);
+  }
+
+  .radio input[type="radio"] + label,
+  .checkbox input[type="checkbox"] + label {
+    margin-bottom: (@ff-line-height-computed / 2);
+  }
+}

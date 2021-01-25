@@ -1,0 +1,43 @@
+//
+// Accordion
+// --------------------------------------------------
+
+.ui-accordion .ui-accordion-header {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  margin: (@ff-line-height-computed / 4) 0 0 0;
+  padding: (@ff-line-height-computed / 2);
+  min-height: 0; /* support: IE7 */
+  font-size: @ff-font-size-base;
+
+  .ui-accordion-header-icon {
+    position: absolute;
+    left: (@ff-line-height-computed / 2);
+    top: 50%;
+    margin-top: -8px;
+  }
+}
+
+.ui-accordion .ui-accordion-icons {
+  padding-left: (@ff-line-height-computed * 1.5);
+
+  .ui-accordion-icons {
+    padding-left: (@ff-line-height-computed * 1.5);
+  }
+}
+
+.ui-accordion .ui-accordion-content {
+  padding: (@ff-line-height-computed * 0.75) (@ff-line-height-computed * 1.5);
+  border-top: 0;
+  overflow: auto;
+
+  // Added by me
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+//
+// Styles added by me
+// --------------------------------------------------

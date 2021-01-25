@@ -1,0 +1,131 @@
+extends example-template.jade
+
+block title
+  title Colorpickers
+
+block content
+  .form-container.colorpicker-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='colorpicker-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading Colorpickers
+      fieldset.row
+        .col-sm-12
+          legend
+            span Colorpicker examples
+        .form-group.col-sm-3.col-xs-6
+          label(for='basic-colorpicker-1', class='sr-only') Colorpicker 1
+          input(type='text', name='basic-colorpicker-1', id='basic-colorpicker-1')
+        .form-group.col-sm-3.col-xs-6
+          label(for='basic-colorpicker-2', class='sr-only') Colorpicker 2
+          input(type='text', name='basic-colorpicker-2', id='basic-colorpicker-2')
+        .form-group.col-sm-3.col-xs-6
+          label(for='basic-colorpicker-3', class='sr-only') Colorpicker 3
+          input(type='text', name='basic-colorpicker-3', id='basic-colorpicker-3')
+        .form-group.col-sm-3.col-xs-6
+          label(for='basic-colorpicker-4', class='sr-only') Colorpicker 4
+          input(type='text', name='basic-colorpicker-4', id='basic-colorpicker-4')
+      fieldset.row
+        .col-sm-12
+          legend
+            span Colorpicker with palette
+        .form-group.col-sm-3.col-xs-6
+          label(for='colorpicker-with-palette', class='sr-only') Colorpicker 5
+          input(type='text', name='colorpicker-with-palette', id='colorpicker-with-palette')
+        .form-group.col-sm-3.col-xs-6
+          label(for='colorpicker-only-palette', class='sr-only') Colorpicker 6
+          input(type='text', name='colorpicker-only-palette', id='colorpicker-only-palette')
+        .form-group.col-sm-3.col-xs-6
+          label(for='colorpicker-toggle-palette', class='sr-only') Colorpicker 7
+          input(type='text', name='colorpicker-toggle-palette', id='colorpicker-toggle-palette')
+        .form-group.col-sm-3.col-xs-6
+          label(for='colorpicker-show-selection-palette', class='sr-only') Colorpicker 8
+          input(type='text', name='colorpicker-show-selection-palette', id='colorpicker-show-selection-palette')
+      fieldset.row
+        .col-sm-12
+          legend
+            span Click out fires change
+        .form-group.col-sm-3.col-xs-6
+          label(for='colorpicker-clickout-1', class='sr-only') Colorpicker 9
+          input(type='text', name='colorpicker-clickout-1', id='colorpicker-clickout-1')
+        .form-group.col-sm-3.col-xs-6
+          label(for='colorpicker-clickout-2', class='sr-only') Colorpicker 10
+          input(type='text', name='colorpicker-clickout-2', id='colorpicker-clickout-2')
+        .form-group.col-sm-3.col-xs-6
+          label(for='colorpicker-clickout-3', class='sr-only') Colorpicker 11
+          input(type='text', name='colorpicker-clickout-3', id='colorpicker-clickout-3')
+        .form-group.col-sm-3.col-xs-6
+          label(for='colorpicker-clickout-4', class='sr-only') Colorpicker 12
+          input(type='text', name='colorpicker-clickout-4', id='colorpicker-clickout-4')
+      fieldset.row
+        .col-sm-12
+          legend
+            span Colorpicker buttons options
+        .form-group.col-sm-6
+          label(for='colorpicker-buttons-1', class='sr-only') Colorpicker 13
+          input(type='text', name='colorpicker-buttons-1', id='colorpicker-buttons-1')
+        .form-group.col-sm-6
+          label(for='colorpicker-buttons-2', class='sr-only') Colorpicker 14
+          input(type='text', name='colorpicker-buttons-2', id='colorpicker-buttons-2')
+      fieldset.row
+        .col-sm-12
+          legend
+            span Colorpicker preferred format
+        .form-group.col-sm-4.col-xs-6
+          label(for='colorpicker-format-1', class='sr-only') Colorpicker 15
+          input(type='text', name='colorpicker-format-1', id='colorpicker-format-1')
+        .form-group.col-sm-4.col-xs-6
+          label(for='colorpicker-format-2', class='sr-only') Colorpicker 16
+          input(type='text', name='colorpicker-format-2', id='colorpicker-format-2')
+        .form-group.col-sm-4.col-xs-6
+          label(for='colorpicker-format-3', class='sr-only') Colorpicker 17
+          input(type='text', name='colorpicker-format-3', id='colorpicker-format-3')
+        .form-group.col-sm-4.col-xs-6
+          label(for='colorpicker-format-4', class='sr-only') Colorpicker 18
+          input(type='text', name='colorpicker-format-4', id='colorpicker-format-4')
+        .form-group.col-sm-4.col-xs-6
+          label(for='colorpicker-format-5', class='sr-only') Colorpicker 19
+          input(type='text', name='colorpicker-format-5', id='colorpicker-format-5')
+        .form-group.col-sm-4.col-xs-6
+          label(for='colorpicker-format-6', class='sr-only') Colorpicker 20
+          input(type='text', name='colorpicker-format-6', id='colorpicker-format-6')
+      fieldset.row
+        .col-sm-12
+          legend
+            span Colorpicker plus input
+        .form-group.col-sm-12
+          label(for='colorpicker-input-color', class='sr-only') Choose color
+          .colorpicker-right
+            input(type='text', name='colorpicker-input-1', id='colorpicker-input-1', class='colorpicker')
+            input(type='text', name='colorpicker-input-color', id='colorpicker-input-color', class='form-control ff-rounded-l')
+          span.help-block Try typing in a color a watch the colorpicker update.
+        .form-group.col-sm-12
+          label(for='colorpicker-input-color-2', class='sr-only') Choose color
+          .colorpicker-left
+            input(type='text', name='colorpicker-input-3', id='colorpicker-input-3', class='colorpicker')
+            input(type='text', name='colorpicker-input-color-2', id='colorpicker-input-color-2', class='form-control ff-rounded-r')
+          span.help-block Try typing in a color a watch the colorpicker update.
+      fieldset.row
+        .col-md-12
+          legend
+            span Colopicker plus input error
+        .form-group.col-md-12.has-error.has-feedback
+          label(for='colorpicker-state-error', class='sr-only') Choose color
+          .colorpicker-left
+            input(type='text', name='colorpicker-error', id='colorpicker-error', class='colorpicker')
+            input(type='text', name='colorpicker-state-error', id='colorpicker-state-error', class='form-control ff-rounded-r')
+          span.icon-cancel5.form-control-feedback
+          span.help-block This text will explain what you have to correct your mistake.
+        .form-group.col-md-12.has-error.has-feedback
+          label(for='colorpicker-state-error', class='sr-only') Choose color
+          .colorpicker-right
+            input(type='text', name='colorpicker-error-right', id='colorpicker-error-right', class='colorpicker')
+            input(type='text', name='colorpicker-state-error-right', id='colorpicker-state-error-right', class='form-control ff-rounded-l')
+          span.icon-cancel5.form-control-feedback
+          span.help-block This text will explain what you have to correct your mistake.
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Submit', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-left')
+          span.btn-icon-left.icon-cancel5.ff-rounded-l
+          | Reset
+block mainjs
+  script(src='../scripts/colorpicker.js')

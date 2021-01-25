@@ -1,0 +1,42 @@
+//
+// Misc visuals
+// --------------------------------------------------
+
+// Corner radius
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+  .border-top-left-radius(@ff-ui-border-radius);
+}
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+  .border-top-right-radius(@ff-ui-border-radius);
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-left,
+.ui-corner-bl {
+  .border-bottom-left-radius(@ff-ui-border-radius);
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+  .border-bottom-right-radius(@ff-ui-border-radius);
+}
+
+/* Overlays */
+.ui-widget-overlay {
+  background-color: @ff-ui-widget-overlay-bg;
+  .ff-opacity(@ff-ui-widget-overlay-opacity);
+}
+.ui-widget-shadow {
+  margin: @ff-ui-widget-shadow-margin;
+  padding: @ff-ui-widget-shadow-padding;
+  background-color: @ff-ui-widget-shadow-bg;
+  .ff-opacity(@ff-ui-widget-shadow-opacity);
+  border-radius: @ff-ui-widget-shadow-border-radius;
+}

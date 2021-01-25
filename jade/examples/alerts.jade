@@ -1,0 +1,107 @@
+extends example-template.jade
+
+block title
+  title Alerts
+
+block content
+  .form-container.alerts-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='alerts-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading Alerts
+      fieldset.row
+        .col-md-12
+          legend
+            span Simple alerts
+        .col-md-12
+          .alert.alert-success.lh-margin-b.ff-rounded(role='alert')
+            strong Well done!
+            |  You successfully read this&nbsp;
+            a(href='http://google.com', title='Google', target='_blank', class='alert-link') important
+            |  alert message.
+        .col-md-12
+          .alert.alert-info.lh-margin-b.ff-rounded(role='alert')
+            strong Heads up!
+            |  This alert needs your attention, but it's not super important.
+        .col-md-12
+          .alert.alert-warning.lh-margin-b.ff-rounded(role='alert')
+            strong Warning!
+            |  Better check yourself, you're not looking too good.
+        .col-md-12
+          .alert.alert-danger.lh-margin-b.ff-rounded(role='alert')
+            strong Oh snap!
+            |  Change a few things up and try submitting again. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, animi.
+      fieldset.row
+        .col-md-12
+          legend
+            span Dismissible alerts
+        .col-md-12
+          .alert.alert-dismissible.alert-success.lh-margin-b.ff-rounded(role='alert')
+            strong Well done!
+            |  You successfully read this important alert message.
+            button(type='button', class='close')
+              span.icon-cancel5
+              span.sr-only Close
+      fieldset.row
+        .col-md-12
+          legend
+            span Alerts with icons on left
+        .col-md-12
+          .alert.alert-success.alert-dismissible.has-alert-icon.lh-margin-b.ff-rounded(role='alert')
+            span.alert-icon.icon-checkmark-circle
+            strong Well done!
+            |  You successfully read this important alert message.
+            button(type='button', class='close')
+              span.icon-cancel5
+              span.sr-only Close
+        .col-md-12
+          .alert.alert-info.alert-dismissible.has-alert-icon.lh-margin-b.ff-rounded(role='alert')
+            span.alert-icon.icon-info22
+            strong Heads up!
+            |  This alert needs your attention, but it's not super important.
+            button(type='button', class='close')
+              span.icon-cancel5
+              span.sr-only Close
+        .col-md-12
+          .alert.alert-warning.alert-dismissible.has-alert-icon.lh-margin-b.ff-rounded(role='alert')
+            span.alert-icon.icon-warning
+            strong Warning!
+            |  Better check yourself, you're not looking too good.
+            button(type='button', class='close')
+              span.icon-cancel5
+              span.sr-only Close
+        .col-md-12
+          .alert.alert-danger.alert-dismissible.has-alert-icon.lh-margin-b.ff-rounded(role='alert')
+            span.alert-icon.icon-close2
+            strong Oh snap!
+            |  Change a few things up and try submitting again.
+            button(type='button', class='close')
+              span.icon-cancel5
+              span.sr-only Close
+        .col-md-12
+          legend
+            span jQueryUI interaction cues
+        .col-md-12
+          // jQueryUI highlight state
+          .ui-widget(style='margin-bottom: 24px;')
+            .ui-state-highlight.ui-corner-all(style='padding: 24px; border-radius: 3px;')
+              p(style='margin-bottom: 0;') Lorem ipsum&nbsp;
+                a(href='http://google.com',title='Google') dolor
+                |  sit amet, consectetur adipisicing elit. Cum quo recusandae, voluptates illum, tempora, libero autem.
+        .col-md-12
+          // jQueryUI error state
+          .ui-widget(style='margin-bottom: 24px;')
+            .ui-state-error.ui-corner-all(style='padding: 24px; border-radius: 3px;')
+              p(style='margin-bottom: 0;') Lorem ipsum&nbsp;
+                a(href='http://google.com', title='Google') dolor
+                |  sit amet, consectetur adipisicing elit. Cum quo recusandae, voluptates illum, tempora, libero autem.
+        .col-md-12
+          // jQueryUI error text
+          .ui-widget.ui-state-default.lh-margin-b.ui-corner-all(style='padding: 24px;')
+            p.ui-state-error-text(style='margin-bottom: 0;') Lorem ipsum dolor sit amet,&nbsp;
+              a(href='http://google.com', title='Google') consectetur
+              |  adipisicing elit. Cumque, nemo?
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Submit', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded') Reset
+block mainjs
+  script(src='../scripts/alerts.js')

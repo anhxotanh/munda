@@ -1,0 +1,145 @@
+//
+// Dialog
+// --------------------------------------------------
+
+.ui-dialog {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  outline: 0;
+
+  .ui-dialog-titlebar {
+    padding: (@ff-line-height-computed / 2) @ff-line-height-computed;
+    position: relative
+  }
+
+  .ui-dialog-title {
+    float: left;
+    margin: 0;
+    white-space: nowrap;
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ui-dialog-titlebar-close {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -24px;
+  }
+
+  .ui-dialog-content {
+    position: relative;
+    border: 0;
+    padding: @ff-line-height-computed;
+    background: none;
+    overflow: auto;
+  }
+
+  .ui-dialog-buttonpane {
+    text-align: left;
+    border-width: 1px 0 0 0;
+    background-image: none;
+
+    padding: (@ff-line-height-computed / 2) @ff-line-height-computed;
+
+    .ui-dialog-buttonset {
+      float: right;
+    }
+
+    button {
+      margin: 0 0 0 (@ff-line-height-computed / 2);
+      cursor: pointer;
+    }
+  }
+
+  .ui-resizable-se {
+    width: 12px;
+    height: 12px;
+    right: -5px;
+    bottom: -5px;
+    background-position: 16px 16px;
+  }
+}
+
+.ui-draggable .ui-dialog-titlebar {
+  cursor: move;
+}
+
+//
+// Styles added by me
+// -------------------------------------------------
+
+.ui-dialog {
+  &.ui-widget-content {
+    border-width: 0;
+  }
+
+  .ui-dialog-titlebar {
+    background-color: @ff-ui-dialog-titlebar-bg;
+    border-width: 0;
+    color: #fff;
+    .border-radius(@ff-border-radius @ff-border-radius 0 0);
+    .box-shadow(inset 0 -2px 0 0 darken(@ff-ui-dialog-titlebar-bg, 5%));
+  }
+
+  .ui-dialog-title {
+    font-weight: @ff-ui-dialog-title-font-weight;
+  }
+
+  .ui-dialog-titlebar-close {
+    &.ui-state-default {
+      border-width: 0;
+      background-color: transparent;
+      color: @ff-ui-dialog-titlebar-close-color;
+    }
+    &.ui-state-default,
+    &.ui-state-hover,
+    &.ui-state-focus,
+    &.ui-state-active {
+      .box-shadow(none);
+    }
+  }
+
+  // For modal form
+  &.modal-form {
+    border-width: 0;
+    .ui-dialog-titlebar {
+      width: 252px;
+      position: absolute;
+      top: @ff-line-height-computed;
+      right: 0;
+      z-index: 1;
+      background-color: transparent;
+      .box-shadow(none);
+    }
+
+    .ui-dialog-titlebar-close {
+      top: -4px;
+      margin: 0;
+      right: @ff-form-container-padding-horizontal;
+      &.ui-state-default {
+        color: @ff-text-color;
+      }
+      &.ui-state-default,
+      &.ui-state-hover,
+      &.ui-state-focus,
+      &.ui-state-active {
+        .box-shadow(none);
+      }
+    }
+
+    .ui-dialog-content {
+      padding: 0;
+
+      .register-form,
+      .login-form {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+extends example-template.jade
+
+block title
+  title Progressbar
+
+block content
+  .form-container.progressbar-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='progressbar-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading Progressbar
+      fieldset.row
+        .col-sm-12
+          legend
+            span Basic example
+        .form-group.col-md-12
+          #progressbar-1
+      fieldset.row
+        .col-sm-12
+          legend
+            span Custom label
+        .form-group.col-md-12
+          #progressbar-2
+            .progressbar-label Loading ...
+      fieldset.row
+        .col-sm-12
+          legend
+            span Download Dialog
+        .form-group.col-md-12
+          #dialog(title='File download')
+            #progressbar-3
+              .progressbar-label Starting download...
+          button(type='button', id='download-dialog') Start download
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Submit', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-left')
+          span.btn-icon-left.icon-cancel5.ff-rounded-l
+          | Reset
+block mainjs
+  script(src='../scripts/progressbar.js')

@@ -1,0 +1,23 @@
+extends example-template.jade
+
+block title
+  title Inline form
+
+block content
+  .form-container.inline-form.animated.fadeInDown
+    form(action='', method='post', id='inline-form', class='rcw-form form-inline container-fluid')
+      header
+        h3.form-main-heading Inline form
+      fieldset.fieldset-inline
+        .form-group
+          label(for='example-email-1', class='sr-only') Email address
+          input(type='email', class='form-control ff-rounded', name='example-email-1', id='example-email-1', placeholder='Enter email')
+        .form-group
+          label(for='example-password-1', class='sr-only')
+          input(type='password', class='form-control ff-rounded', name='example-password-1', id='example-password-1', placeholder='Enter password')
+        .checkbox
+          input(type='checkbox', name='remember-me', value='remember-me', id='remember-me')
+          label(for='remember-me') Remember me
+        button(type='submit', class='btn btn-primary ff-rounded') Log in
+block mainjs
+  script(src='../scripts/form-inline.js')

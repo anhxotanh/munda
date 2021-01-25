@@ -1,0 +1,18 @@
+//
+// Buttonset
+// --------------------------------------------------
+
+.ui-buttonset {
+  margin-right: (@ff-line-height-computed / 4);
+}
+.ui-buttonset .ui-button {
+  margin-left: 0;
+  margin-right: -2px;
+}
+// Workarounds
+// Reset extra padding in Firefox, see h5bp.com/l
+input.ui-button::-moz-focus-inner,
+button.ui-button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}

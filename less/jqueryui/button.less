@@ -1,0 +1,134 @@
+//
+// Button
+// --------------------------------------------------
+
+.ui-button {
+  // Added by me
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  line-height: normal;
+  margin-right: 3px;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+  overflow: visible; /* removes extra width in IE */
+}
+
+.ui-button,
+.ui-button:link,
+.ui-button:visited,
+.ui-button:hover,
+.ui-button:active {
+  text-decoration: none;
+}
+
+// To make room for the icon, a width needs to be set here
+.ui-button-icon-only {
+  width: @ff-form-control-height-base;
+  height: @ff-form-control-height-base;
+}
+
+.ui-button-icons-only {
+  width: 68px;
+  height: @ff-form-control-height-base;
+}
+
+// Button text element
+.ui-button .ui-button-text {
+  display: block;
+  line-height: @ff-line-height-base;
+}
+
+.ui-button-text-only {
+  min-width: @ff-form-control-height-base;
+}
+
+.ui-button-text-only .ui-button-text {
+  padding: (@ff-line-height-computed / 2);
+}
+
+.ui-button-icon-only .ui-button-text,
+.ui-button-icons-only .ui-button-text {
+  .sr-only;
+}
+
+.ui-button-text-icon-primary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+  padding: (@ff-line-height-computed / 2) (@ff-line-height-computed / 2) (@ff-line-height-computed / 2) (@ff-line-height-computed + @ff-ui-icon-width);
+}
+
+.ui-button-text-icon-secondary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+  padding: (@ff-line-height-computed / 2);
+}
+
+.ui-button-text-icons .ui-button-text {
+  padding-left: (@ff-line-height-computed + @ff-ui-icon-width);
+  padding-right: (@ff-line-height-computed + @ff-ui-icon-width);
+}
+
+/* no icon support for input elements, provide padding by default */
+input.ui-button {
+  padding: (@ff-line-height-computed / 2);
+}
+
+// Button icon element(s)
+.ui-button-icon-only .ui-icon,
+.ui-button-text-icon-primary .ui-icon,
+.ui-button-text-icon-secondary .ui-icon,
+.ui-button-text-icons .ui-icon,
+.ui-button-icons-only .ui-icon {
+  position: absolute;
+  top: 50%;
+  margin-top: -(@ff-ui-icon-width / 2);
+}
+
+.ui-button-icon-only .ui-icon {
+  left: 50%;
+  margin-left: -(@ff-ui-icon-width / 2);
+}
+
+.ui-button-text-icon-primary .ui-button-icon-primary,
+.ui-button-text-icons .ui-button-icon-primary,
+.ui-button-icons-only .ui-button-icon-primary {
+  left: (@ff-line-height-computed / 2);
+}
+.ui-button-text-icon-secondary .ui-button-icon-secondary,
+.ui-button-text-icons .ui-button-icon-secondary,
+.ui-button-icons-only .ui-button-icon-secondary {
+  right: (@ff-line-height-computed / 2);
+}
+
+//
+// Styles added by me
+// --------------------------------------------------
+
+.ui-button {
+  // Add box-shadows for the different interaction states
+  &.ui-state-default {
+    .box-shadow(inset 0 -2px 0 0 darken(@ff-ui-state-default-bg, 5%));
+  }
+
+  &.ui-state-hover,
+  &.ui-state-focus {
+    .box-shadow(inset 0 -2px 0 0 darken(@ff-ui-state-hover-bg, 5%));
+  }
+
+  &.ui-state-active {
+    .box-shadow(inset 0 -2px 0 0 darken(@ff-ui-state-active-bg, 5%));
+  }
+}
+
+a.ui-button {
+  color: @ff-ui-state-default-color;
+}
+
+.rcw-form {
+  .ui-button {
+    font-weight: @ff-font-weight;
+    &.ui-state-active {
+      color: #fff;
+    }
+  }
+}

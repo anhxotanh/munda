@@ -1,0 +1,68 @@
+//
+// Component containers
+// --------------------------------------------------
+
+.ui-widget {
+  font-family: @ff-font-family-base;
+  font-size: @ff-font-size-base;
+  line-height: @ff-line-height-base;
+
+  .ui-widget {
+    font-size: @ff-font-size-base;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    font-family: @ff-font-family-base;
+    font-size: @ff-font-size-base;
+    a:focus,
+    a:active {
+      outline: none;
+    }
+  }
+}
+
+.ui-widget-content {
+  border: @ff-ui-widget-content-border-size @ff-ui-widget-content-border-style @ff-ui-widget-content-border-color;
+  background-color: @ff-ui-widget-content-bg;
+  background-image: none;
+  color: @ff-ui-widget-content-color;
+
+  a {
+    color: @ff-primary;
+  }
+}
+
+.ui-widget-header {
+  border: @ff-ui-widget-header-border-size @ff-ui-widget-header-border-style @ff-ui-widget-header-border-color;
+  background-color: @ff-ui-widget-header-bg;
+  background-image: none;
+  color: @ff-ui-widget-header-color;
+  font-weight: @ff-ui-widget-header-font-weight;
+  a {
+    color: @ff-primary;
+  }
+}
+
+//
+// Styles added by me
+// --------------------------------------------------
+
+// Set box sizing to border box
+.ui-widget {
+  &,
+  &:before,
+  &:after {
+    .box-sizing(border-box);
+  }
+
+  *,
+  *:before,
+  *:after {
+    .box-sizing(border-box);
+  }
+
+  font-weight: @ff-font-weight;
+}

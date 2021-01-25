@@ -1,0 +1,153 @@
+/* Colorpicker: spectrum custom */
+
+// Import variables
+@import "variables.less";
+
+// Import mixins
+@import "mixins/clearfix.less";
+@import "mixins/lesshat.less";
+@import "mixins/form-framework.less";
+
+@import "scaffolding.less";
+
+.sp-replacer {
+  position: relative;
+  height: @ff-sp-replacer-height;
+  padding: @ff-sp-replacer-padding-vertical (@ff-sp-replacer-padding-horizontal * 2 + @ff-sp-dd-width) @ff-sp-replacer-padding-vertical @ff-sp-replacer-padding-horizontal;
+  border-color: @ff-form-control-border-color;
+  background-color: @ff-form-control-bg;
+  color: @ff-form-control-color;
+  // Remove this is you don't want
+  // rounded corners on your colorpicker
+  .border-radius(@ff-border-radius);
+
+  &.sp-active {
+    border-color: @ff-primary;
+    background-color: #fff;
+    color: @ff-form-control-color;
+    z-index: 1;
+  }
+
+  &:hover {
+    border-color: @ff-form-control-border-hover;
+    color: @ff-form-control-color;
+  }
+
+  &.sp-disabled {
+    border-color: @ff-form-control-border-color;
+    color: lighten(@ff-form-control-color, 20%);
+  }
+}
+
+.sp-preview {
+  width: @ff-sp-preview-width;
+  height: @ff-sp-preview-width;
+  border-width: 0;
+  margin-right: 0;
+}
+
+.sp-dd {
+  padding: 0;
+  position: absolute;
+  right: @ff-sp-replacer-padding-horizontal;
+  top: 50%;
+  margin-top: -(@ff-font-size-base / 2);
+  width: @ff-sp-dd-width;
+  text-align: center;
+}
+
+.sp-container {
+  border-color: @ff-form-control-border-color;
+  background-color: #fff;
+
+  button {
+    background-image: none;
+    background-color: @ff-form-control-bg;
+    .border-radius(@ff-spectrum-button-border-radius);
+    font-size: 12px;
+    border-color: @ff-form-control-border-color;
+
+    &:hover {
+      background-image: none;
+      background-color: @ff-form-control-bg;
+      border-color: @ff-form-control-border-hover;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      .box-shadow(none);
+    }
+  }
+}
+
+.sp-input-container {
+  margin-bottom: 5px;
+}
+
+.sp-input {
+  .border-radius(@ff-spectrum-button-border-radius);
+  border: 1px solid @ff-form-control-border-color;
+  &:hover {
+    border-color: @ff-form-control-border-hover;
+  }
+  &:focus {
+    outline: none;
+    border-color: @ff-primary;
+  }
+}
+
+.sp-cancel {
+  color: @ff-danger !important;
+}
+
+.sp-palette-container{
+  border-right-color: @ff-form-control-border-color;
+}
+
+.sp-palette {
+  .sp-thumb-el {
+    border-color: @ff-form-control-border-color;
+    &.sp-thumb-active {
+      border-color: @ff-primary;
+    }
+    &:hover {
+      border-color: @ff-primary;
+    }
+  }
+}
+
+
+// Input + colorpicker
+.colorpicker-left {
+  // The 2 at the end is the border-width multiplied by 2
+  padding-left: (@ff-sp-replacer-padding-horizontal * 3 + @ff-sp-dd-width + @ff-sp-preview-width + 2 - 1);
+  .sp-replacer {
+    left: 0;
+    .border-radius(@ff-border-radius 0 0 @ff-border-radius);
+  }
+}
+
+.colorpicker-right {
+  padding-right: (@ff-sp-replacer-padding-horizontal * 3 + @ff-sp-dd-width + @ff-sp-preview-width + 2 - 1);
+  .sp-replacer {
+    right: 0;
+    .border-radius(0 @ff-border-radius @ff-border-radius 0);
+  }
+}
+
+.colorpicker-left,
+.colorpicker-right {
+  position: relative;
+  .sp-replacer {
+    position: absolute;
+    top: 0;
+  }
+  // I've put z-index: 1 on hover, because i want the
+  // colorpciker to move over the input
+  .sp-replacer:hover {
+    z-index: 1;
+  }
+}

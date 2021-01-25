@@ -1,0 +1,195 @@
+/* Style switcher version 1.0.0 */
+/* Scaffolding */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  }
+.style-switcher {
+  position: fixed;
+  top: 96px;
+  left: -276px;
+  z-index: 9999998;
+  width: 276px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 24px;
+  background-color: #fff;
+  -webkit-transition: left .2s ease;
+  -moz-transition: left .2s ease;
+  -o-transition: left .2s ease;
+  transition: left .2s ease;
+  }
+.style-switcher:before,
+.style-switcher:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+.style-switcher h3,
+.style-switcher h5,
+.style-switcher ul {
+  padding: 0;
+  margin: 0;
+  }
+.style-switcher h3,
+.style-switcher h5 {
+  margin-bottom: 12px;
+  text-align: center;
+  }
+.style-switcher ul {
+  list-style: none;
+  }
+.style-switcher ul:before,
+.style-switcher ul:after {
+  display: table;
+  content: " ";
+  }
+.style-switcher ul:after {
+  clear: both;
+  }
+.style-switcher ul li {
+  float: left;
+  }
+.style-switcher ul li a {
+  position: relative;
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin: 0 6px 12px 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  border: 1px solid #bdc3c7;
+  border-radius: 3px;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  }
+.style-switcher ul li a:hover {
+  border-color: #869198;
+  }
+.style-switcher ul li a:active {
+  border-color: #2980b9;
+  }
+.style-switcher ul li a:before {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  content: '';
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  border-radius: 2px;
+
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  }
+.style-switcher h3 {
+  font-size: 16px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  }
+.style-switcher h5 {
+  font-size: 14px;
+  line-height: 1.714285714285714;
+  }
+.style-switcher .switcher-toggle {
+  position: absolute;
+  top: 0;
+  right: -48px;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  color: #c0392b;
+  text-align: center;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  }
+.style-switcher.open {
+  left: 0;
+  }
+.style-switcher .reset-style-switcher {
+  height: 30px;
+  padding: 0 12px;
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 30px;
+  color: #fff;
+  background-color: #c0392b;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: inset 0 -2px 0 0 #962d22;
+  -moz-box-shadow: inset 0 -2px 0 0 #962d22;
+  box-shadow: inset 0 -2px 0 0 #962d22;
+  }
+.style-switcher .reset-style-switcher:hover {
+  background-color: #d65548;
+  -webkit-box-shadow: inset 0 -2px 0 0 #ab3326;
+  -moz-box-shadow: inset 0 -2px 0 0 #ab3326;
+  box-shadow: inset 0 -2px 0 0 #ab3326;
+  }
+.style-switcher .reset-style-switcher:active {
+  background-color: #2c3e50;
+  -webkit-box-shadow: inset 0 2px 0 0 #2c3e50;
+  -moz-box-shadow: inset 0 2px 0 0 #2c3e50;
+  box-shadow: inset 0 2px 0 0 #2c3e50;
+  }
+.alizarin:before {
+  background-color: #e74c3c;
+  }
+.amethyst:before {
+  background-color: #9b59b6;
+  }
+.carrot:before {
+  background-color: #e67e22;
+  }
+.emerald:before {
+  background-color: #2ecc71;
+  }
+.greensea:before {
+  background-color: #16a085;
+  }
+.pumpkin:before {
+  background-color: #d35400;
+  }
+.sunflower:before {
+  background-color: #f1c40f;
+  }
+.turquoise:before {
+  background-color: #1abc9c;
+  }
+.wetasphalt:before {
+  background-color: #34495e;
+  }
+.wisteria:before {
+  background-color: #8e44ad;
+  }
+.food:before {
+  background: url(../images/textures/food.png) 0 0 repeat;
+  }
+.black-linen-v2:before {
+  background: url(../images/textures/black-linen-v2.png) 0 0 repeat;
+  }
+.low-contrast-linen:before {
+  background: url(../images/textures/low-contrast-linen.png) 0 0 repeat;
+  }
+.purty-wood:before {
+  background: url(../images/textures/purty-wood.png) 0 0 repeat;
+  }
+.retina-wood:before {
+  background: url(../images/textures/retina-wood.png) 0 0 repeat;
+  }
+.shattered:before {
+  background: url(../images/textures/shattered.png) 0 0 repeat;
+  }

@@ -1,0 +1,223 @@
+<!DOCTYPE html><!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>jQueryUI icons</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon and Apple Icons-->
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../apple-touch-icon-precomposed.png">
+  <!-- Google Fonts-->
+  <link href="http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,900italic" rel="stylesheet">
+  <!-- Vendor stylesheets-->
+  <link rel="stylesheet" href="../styles/vendor/normalize.css">
+  <link rel="stylesheet" href="../styles/vendor/grid.css">
+  <link rel="stylesheet" href="../styles/icomoon.css">
+  <link rel="stylesheet" href="../styles/vendor/spectrum.css">
+  <link rel="stylesheet" href="../styles/vendor/spectrum-custom.css" id="spectrum-custom">
+  <link rel="stylesheet" href="../styles/vendor/raty-custom.css">
+  <link rel="stylesheet" href="../styles/vendor/animate.css">
+  <link rel="stylesheet" href="../styles/style-switcher.css">
+  <!-- Main stylesheet-->
+  <link rel="stylesheet" href="../styles/form-framework.min.css" id="form-framework">
+  <link rel="stylesheet" href="../styles/jqueryui-theme.min.css" id="jqueryui-theme">
+  <!-- build:js scripts/vendor/modernizr.js-->
+  <script src="../../bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild-->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+  <!-- CSS3 pseudo-classes and attribute selectors support in Internet Explorer 6-8--><!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/mootools/1.5.0/mootools-core-full-compat.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+  <![endif]-->
+</head>
+<body class="example">
+  <div id="preloader" class="preloader">
+    <div id="status" class="status"></div>
+  </div>
+  <div class="style-switcher ff-rounded-etr">
+    <button type="button" id="switcher-toggle" class="switcher-toggle ff-rounded-r"><span class="icon-gear"></span></button>
+    <h3>Change styles</h3>
+    <h5>Skin</h5>
+    <ul>
+      <li><a id="carrot" href="#" title="Carrot" data-tooltip="Carrot" class="carrot skin"><span class="sr-only">Carrot</span></a></li>
+      <li><a id="greensea" href="#" title="Greensea" class="greensea skin"><span class="sr-only">Greensea</span></a></li>
+      <li><a id="pumpkin" href="#" title="Pumpkin" class="pumpkin skin"><span class="sr-only">Pumpkin</span></a></li>
+      <li><a id="sunflower" href="#" title="Sunflower" class="sunflower skin"><span class="sr-only">Sunflower</span></a></li>
+      <li><a id="turquoise" href="#" title="Turquoise" class="turquoise skin"><span class="sr-only">Turquoise</span></a></li>
+    </ul>
+    <h5>Body background</h5>
+    <ul>
+      <li><a id="food" href="#" title="Food" class="food body-bg"><span class="sr-only">Food</span></a></li>
+      <li><a id="black-linen-v2" href="#" title="Black linen v2" class="black-linen-v2 body-bg"><span class="sr-only">Black linen v2</span></a></li>
+      <li><a id="low-contrast-linen" href="#" title="Low contrast linen" class="low-contrast-linen body-bg"><span class="sr-only">Low contrast linen</span></a></li>
+      <li><a id="purty-wood" href="#" title="Purty wood" class="purty-wood body-bg"><span class="sr-only">Purty wood</span></a></li>
+      <li><a id="shattered" href="#" title="Shattered" class="shattered body-bg"><span class="sr-only">Shattered</span></a></li>
+    </ul>
+    <div class="text-right">
+      <button type="button" id="reset-style-switcher" class="reset-style-switcher ff-rounded">Reset</button>
+    </div>
+  </div>
+  <div class="form-container ui-icons-form animated fadeInDown">
+    <form action="" method="post" enctype="multipart/form-data" id="ui-icons-form" class="rcw-form container-fluid">
+      <header>
+        <h3 class="form-main-heading">jQueryUI icons</h3>
+      </header>
+      <fieldset class="row">
+        <div class="col-md-12">
+          <legend><span>jQueryUI icons examples</span></legend>
+        </div>
+        <div class="col-md-12">
+          <button type="button" id="ui-icons-demo-1" title=".ui-icon-closethick" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-2" title=".ui-icon-minus" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-3" title=".ui-icon-minusthick" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-4" title=".ui-icon-plus" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-5" title=".ui-icon-carat-1-n" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-6" title=".ui-icon-carat-1-w" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-7" title=".ui-icon-carat-1-s" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-8" title=".ui-icon-carat-1-e" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-9" title=".ui-icon-triangle-1-n" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-10" title=".ui-icon-triangle-1-s" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-11" title=".ui-icon-triangle-1-e" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-12" title=".ui-icon-triangle-1-w" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-13" title=".ui-icon-triangle-2-n-s" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-14" title=".ui-icon-arrow-1-n" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-15" title=".ui-icon-arrow-1-ne" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-16" title=".ui-icon-arrow-1-e" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-17" title=".ui-icon-arrow-1-se" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-18" title=".ui-icon-arrow-1-s" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-19" title=".ui-icon-arrow-1-sw" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-20" title=".ui-icon-arrow-1-w" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-21" title=".ui-icon-arrow-1-nw" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-22" title=".ui-icon-arrowthick-1-n" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-23" title=".ui-icon-arrowthick-1-ne" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-24" title=".ui-icon-arrowthick-1-e" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-25" title=".ui-icon-arrowthick-1-se" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-26" title=".ui-icon-arrowthick-1-s" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-27" title=".ui-icon-arrowthick-1-sw" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-28" title=".ui-icon-arrowthick-1-w" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-29" title=".ui-icon-arrowthick-1-nw" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-30" title=".ui-icon-arrow-2-n-s" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-31" title=".ui-icon-arrow-2-e-w" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-32" title=".ui-icon-arrow-2-ne-sw" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-33" title=".ui-icon-arrow-4" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-34" title=".ui-icon-arrow-4-diag" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-35" title=".ui-icon-extlink" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-36" title=".ui-icon-newwin" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-37" title=".ui-icon-refresh" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-38" title=".ui-icon-shuffle" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-39" title=".ui-icon-transfer-e-w" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-40" title=".ui-icon-folder-collapsed" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-41" title=".ui-icon-folder-open" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-42" title=".ui-icon-document" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-43" title=".ui-icon-note" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-44" title=".ui-icon-mail-closed" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-45" title=".ui-icon-mail-open" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-46" title=".ui-icon-suitcase" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-47" title=".ui-icon-comment" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-48" title=".ui-icon-person" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-49" title=".ui-icon-print" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-50" title=".ui-icon-trash" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-51" title=".ui-icon-locked" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-52" title=".ui-icon-unlocked" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-53" title=".ui-icon-bookmark" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-54" title=".ui-icon-tag" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-55" title=".ui-icon-home" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-56" title=".ui-icon-flag" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-57" title=".ui-icon-calculator" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-58" title=".ui-icon-cart" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-59" title=".ui-icon-pencil" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-60" title=".ui-icon-clock" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-61" title=".ui-icon-disk" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-62" title=".ui-icon-calendar" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-63" title=".ui-icon-zoomin" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-64" title=".ui-icon-zoomout" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-65" title=".ui-icon-search" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-66" title=".ui-icon-wrench" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-67" title=".ui-icon-gear" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-68" title=".ui-icon-heart" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-69" title=".ui-icon-star" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-70" title=".ui-icon-link" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-71" title=".ui-icon-cancel" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-72" title=".ui-icon-close" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-73" title=".ui-icon-closethick" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-74" title=".ui-icon-key" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-75" title=".ui-icon-lightbulb" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-76" title=".ui-icon-scissors" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-77" title=".ui-icon-clipboard" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-78" title=".ui-icon-copy" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-79" title=".ui-icon-contact" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-80" title=".ui-icon-image" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-81" title=".ui-icon-video" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-82" title=".ui-icon-alert" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-83" title=".ui-icon-info" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-84" title=".ui-icon-notice" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-85" title=".ui-icon-help" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-86" title=".ui-icon-check" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-87" title=".ui-icon-bullet" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-88" title=".ui-icon-radio-off" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-89" title=".ui-icon-radio-on" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-90" title=".ui-icon-pin-sw" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-91" title=".ui-icon-pin-s" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-92" title=".ui-icon-play" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-93" title=".ui-icon-pause" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-94" title=".ui-icon-seek-next" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-95" title=".ui-icon-seek-prev" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-96" title=".ui-icon-seek-end" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-97" title=".ui-icon-seek-first" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-98" title=".ui-icon-stop" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-99" title=".ui-icon-eject" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-100" title=".ui-icon-volume-off" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-101" title=".ui-icon-volume-on" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-102" title=".ui-icon-power" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-103" title=".ui-icon-signal-diag" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-104" title=".ui-icon-signal" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-105" title=".ui-icon-battery-0" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-106" title=".ui-icon-battery-1" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-107" title=".ui-icon-battery-2" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-108" title=".ui-icon-battery-3" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-109" title=".ui-icon-battery-4" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-110" title=".ui-icon-circle-plus" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-111" title=".ui-icon-circle-minus" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-112" title=".ui-icon-circle-close" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-113" title=".ui-icon-chevron-left" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-114" title=".ui-icon-chevron-right" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-115" title=".ui-icon-chevron-top" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-116" title=".ui-icon-chevron-down" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-117" title=".ui-icon-circle-arrow-e" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-118" title=".ui-icon-circle-arrow-w" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-119" title=".ui-icon-circle-arrow-n" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-120" title=".ui-icon-circle-arrow-s" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-121" title=".ui-icon-circle-check" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-122" title=".ui-icon-square-plus" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-123" title=".ui-icon-square-minus" class="ui-icons-demo">Demo</button>
+          <button type="button" id="ui-icons-demo-124" title=".ui-icon-square-close" class="ui-icons-demo">Demo</button>
+        </div>
+      </fieldset>
+      <footer class="ff-rounded-b">
+        <input type="submit" name="submit" value="Submit" style="margin-right: 10px;" class="btn btn-primary ff-rounded">
+        <button type="reset" class="btn btn-default ff-rounded btn-has-icon-left"><span class="btn-icon-left icon-cancel5 ff-rounded-l"></span>Reset</button>
+      </footer>
+    </form>
+  </div>
+  <script src="../scripts/plugins/jquery.js"></script>
+  <script src="../scripts/plugins/jquery.easing.1.3.js"></script>
+  <script src="../scripts/plugins/jquery-ui.js"></script>
+  <script src="../scripts/plugins/jquery-ui-timepicker-addon.js"></script>
+  <script src="../scripts/plugins/jquery.mtz.monthpicker.js"></script>
+  <script src="../scripts/plugins/jquery-ui-sliderAccess.js"></script>
+  <script src="../scripts/plugins/jquery.maskedinput.js"></script>
+  <script src="../scripts/plugins/spectrum.js"></script>
+  <script src="../scripts/plugins/jquery.raty.js"></script>
+  <script src="../scripts/plugins/jquery.nicefileinput.min.js"></script>
+  <script src="../scripts/plugins/placeholders.min.js"></script>
+  <script src="../scripts/plugins/jquery.validate.js"></script>
+  <script src="../scripts/plugins/additional-methods.js"></script>
+  <script src="../scripts/plugins/jquery.form.js"></script>
+  <script src="../scripts/style-switcher.js"></script>
+  <script src="../scripts/preloader.js"></script>
+  <script src="../scripts/ui-icons.js"></script>
+</body></html>

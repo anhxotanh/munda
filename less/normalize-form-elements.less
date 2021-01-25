@@ -1,0 +1,48 @@
+/* Normalize form elements */
+
+.rcw-form {
+  &,
+  &:before,
+  &:after {
+    .box-sizing(border-box);
+  }
+
+  *,
+  *:before,
+  *:after {
+    .box-sizing(border-box);
+  }
+  fieldset {
+    padding: 0;
+    border: 0;
+    min-width: 0;
+  }
+
+  legend {
+    display: block;
+    width: 100%;
+    border: 0;
+  }
+
+  label {
+    display: inline-block;
+  }
+
+  input[type="search"] {
+    .box-sizing(border-box);
+  }
+
+  input[type="file"] {
+    display: block;
+  }
+
+  input[type="range"] {
+    display: block;
+    width: 100%;
+  }
+
+  select[multiple],
+  select[size] {
+    height: auto;
+  }
+}

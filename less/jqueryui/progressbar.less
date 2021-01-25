@@ -1,0 +1,52 @@
+//
+// Progress bar
+// --------------------------------------------------
+
+.ui-progressbar {
+  height: @ff-ui-progressbar-height;
+  text-align: left;
+  overflow: hidden;
+
+  .ui-progressbar-value {
+    margin: 0;
+    height: 100%;
+  }
+
+  .ui-progressbar-overlay {
+    background-image: none;
+    height: 100%;
+    .ff-opacity(0.25);
+  }
+}
+
+.ui-progressbar-indeterminate .ui-progressbar-value {
+  background-image: none;
+}
+
+//
+// Styles added by me
+// --------------------------------------------------
+
+.ui-progressbar {
+  &.ui-widget-content {
+    position: relative;
+    background-color: @ff-ui-progressbar-bg;
+    border-width: 0;
+  }
+
+  .ui-progressbar-value {
+    background-color: @ff-primary;
+    border-width: 0;
+  }
+
+  .progressbar-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: @ff-ui-progressbar-label-font-size;
+    line-height: @ff-line-height-computed;
+    color: @ff-text-color;
+  }
+}

@@ -1,0 +1,123 @@
+//
+// Interaction cues
+// --------------------------------------------------
+
+// Highlight state
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-hightlight {
+  border: @ff-ui-state-highlight-border-size @ff-ui-state-highlight-border-style @ff-ui-state-highlight-border-color;
+  background-color: @ff-ui-state-highlight-bg;
+  background-image: none;
+  color: @ff-ui-state-highlight-color;
+
+  a {
+    color: @ff-ui-state-highlight-link-color;
+  }
+}
+
+// Error state
+.ui-state-error,
+.ui-widget-content .ui-state-error,
+.ui-widget-header .ui-state-error {
+  border: @ff-ui-state-error-border-size @ff-ui-state-error-border-style @ff-ui-state-error-border-color;
+  background-color: @ff-ui-state-error-bg;
+  background-image: none;
+  color: @ff-ui-state-error-color;
+
+  a {
+    color: @ff-ui-state-error-link-color;
+  }
+}
+
+// Error state text
+.ui-state-error-text,
+.ui-widget-content .ui-state-error-text,
+.ui-widget-header .ui-state-error-text {
+  color: @ff-ui-state-error-text-color;
+}
+
+// Priority primary
+.ui-priority-primary,
+.ui-widget-content .ui-priority-primary,
+.ui-widget-header .ui-priority-primary {
+  font-weight: @ff-ui-priority-primary-font-weight;
+}
+
+// Priority secondary
+.ui-priority-secondary,
+.ui-widget-content .ui-priority-secondary,
+.ui-widget-header .ui-priority-secondary {
+  .ff-opacity(@ff-ui-priority-secondary-opacity);
+  font-weight: @ff-ui-priority-secondary-font-weight;
+}
+
+// Disabled state
+.ui-state-disabled,
+.ui-widget-content .ui-state-disabled,
+.ui-widget-header .ui-state-disabled {
+  .ff-opacity(@ff-ui-state-disabled-opacity);
+  background-image: none;
+}
+
+.ui-state-disabled .ui-icon {
+  .ff-opacity(@ff-ui-state-disabled-opacity);
+}
+
+//
+// Styles added by me
+// --------------------------------------------------
+
+.ui-priority-primary,
+.ui-widget-content .ui-priority-primary,
+.ui-widget-header .ui-priority-primary {
+  background-color: @ff-btn-primary-bg;
+  color: @ff-btn-primary-color;
+}
+
+button.ui-priority-primary,
+.ui-widget-content button.ui-priority-primary,
+.ui-widget-header button.ui-priority-primary {
+  .box-shadow(inset 0 -2px 0 0 darken(@ff-btn-primary-bg, 5%));
+
+  &:hover,
+  &:focus {
+    background-color: lighten(@ff-btn-primary-bg, 5%);
+    .box-shadow(inset 0 -2px 0 0 @ff-btn-primary-bg);
+  }
+
+  &:active {
+    background-color: @ff-text-color;
+    .box-shadow(inset 0 2px 0 0 darken(@ff-text-color, 5%));
+  }
+}
+
+.ui-priority-secondary,
+.ui-widget-content .ui-priority-secondary,
+.ui-widget-header .ui-priority-secondary {
+  background-color: @ff-btn-default-bg;
+  color: @ff-btn-default-color;
+}
+
+button.ui-priority-secondary,
+.ui-widget-content button.ui-priority-secondary,
+.ui-widget-header button.ui-priority-secondary {
+  .box-shadow(inset 0 -2px 0 0 darken(@ff-btn-default-bg, 5%));
+
+  &:hover,
+  &:focus {
+    background-color: lighten(@ff-btn-default-bg, 5%);
+    .box-shadow(inset 0 -2px 0 0 @ff-btn-default-bg);
+  }
+
+  &:active {
+    background-color: @ff-text-color;
+    .box-shadow(inset 0 2px 0 0 darken(@ff-text-color, 5%));
+  }
+}
+
+.ui-state-disabled,
+.ui-widget-content .ui-state-disabled,
+.ui-widget-header .ui-state-disabled {
+  outline: none;
+}

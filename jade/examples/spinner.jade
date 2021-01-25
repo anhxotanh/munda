@@ -1,0 +1,54 @@
+extends example-template.jade
+
+block title
+  title Spinners
+
+block content
+  .form-container.spinner-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='spinner-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading Spinners
+      fieldset.row
+        .col-sm-12
+          legend
+            span Spinner basic
+        .form-group.col-md-12
+          label(for='basic-spinner', class='sr-only') Basic spinner
+          input(type='text', name='basic-spinner', id='basic-spinner', class='form-control ff-rounded', value='0')
+        .form-group.col-md-12
+          button(type='button', class='btn btn-danger ff-rounded', id='toggle-de', style='margin-right: 10px;') Toogle disable/enable
+          button(type='button', class='btn btn-success ff-rounded', id='get-value', style='margin-right: 10px;') Get value
+          button(type='button', class='btn btn-info ff-rounded', id='set-value', style='margin-right: 10px;') Set value to 5
+      fieldset.row
+        .col-md-12
+          legend <span>Currency</span>
+        .form-group.col-sm-6
+          label(for='spinner-currency', class='sr-only') Currency spinner
+          input(type='text', name='spinner-currency', id='spinner-currency', class='form-control ff-rounded', value='5')
+        .form-group.col-sm-6
+          label(for='change-currency', class='sr-only')
+          select(name='change-currency', id='change-currency', class='form-control ff-rounded')
+            option(value='', disabled, selected) Currency
+            option(value='usd') USD
+            option(value='euro') EUR
+            option(value='yen') YEN
+          span.select-icon.icon-arrow-down8.ff-rounded-r
+      fieldset.row
+        .col-md-12
+          legend <span>Decimal spinner</span>
+        .form-group.col-md-12
+          label(for='spinner-decimal', class='sr-only') Decimal spinner
+          input(type='text', name='spinner-decimal', id='spinner-decimal', class='form-control ff-rounded', value='5.00')
+      fieldset.row
+        .col-md-12
+          legend <span>Overflow spinner</span>
+        .form-group.col-md-12
+          label(for='spinner-overflow', class='sr-only') Overflow spinner
+          input(type='text', name='spinner-overflow', id='spinner-overflow', class='form-control ff-rounded', value='10')
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Submit', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-left')
+          span.btn-icon-left.icon-cancel5.ff-rounded-l
+          | Reset
+block mainjs
+  script(src='../scripts/spinner.js')

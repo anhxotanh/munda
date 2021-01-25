@@ -1,0 +1,226 @@
+/* Inputs */
+
+/* Shared size and type resets for form controls. Apply `.form-control` to any
+of the following form controls:
+select
+textarea
+input[type="text"]
+input[type="password"]
+input[type="datetime"]
+input[type="datetime-local"]
+input[type="date"]
+input[type="month"]
+input[type="time"]
+input[type="week"]
+input[type="number"]
+input[type="email"]
+input[type="url"]
+input[type="search"]
+input[type="tel"]
+input[type="color"] */
+
+.rcw-form {
+
+  .form-control {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: @ff-form-control-height-base;
+    line-height: @ff-line-height-base;
+    padding: @ff-padding-base-vertical @ff-padding-base-horizontal;
+    color: @ff-form-control-color;
+    border-width: @ff-form-control-border-width;
+    border-style: @ff-form-control-border-style;
+    border-color: @ff-form-control-border-color;
+    background-color: @ff-form-control-bg;
+    background-image: none;
+    .transition(all 0.2s ease);
+
+    // Hover state
+    &:hover {
+      border-color: @ff-form-control-border-hover;
+      & + .select-icon {
+        border-color: @ff-select-icon-hover-border;
+      }
+    }
+
+    // Focus state
+    .form-control-focus();
+
+    // Placeholder text
+    .placeholder();
+
+    // Disabled
+    &[disabled] {
+      .form-control-disabled();
+      .placeholder(@ff-form-control-placeholder-color-disabled);
+      color: @ff-text-color-disabled;
+      &:hover {
+        border-color: @ff-form-control-border-color-disabled;
+        // Select icon when you hover over the .form-control
+        .select-icon {
+          border-color: @ff-form-control-border-color-disabled;
+        }
+      }
+    }
+
+    // Form control icons
+    &[disabled] ~ .icon-left,
+    &[disabled] ~ .icon-right,
+    &[disabled] ~ .select-icon {
+      color: @ff-primary-disabled;
+    }
+
+    // Select icon
+    &[disabled] ~ .select-icon {
+      border-color: @ff-form-control-border-color-disabled;
+    }
+
+    // Readonly
+    &[readonly] {
+      cursor: not-allowed;
+      color: @ff-readonly-color;
+      background-color: @ff-form-control-bg;
+      border-color: @ff-form-control-border-color-disabled;
+      .placeholder();
+
+      &:hover {
+        border-color: @ff-form-control-border-color-disabled;
+      }
+    }
+  }
+
+  // Different padding for textareas with the .form-control class
+  textarea.form-control {
+    padding: (@ff-line-height-computed / 2) @ff-padding-base-horizontal;
+    height: auto;
+    resize: none;
+  }
+
+  fieldset[disabled] .form-control {
+    .form-control-disabled();
+    .placeholder(@ff-form-control-placeholder-color-disabled);
+    color: @ff-text-color-disabled;
+
+    & ~ .icon-left,
+    & ~ .icon-right,
+    & ~ .select-icon {
+      color: @ff-primary-disabled;
+    }
+
+    & ~ .select-icon {
+      border-color: @ff-form-control-border-color-disabled;
+    }
+
+    &:hover {
+      border-color: @ff-form-control-border-color-disabled;
+      .select-icon {
+        border-color: @ff-form-control-border-color-disabled;
+      }
+    }
+  }
+
+  // Has success
+  fieldset[disabled] .has-success .form-control,
+  .has-success .form-control[disabled] {
+    &:hover {
+      border-color: @ff-success;
+    }
+  }
+
+  fieldset[disabled] .has-success .form-control {
+    border-color: @ff-success;
+    & ~ .icon-left,
+    & ~ .icon-right,
+    & ~ .select-icon {
+      color: @ff-success;
+    }
+    & ~ .select-icon {
+      border-color: @ff-success;
+    }
+  }
+
+  // Has error
+  fieldset[disabled] .has-error .form-control,
+  .has-error .form-control[disabled] {
+    &:hover {
+      border-color: @ff-danger;
+    }
+  }
+
+  fieldset[disabled] .has-error .form-control {
+    border-color: @ff-danger;
+    & ~ .icon-left,
+    & ~ .icon-right,
+    & ~ .select-icon {
+      color: @ff-danger;
+    }
+    & ~ .select-icon {
+      border-color: @ff-danger;
+    }
+  }
+
+  // Has warning
+  fieldset[disabled] .has-warning .form-control,
+  .has-warning .form-control[disabled] {
+    &:hover {
+      border-color: @ff-warning;
+    }
+  }
+
+  fieldset[disabled] .has-warning .form-control {
+    border-color: @ff-warning;
+    & ~ .icon-left,
+    & ~ .icon-right,
+    & ~ .select-icon {
+      color: @ff-warning;
+    }
+    & ~ .select-icon {
+      border-color: @ff-warning;
+    }
+  }
+
+
+  // Search inputs in iOS
+  //
+  // This overrides the extra rounded corners on search inputs in iOS so that our
+  // `.form-control` class can properly style them. Note that this cannot simply
+  // be added to `.form-control` as it's not specific enough. For details, see
+  // https://github.com/twbs/bootstrap/issues/11586.
+
+  input[type="search"] {
+    -webkit-appearance: none;
+  }
+
+  // Special styles for iOS temporal inputs
+  //
+  // In Mobile Safari, setting `display: block` on temporal inputs causes the
+  // text within the input to become vertically misaligned.
+  // As a workaround, we set a pixel line-height that matches the
+  // given height of the input. Since this fucks up everything else, we have to
+  // appropriately reset it for Internet Explorer and the size variations.
+
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  input[type="month"] {
+    line-height: @ff-form-control-height-base;
+    // IE8+ misaligns the text within date inputs, so we reset
+    line-height: @ff-line-height-base ~"\0";
+  }
+
+  // Static form control text
+  //
+  // Apply class to a `p` element to make any string of text align with labels in
+  // a horizontal form layout.
+
+  .form-control-static {
+    // Size it appropriately next to real form controls
+    height: @ff-form-control-height-base;
+    padding-top: (@ff-padding-base-vertical + 3);
+    padding-bottom: (@ff-padding-base-vertical + 1);
+    // Remove default margin from `p`
+    margin-bottom: 0;
+  }
+}
+

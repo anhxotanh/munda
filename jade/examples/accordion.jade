@@ -1,0 +1,39 @@
+extends example-template.jade
+
+block title
+  title Accordion
+
+block content
+  .form-container.accordion-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='accordion-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading Accordion
+      fieldset.row
+        .col-md-12
+          legend
+            span Basic accordion
+        .form-group.col-md-12
+          #basic-accordion
+            .group
+              h3 Section 1
+              div
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, nemo! Saepe dolorum ad animi deserunt illum est unde provident, accusamus! Temporibus nulla rerum, aspernatur omnis doloremque quisquam ipsa veniam eaque.
+            .group
+              h3 Section 2
+              div
+                p Fuga fugiat velit numquam id. Vitae, culpa nihil. Ipsa placeat labore incidunt repellendus ducimus veniam quasi aut illo iusto eius eos, modi magni, voluptas accusantium, ratione aliquam provident pariatur sint!
+            .group
+              h3 Section 3
+              div
+                p Aspernatur nulla nihil, quos et minus distinctio eos corporis consequuntur! Iusto adipisci necessitatibus reprehenderit tempore similique, ratione hic minus quibusdam eius porro voluptate fugit debitis, delectus soluta maiores voluptatibus, tenetur!
+            .group
+              h3 Section 4
+              div
+                p Laboriosam vel suscipit, ea, nisi ullam repellat unde aspernatur cumque enim quos officiis reprehenderit accusamus nesciunt repellendus dolores deleniti ratione, ipsum accusantium! Rerum numquam ratione laboriosam sapiente delectus pariatur totam!
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Submit', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-left')
+          span.btn-icon-left.icon-cancel5.ff-rounded-l
+          | Reset
+block mainjs
+  script(src='../scripts/accordion.js')

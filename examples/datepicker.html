@@ -1,0 +1,216 @@
+<!DOCTYPE html><!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Datepicker form</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon and Apple Icons-->
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../apple-touch-icon-precomposed.png">
+  <!-- Google Fonts-->
+  <link href="http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,900italic" rel="stylesheet">
+  <!-- Vendor stylesheets-->
+  <link rel="stylesheet" href="../styles/vendor/normalize.css">
+  <link rel="stylesheet" href="../styles/vendor/grid.css">
+  <link rel="stylesheet" href="../styles/icomoon.css">
+  <link rel="stylesheet" href="../styles/vendor/spectrum.css">
+  <link rel="stylesheet" href="../styles/vendor/spectrum-custom.css" id="spectrum-custom">
+  <link rel="stylesheet" href="../styles/vendor/raty-custom.css">
+  <link rel="stylesheet" href="../styles/vendor/animate.css">
+  <link rel="stylesheet" href="../styles/style-switcher.css">
+  <!-- Main stylesheet-->
+  <link rel="stylesheet" href="../styles/form-framework.min.css" id="form-framework">
+  <link rel="stylesheet" href="../styles/jqueryui-theme.min.css" id="jqueryui-theme">
+  <!-- build:js scripts/vendor/modernizr.js-->
+  <script src="../../bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild-->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+  <!-- CSS3 pseudo-classes and attribute selectors support in Internet Explorer 6-8--><!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/mootools/1.5.0/mootools-core-full-compat.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+  <![endif]-->
+</head>
+<body class="example">
+  <div id="preloader" class="preloader">
+    <div id="status" class="status"></div>
+  </div>
+  <div class="style-switcher ff-rounded-etr">
+    <button type="button" id="switcher-toggle" class="switcher-toggle ff-rounded-r"><span class="icon-gear"></span></button>
+    <h3>Change styles</h3>
+    <h5>Skin</h5>
+    <ul>
+      <li><a id="carrot" href="#" title="Carrot" data-tooltip="Carrot" class="carrot skin"><span class="sr-only">Carrot</span></a></li>
+      <li><a id="greensea" href="#" title="Greensea" class="greensea skin"><span class="sr-only">Greensea</span></a></li>
+      <li><a id="pumpkin" href="#" title="Pumpkin" class="pumpkin skin"><span class="sr-only">Pumpkin</span></a></li>
+      <li><a id="sunflower" href="#" title="Sunflower" class="sunflower skin"><span class="sr-only">Sunflower</span></a></li>
+      <li><a id="turquoise" href="#" title="Turquoise" class="turquoise skin"><span class="sr-only">Turquoise</span></a></li>
+    </ul>
+    <h5>Body background</h5>
+    <ul>
+      <li><a id="food" href="#" title="Food" class="food body-bg"><span class="sr-only">Food</span></a></li>
+      <li><a id="black-linen-v2" href="#" title="Black linen v2" class="black-linen-v2 body-bg"><span class="sr-only">Black linen v2</span></a></li>
+      <li><a id="low-contrast-linen" href="#" title="Low contrast linen" class="low-contrast-linen body-bg"><span class="sr-only">Low contrast linen</span></a></li>
+      <li><a id="purty-wood" href="#" title="Purty wood" class="purty-wood body-bg"><span class="sr-only">Purty wood</span></a></li>
+      <li><a id="shattered" href="#" title="Shattered" class="shattered body-bg"><span class="sr-only">Shattered</span></a></li>
+    </ul>
+    <div class="text-right">
+      <button type="button" id="reset-style-switcher" class="reset-style-switcher ff-rounded">Reset</button>
+    </div>
+  </div>
+  <div class="form-container datepicker-form animated fadeInDown">
+    <form action="" method="post" enctype="multipart/form-data" id="datepicker-form" class="rcw-form container-fluid">
+      <header>
+        <h3 class="form-main-heading">Datepicker</h3>
+      </header>
+      <fieldset class="row">
+        <div class="col-md-12">
+          <legend><span>Basic datepickers</span></legend>
+        </div>
+        <div class="form-group col-md-12 has-icon-left">
+          <label for="basic-datepicker-1" class="sr-only">Pick date</label>
+          <input type="text" name="basic-datepicker-1" id="basic-datepicker-1" placeholder="Pick date" class="form-control ff-rounded"><span class="icon-calendar-alt-stroke icon-left"></span>
+        </div>
+        <div class="form-group col-md-12 has-icon-left">
+          <label for="basic-datepicker-2" class="sr-only">Pick date</label>
+          <input type="text" name="basic-datepicker-2" id="basic-datepicker-2" placeholder="Pick date" class="form-control ff-rounded"><span class="icon-calendar-alt-fill icon-left"></span>
+        </div>
+      </fieldset>
+      <fieldset class="row">
+        <div class="col-md-12">
+          <legend><span>Datepicker with month &amp; year menus</span></legend>
+        </div>
+        <div class="form-group col-md-6 has-icon-left">
+          <label for="datepicker-month-and-year-1" class="sr-only">Pick date</label>
+          <input type="text" name="datepicker-month-and-year-1" id="datepicker-month-and-year-1" placeholder="Pick date" class="form-control ff-rounded"><span class="icon-calendar4 icon-left"></span>
+        </div>
+        <div class="form-group col-md-6 has-icon-left">
+          <label for="datepicker-month-and-year-2" class="sr-only">Pick date</label>
+          <input type="text" name="datepicker-month-and-year-2" id="datepicker-month-and-year-2" placeholder="Pick date" class="form-control ff-rounded"><span class="icon-calendar5 icon-left"></span>
+        </div>
+      </fieldset>
+      <fieldset class="row">
+        <div class="col-md-12">
+          <legend><span>Display multiple months</span></legend>
+        </div>
+        <div class="form-group col-md-12 has-icon-left">
+          <label for="multiple-months" class="sr-only">Pick date</label>
+          <input type="text" name="multiple-months" id="multiple-months" placeholder="Pick date" class="form-control ff-rounded"><span class="icon-calendar7 icon-left"></span>
+        </div>
+      </fieldset>
+      <fieldset class="row">
+        <div class="col-md-12">
+          <legend><span>Inline calendar</span></legend>
+        </div>
+        <div class="form-group col-md-6"><span class="label">Inline calenadar 1</span>
+          <div id="datepicker-inline-1"></div>
+        </div>
+        <div class="form-group col-md-6"><span class="label">Inline calenadar 2</span>
+          <div id="datepicker-inline-2"></div>
+        </div>
+      </fieldset>
+      <fieldset class="row">
+        <div class="col-md-12">
+          <legend><span>Date formats</span></legend>
+        </div>
+        <div class="form-group col-md-6 has-icon-left">
+          <label for="datepicker-date-formats" class="sr-only">Pick date</label>
+          <input type="text" name="datepicker-date-formats" id="datepicker-date-formats" placeholder="Pick date" class="form-control ff-rounded"><span class="icon-calendar9 icon-left"></span>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="date-format" class="sr-only"></label>
+          <select name="date-format" id="date-format" class="form-control ff-rounded">
+            <option value="" selected>Choose format</option>
+            <option value="mm/dd/yy">Default - mm/dd/yy</option>
+            <option value="yy-mm-dd">ISO 8601 - yy-mm-dd</option>
+            <option value="d M, y">Short - d M, y</option>
+            <option value="d MM, y">Medium - d MM, y</option>
+            <option value="DD, d MM, yy">DD, d MM, yy</option>
+          </select><span class="select-icon icon-arrow-down8 ff-rounded-r"></span>
+        </div>
+      </fieldset>
+      <fieldset class="row">
+        <div class="col-md-12">
+          <legend><span>Input group</span></legend>
+        </div>
+        <div class="form-group col-md-12">
+          <div class="input-group">
+            <label for="datepicker-icon" class="input-group-addon ff-rounded-l"><span class="icon-calendar10"></span></label>
+            <input type="text" name="datepicker-icon" id="datepicker-icon" placeholder="Pick date" class="form-control ff-rounded-r">
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="row">
+        <div class="col-md-12">
+          <legend><span>Icon trigger</span></legend>
+        </div>
+        <div class="form-group col-md-12 has-icon-left">
+          <label for="datepicker-trigger" class="control-label sr-only"></label>
+          <div class="input-group">
+            <input type="text" name="datepicker-trigger" id="datepicker-trigger" placeholder="Pick date" class="form-control ff-rounded-l"><span class="input-group-btn">
+              <button type="button" id="icon-trigger" class="btn btn-primary ff-rounded-r"><span class="icon-calendar11"></span></button></span>
+          </div><span class="icon-calendar9 icon-left"></span>
+        </div>
+      </fieldset>
+      <fieldset class="row">
+        <div class="col-md-12">
+          <legend><span>Populate alternate field</span></legend>
+        </div>
+        <div class="form-group col-md-6 has-icon-left">
+          <label for="datepicker-alternate-1" class="sr-only">Pick date</label>
+          <input type="text" name="datepicker-alternate-1" id="datepicker-alternate-1" placeholder="Pick date" class="form-control ff-rounded"><span class="icon-calendar-alt-stroke icon-left"></span>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="alternate" class="sr-only">Alternate</label>
+          <input type="text" name="alternate" id="alternate" placeholder="Alternate" readonly class="form-control ff-rounded">
+        </div>
+      </fieldset>
+      <fieldset class="row">
+        <div class="col-md-12">
+          <legend><span>Restrict date range</span></legend>
+        </div>
+        <div class="form-group col-md-12 has-icon-left">
+          <label for="datepicker-restrict" class="sr-only">Pick date</label>
+          <input type="text" name="datepicker-restrict" id="datepicker-restrict" placeholder="Pick date" class="form-control ff-rounded"><span class="icon-calendar4 icon-left"></span>
+        </div>
+      </fieldset>
+      <fieldset class="row">
+        <div class="col-md-12">
+          <legend><span>Select a date range</span></legend>
+        </div>
+        <div class="form-group col-md-6 has-icon-left">
+          <label for="datepicker-from" class="sr-only">Date start</label>
+          <input type="text" name="datepicker-from" id="datepicker-from" placeholder="Date start" class="form-control ff-rounded"><span class="icon-calendar5 icon-left"></span>
+        </div>
+        <div class="form-group col-md-6 has-icon-left">
+          <label for="datepicker-to" class="sr-only">Date end</label>
+          <input type="text" name="datepicker-to" id="datepicker-to" placeholder="Date end" class="form-control ff-rounded"><span class="icon-calendar5 icon-left"></span>
+        </div>
+      </fieldset>
+      <footer class="ff-rounded-b">
+        <input type="submit" name="submit" value="Submit" style="margin-right: 10px;" class="btn btn-primary ff-rounded">
+        <button type="reset" class="btn btn-default ff-rounded btn-has-icon-left"><span class="btn-icon-left icon-cancel5 ff-rounded-l"></span>Reset</button>
+      </footer>
+    </form>
+  </div>
+  <script src="../scripts/plugins/jquery.js"></script>
+  <script src="../scripts/plugins/jquery.easing.1.3.js"></script>
+  <script src="../scripts/plugins/jquery-ui.js"></script>
+  <script src="../scripts/plugins/jquery-ui-timepicker-addon.js"></script>
+  <script src="../scripts/plugins/jquery.mtz.monthpicker.js"></script>
+  <script src="../scripts/plugins/jquery-ui-sliderAccess.js"></script>
+  <script src="../scripts/plugins/jquery.maskedinput.js"></script>
+  <script src="../scripts/plugins/spectrum.js"></script>
+  <script src="../scripts/plugins/jquery.raty.js"></script>
+  <script src="../scripts/plugins/jquery.nicefileinput.min.js"></script>
+  <script src="../scripts/plugins/placeholders.min.js"></script>
+  <script src="../scripts/plugins/jquery.validate.js"></script>
+  <script src="../scripts/plugins/additional-methods.js"></script>
+  <script src="../scripts/plugins/jquery.form.js"></script>
+  <script src="../scripts/style-switcher.js"></script>
+  <script src="../scripts/preloader.js"></script>
+  <script src="../scripts/datepicker.js"></script>
+</body></html>

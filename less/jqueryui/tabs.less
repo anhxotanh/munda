@@ -1,0 +1,153 @@
+//
+// Tabs
+// --------------------------------------------------
+
+.ui-tabs {
+  position: relative; // position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed")
+  padding: 0;
+
+  .ui-tabs-nav {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      float: left;
+      position: relative;
+      top: 0;
+      margin: 0;
+      border-bottom-width: 0;
+      padding: 0;
+      white-space: nowrap;
+    }
+
+    .ui-tabs-active {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .ui-tabs-active,
+    .ui-state-disabled,
+    .ui-tabs-loading {
+      .ui-tabs-anchor {
+        cursor: text;
+      }
+    }
+
+    .ui-tabs-anchor {
+      float: left;
+      height: @ff-form-control-height-base;
+      padding: (@ff-line-height-computed / 2) (@ff-line-height-computed * 0.75);
+      line-height: @ff-line-height-base;
+      text-decoration: none;
+    }
+  }
+
+  .ui-tabs-panel {
+    display: block;
+    border-width: 0;
+    padding: 10px 20px;
+    background: none;
+  }
+}
+
+.ui-tabs-collapsible .ui-tabs-nav .ui-tabs-active .ui-tabs-anchor {
+  cursor: pointer;
+}
+
+//
+// Styles added by me
+// --------------------------------------------------
+
+.ui-tabs {
+  &.ui-widget-content {
+    border-width: 0;
+  }
+  .ui-tabs-nav {
+    border-width: 0;
+    background-color: transparent;
+
+    > li {
+      margin-right: (@ff-line-height-computed / 4);
+      .border-radius(@ff-border-radius);
+
+      > a > [class^="icon-"] {
+        position: relative;
+        top: 2px;
+        margin-right: (@ff-line-height-computed / 2);
+      }
+    }
+
+    .ui-state-default {
+      border-width: 0;
+
+      .ui-tabs-anchor {
+        color: @ff-form-control-color;
+      }
+
+    }
+
+    .ui-state-hover {
+      border-color: @ff-ui-state-default-border-color;
+    }
+
+    .ui-state-focus {
+      border-color: @ff-ui-state-default-border-color;
+    }
+
+    .ui-state-active {
+      // margin-top: -1px;
+      border-color: @ff-primary;
+      .ui-tabs-anchor {
+        color: #fff;
+      }
+      &.ui-state-hover {
+        border-color: @ff-primary;
+      }
+    }
+  }
+
+  .ui-tabs-panel {
+    // border: @ff-ui-state-default-border-size @ff-ui-state-default-border-style @ff-ui-state-default-border-color;
+    background-color: @ff-ui-state-default-bg;
+    .border-radius(@ff-border-radius);
+    margin-top: (@ff-line-height-computed / 4);
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+  .ui-tabs-vertical {
+    width: 100%;
+    .clearfix();
+
+    .ui-tabs-nav {
+      width: 25%;
+      float: left;
+
+      > li {
+        .box-sizing(content-box);
+        clear: left;
+        width: 100%;
+        margin-bottom: (@ff-line-height-computed / 4);
+        margin-right: 0;
+
+        &.ui-state-active {
+          margin-bottom: (@ff-line-height-computed / 4);
+        }
+
+        .ui-tabs-anchor {
+          width: 100%;
+        }
+      }
+    }
+
+    .ui-tabs-panel {
+      float: right;
+      width: 74%;
+      margin-top: 0;
+    }
+  }
+}

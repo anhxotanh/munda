@@ -1,0 +1,155 @@
+/* Colorpicker: spectrum custom */
+/* Scaffolding */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sp-replacer {
+  position: relative;
+  height: 48px;
+  padding: 6px 28px 6px 6px;
+  border-color: #bdc3c7;
+  background-color: #fafafb;
+  color: #2c3e50;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
+.sp-replacer.sp-active {
+  border-color: #f1c40f;
+  background-color: #fff;
+  color: #2c3e50;
+  z-index: 1;
+}
+.sp-replacer:hover {
+  border-color: #869198;
+  color: #2c3e50;
+}
+.sp-replacer.sp-disabled {
+  border-color: #bdc3c7;
+  color: #507192;
+}
+.sp-preview {
+  width: 34px;
+  height: 34px;
+  border-width: 0;
+  margin-right: 0;
+}
+.sp-dd {
+  padding: 0;
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  margin-top: -8px;
+  width: 16px;
+  text-align: center;
+}
+.sp-container {
+  border-color: #bdc3c7;
+  background-color: #fff;
+}
+.sp-container button {
+  background-image: none;
+  background-color: #fafafb;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  font-size: 12px;
+  border-color: #bdc3c7;
+}
+.sp-container button:hover {
+  background-image: none;
+  background-color: #fafafb;
+  border-color: #869198;
+}
+.sp-container button:focus {
+  outline: none;
+}
+.sp-container button:active {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.sp-input-container {
+  margin-bottom: 5px;
+}
+.sp-input {
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  border: 1px solid #bdc3c7;
+}
+.sp-input:hover {
+  border-color: #869198;
+}
+.sp-input:focus {
+  outline: none;
+  border-color: #f1c40f;
+}
+.sp-cancel {
+  color: #c0392b !important;
+}
+.sp-palette-container {
+  border-right-color: #bdc3c7;
+}
+.sp-palette .sp-thumb-el {
+  border-color: #bdc3c7;
+}
+.sp-palette .sp-thumb-el.sp-thumb-active {
+  border-color: #f1c40f;
+}
+.sp-palette .sp-thumb-el:hover {
+  border-color: #f1c40f;
+}
+.colorpicker-left {
+  padding-left: 69px;
+}
+.colorpicker-left .sp-replacer {
+  left: 0;
+  -webkit-border-radius: 3px 0 0 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px 0 0 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px 0 0 3px;
+  background-clip: padding-box;
+}
+.colorpicker-right {
+  padding-right: 69px;
+}
+.colorpicker-right .sp-replacer {
+  right: 0;
+  -webkit-border-radius: 0 3px 3px 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0 3px 3px 0;
+  -moz-background-clip: padding;
+  border-radius: 0 3px 3px 0;
+  background-clip: padding-box;
+}
+.colorpicker-left,
+.colorpicker-right {
+  position: relative;
+}
+.colorpicker-left .sp-replacer,
+.colorpicker-right .sp-replacer {
+  position: absolute;
+  top: 0;
+}
+.colorpicker-left .sp-replacer:hover,
+.colorpicker-right .sp-replacer:hover {
+  z-index: 1;
+}

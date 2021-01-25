@@ -1,0 +1,301 @@
+<!DOCTYPE html><!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Upload PHP Script</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon and Apple Icons-->
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../apple-touch-icon-precomposed.png">
+  <!-- Google Fonts-->
+  <link href="http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,900italic" rel="stylesheet">
+  <!-- Vendor stylesheets-->
+  <link rel="stylesheet" href="../styles/vendor/normalize.css">
+  <link rel="stylesheet" href="../styles/vendor/grid.css">
+  <link rel="stylesheet" href="../styles/icomoon.css">
+  <link rel="stylesheet" href="../styles/vendor/spectrum.css">
+  <link rel="stylesheet" href="../styles/vendor/spectrum-custom.css" id="spectrum-custom">
+  <link rel="stylesheet" href="../styles/vendor/raty-custom.css">
+  <link rel="stylesheet" href="../styles/vendor/animate.css">
+  <link rel="stylesheet" href="../styles/style-switcher.css">
+  <!-- Main stylesheet-->
+  <link rel="stylesheet" href="../styles/form-framework.min.css" id="form-framework">
+  <link rel="stylesheet" href="../styles/jqueryui-theme.min.css" id="jqueryui-theme">
+  <!-- build:js scripts/vendor/modernizr.js-->
+  <script src="../../bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild-->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+  <!-- CSS3 pseudo-classes and attribute selectors support in Internet Explorer 6-8--><!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/mootools/1.5.0/mootools-core-full-compat.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+  <![endif]-->
+</head>
+<body class="example">
+  <div id="preloader" class="preloader">
+    <div id="status" class="status"></div>
+  </div>
+  <div class="style-switcher ff-rounded-etr">
+    <button type="button" id="switcher-toggle" class="switcher-toggle ff-rounded-r"><span class="icon-gear"></span></button>
+    <h3>Change styles</h3>
+    <h5>Skin</h5>
+    <ul>
+      <li><a id="carrot" href="#" title="Carrot" data-tooltip="Carrot" class="carrot skin"><span class="sr-only">Carrot</span></a></li>
+      <li><a id="greensea" href="#" title="Greensea" class="greensea skin"><span class="sr-only">Greensea</span></a></li>
+      <li><a id="pumpkin" href="#" title="Pumpkin" class="pumpkin skin"><span class="sr-only">Pumpkin</span></a></li>
+      <li><a id="sunflower" href="#" title="Sunflower" class="sunflower skin"><span class="sr-only">Sunflower</span></a></li>
+      <li><a id="turquoise" href="#" title="Turquoise" class="turquoise skin"><span class="sr-only">Turquoise</span></a></li>
+    </ul>
+    <h5>Body background</h5>
+    <ul>
+      <li><a id="food" href="#" title="Food" class="food body-bg"><span class="sr-only">Food</span></a></li>
+      <li><a id="black-linen-v2" href="#" title="Black linen v2" class="black-linen-v2 body-bg"><span class="sr-only">Black linen v2</span></a></li>
+      <li><a id="low-contrast-linen" href="#" title="Low contrast linen" class="low-contrast-linen body-bg"><span class="sr-only">Low contrast linen</span></a></li>
+      <li><a id="purty-wood" href="#" title="Purty wood" class="purty-wood body-bg"><span class="sr-only">Purty wood</span></a></li>
+      <li><a id="shattered" href="#" title="Shattered" class="shattered body-bg"><span class="sr-only">Shattered</span></a></li>
+    </ul>
+    <div class="text-right">
+      <button type="button" id="reset-style-switcher" class="reset-style-switcher ff-rounded">Reset</button>
+    </div>
+  </div>
+  <div class="form-container codecanyon-form">
+    <form action="" method="post" enctype="multipart/form-data" id="codecanyon-form" class="rcw-form container-fluid">
+      <header>
+        <h3 class="form-main-heading">Upload PHP Script</h3>
+      </header>
+      <fieldset class="row">
+        <div class="col-md-12">
+          <legend><span>Name &amp; Description</span></legend>
+        </div>
+        <div class="form-group col-md-12 has-icon-left">
+          <label for="name" class="sr-only">Name</label>
+          <input type="text" name="name" id="name" placeholder="Name *" class="form-control"><span class="icon-suitcase2 icon-left"></span>
+          <div class="help-block">Maximum 50 characters. Follow our <a href="#0" title="Item Title Naming Conventions" target="_blank">Item Title Naming Conventions</a>.</div>
+        </div>
+        <div class="form-group col-md-12 has-icon-left">
+          <label for="description" class="sr-only">description</label>
+          <textarea name="description" cols="30" rows="4" id="description" placeholder="Description *" class="form-control"></textarea><span class="icon-pen2 icon-left"></span><span class="help-block">This field is used for search, so please be descriptive!</span><span class="help-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, sapiente consectetur!</span>
+        </div>
+      </fieldset>
+      <fieldset class="row">
+        <div class="col-md-12">
+          <legend><span>Files</span></legend>
+        </div>
+        <div class="form-group col-md-12">
+          <label for="thumbnail" class="sr-only">Thumbnail</label>
+          <div>
+            <input type="file" name="thumbnail" id="thumbnail">
+          </div><span class="help-block">JPEG or PNG 80x80px thumbnail</span>
+        </div>
+        <div class="form-group col-md-12">
+          <label for="inline-preview-image" class="sr-only">Inline preview image</label>
+          <div>
+            <input type="file" name="inline_preview_image" id="inline-preview-image">
+          </div><span class="help-block">590x300 JPEG</span>
+        </div>
+        <div class="form-group col-md-12">
+          <label for="main-files" class="sr-only">Main files</label>
+          <div>
+            <input type="file" name="main_files" id="main-files">
+          </div><span class="help-block">ZIP - All files for buyers, not including preview images</span>
+        </div>
+        <div class="form-group col-md-12">
+          <label for="preview-screenshots" class="sr-only">Preview screenshots</label>
+          <div>
+            <input type="file" name="preview_screenshots" id="preview-screenshots">
+          </div><span class="help-block">ZIP file of images (png/jpg) w/ optional text descriptions for display on the site</span>
+        </div>
+        <div class="form-group col-md-12">
+          <label for="optional-live-preview" class="sr-only">Optional live preview</label>
+          <div>
+            <input type="file" name="optional_live_preview" id="optional-live-preview">
+          </div><span class="help-block">ZIP file containing an index.html (case sensitive) and any supporting js scripts or images you need</span>
+        </div>
+        <div class="form-group col-md-12">
+          <label for="optional-video-preview" class="sr-only">Optional video preview</label>
+          <div>
+            <input type="file" name="optional_video_preview" id="optional-video-preview">
+          </div><span class="help-block">MP4 or FLV preview video, specify the resolution/dimensions below in Preview Resolution</span>
+        </div>
+        <div class="col-md-12">
+          <div role="alert" class="alert alert-warning has-alert-icon"><span class="alert-icon icon-info5"></span> For files over <strong>500MB</strong> we recommend <a href="#0" title="Uploading via FTP" class="alert-link">uploading via FTP</a>. The maximum file size allowed is <strong>1GB</strong>.</div>
+        </div>
+      </fieldset>
+      <fieldset class="row">
+        <div class="col-md-12">
+          <legend><span>Category &amp; attributes</span></legend>
+        </div>
+        <div class="form-group col-md-12">
+          <label for="category" class="sr-only">Service</label>
+          <select name="category" id="category" class="form-control">
+            <option value="" selected disabled>Select category</option>
+            <option value="php-scripts">- PHP Scripts</option>
+            <option value="calendars">&nbsp;&nbsp; - Calendars</option>
+            <option value="countdowns">&nbsp;&nbsp; - Countdowns</option>
+            <option value="database-abstractions">&nbsp;&nbsp; - Database abstractions</option>
+            <option value="forms">&nbsp;&nbsp; - Forms</option>
+          </select><span class="select-icon icon-arrow-down8"></span>
+        </div>
+        <div class="form-group col-md-12">
+          <div class="form-group-heading">High resolution</div>
+          <div class="radio-inline">
+            <input type="radio" name="high_resolution" value="yes" id="high-resolution-yes">
+            <label for="high-resolution-yes">Yes</label>
+          </div>
+          <div class="radio-inline">
+            <input type="radio" name="high_resolution" value="no" id="high-resolution-no" checked>
+            <label for="high-resolution-no">No</label>
+          </div>
+          <div class="radio-inline">
+            <input type="radio" name="high_resolution" value="na" id="high-resolution-na">
+            <label for="high-resolution-na">N/A</label>
+          </div>
+        </div>
+        <div class="form-group col-md-12">
+          <p class="form-group-heading">Compatible browsers</p>
+          <div class="checkbox">
+            <input type="checkbox" id="compatible-browsers-na" value="yes">
+            <label for="compatible-browsers-na">N/A</label>
+          </div>
+          <label for="compatible-browsers" class="sr-only">Compatible browsers</label>
+          <select name="compatible_browsers" id="compatible-browsers" size="5" multiple class="form-control">
+            <option value="ie6">IE6</option>
+            <option value="ie7">IE7</option>
+            <option value="ie8">IE8</option>
+            <option value="ie9">IE9</option>
+            <option value="ie10">IE10</option>
+            <option value="ie11">IE11</option>
+            <option value="firefox">Firefox</option>
+            <option value="safari">Safari</option>
+            <option value="opera">Opera</option>
+            <option value="chrome">Chrome</option>
+          </select>
+        </div>
+        <div class="form-group col-md-12">
+          <p class="form-group-heading">Files included</p>
+          <div class="checkbox">
+            <input type="checkbox" id="file-included-js">
+            <label for="file-included-js">Javascript JS</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" id="file-included-json">
+            <label for="file-included-json">Javascript JSON</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" id="file-included-html">
+            <label for="file-included-html">HTML</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" id="file-included-xml">
+            <label for="file-included-xml">XML</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" id="file-included-css">
+            <label for="file-included-css">CSS</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" id="file-included-php">
+            <label for="file-included-php">PHP</label>
+          </div>
+        </div>
+        <div class="form-group col-md-12">
+          <p class="form-group-heading">Software framework</p>
+          <div class="checkbox">
+            <input type="checkbox" id="software-framework-na" value="yes">
+            <label for="software-framework-na">N/A</label>
+          </div>
+          <label for="software-framework" class="sr-only">Software framework</label>
+          <select name="software_framework" id="software-framework" size="5" multiple class="form-control">
+            <option value="codeigniter">CodeIgniter</option>
+            <option value="kohana">Kohana</option>
+            <option value="cakephp">CakePHP</option>
+            <option value="zend">Zend</option>
+            <option value="symphony">Symphony</option>
+            <option value="yii">Yii</option>
+            <option value="laravel">Laravel</option>
+            <option value="lithium">Lithium</option>
+            <option value="solar">Solar</option>
+          </select>
+        </div>
+        <div class="form-group col-md-12">
+          <p class="form-group-heading">Software version</p>
+          <div class="checkbox">
+            <input type="checkbox" id="software-version-na" value="yes">
+            <label for="software-version-na">N/A</label>
+          </div>
+          <label for="software-version" class="sr-only">Software version</label>
+          <select name="software_version" id="software-version" size="5" multiple class="form-control">
+            <option value="php4.x">PHP 4.x</option>
+            <option value="php5.x">PHP 5.x</option>
+            <option value="php5.0-5.2">PHP 5.0 - 5.2</option>
+            <option value="php5.3">PHP 5.3</option>
+            <option value="php5.4">PHP 5.4</option>
+            <option value="php5.5">PHP 5.5</option>
+            <option value="mysql4.x">MySQL 4.x</option>
+            <option value="mysql5.x">MySQL 5.x</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group col-md-12">
+          <label for="demo-url" class="sr-only">Name</label>
+          <input type="url" name="demo_url" id="demo-url" placeholder="Demo URL" class="form-control"><span class="help-block">Link to a live preview on your own hosting (i.e. http://my-site.com/demo/).</span>
+        </div>
+        <div class="form-group col-md-12">
+          <label for="video-preview-resolution" class="sr-only">Name</label>
+          <input type="url" name="video_preview_resolution" id="video-preview-resolution" placeholder="Video preview resolution" class="form-control"><span class="help-block">Preview Resolution in Pixels. E.g. 300x600, 50x50.</span>
+        </div>
+        <div class="col-md-12">
+          <div role="alert" class="alert alert-warning has-alert-icon"><span class="alert-icon icon-info5"></span> Some of our fields allow you to select multiple values. Please use the CTRL key (PC) or COMMAND key (Mac) to select multiple items.</div>
+        </div>
+      </fieldset>
+      <fieldset class="row">
+        <div class="col-md-12">
+          <legend><span>Tags</span></legend>
+        </div>
+        <div class="form-group col-md-12">
+          <label for="tags" class="sr-only">Tags</label>
+          <textarea name="tags" cols="30" rows="4" id="tags" placeholder="Tags" class="form-control"></textarea><span class="help-block">Maximum of 15 keywords covering features, options and styling. Keywords should all be in lowercase and separated by commas. e.g. slider, gallery, newsletter, wordpress menu</span>
+        </div>
+      </fieldset>
+      <fieldset class="row">
+        <div class="col-md-12">
+          <legend><span>Message to the reviewer</span></legend>
+        </div>
+        <div class="form-group col-md-12">
+          <label for="comments" class="sr-only">Comments</label>
+          <textarea name="comments" cols="30" rows="4" id="comments" placeholder="Comments" class="form-control"></textarea>
+        </div>
+        <div class="form-group col-md-12">
+          <div class="checkbox-inline">
+            <input type="checkbox" id="license" value="yes">
+            <label for="license">Any images, sounds, video, code, flash, or other assets that are not my own work, have been appropriately licensed for use in the file preview or main download. Other than these items, this work is entirely my own and I have full rights to sell it on CodeCanyon.</label>
+          </div>
+        </div>
+      </fieldset>
+      <footer class="ff-rounded-b">
+        <input type="submit" name="submit" value="Upload" style="margin-right: 10px;" class="btn btn-primary">
+        <button type="reset" class="btn btn-default">Reset</button>
+      </footer>
+    </form>
+  </div>
+  <script src="../scripts/plugins/jquery.js"></script>
+  <script src="../scripts/plugins/jquery.easing.1.3.js"></script>
+  <script src="../scripts/plugins/jquery-ui.js"></script>
+  <script src="../scripts/plugins/jquery-ui-timepicker-addon.js"></script>
+  <script src="../scripts/plugins/jquery.mtz.monthpicker.js"></script>
+  <script src="../scripts/plugins/jquery-ui-sliderAccess.js"></script>
+  <script src="../scripts/plugins/jquery.maskedinput.js"></script>
+  <script src="../scripts/plugins/spectrum.js"></script>
+  <script src="../scripts/plugins/jquery.raty.js"></script>
+  <script src="../scripts/plugins/jquery.nicefileinput.min.js"></script>
+  <script src="../scripts/plugins/placeholders.min.js"></script>
+  <script src="../scripts/plugins/jquery.validate.js"></script>
+  <script src="../scripts/plugins/additional-methods.js"></script>
+  <script src="../scripts/plugins/jquery.form.js"></script>
+  <script src="../scripts/style-switcher.js"></script>
+  <script src="../scripts/preloader.js"></script>
+  <script src="../scripts/codecanyon.js"></script>
+</body></html>

@@ -1,0 +1,138 @@
+/* Helper classes */
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+// Alignment
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+// Transformation
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-captitalize {
+  text-transform: capitalize;
+}
+
+// Rounded corners
+
+.ff-rounded {
+  .border-radius(@ff-border-radius);
+}
+
+.ff-rounded-t {
+  .border-radius(@ff-border-radius @ff-border-radius 0 0);
+}
+
+.ff-rounded-b {
+  .border-radius(0 0 @ff-border-radius @ff-border-radius);
+}
+
+.ff-rounded-r {
+  .border-radius(0 @ff-border-radius @ff-border-radius 0);
+}
+
+.ff-rounded-l {
+  .border-radius(@ff-border-radius 0 0 @ff-border-radius);
+}
+
+.ff-rounded-tl-br {
+  .border-radius(@ff-border-radius 0 @ff-border-radius 0);
+}
+
+.ff-rounded-tr-bl {
+  .border-radius(0 @ff-border-radius 0 @ff-border-radius);
+}
+
+.ff-rounded-tl {
+  .border-radius(@ff-border-radius 0 0 0);
+}
+
+.ff-rounded-tr {
+  .border-radius(0 @ff-border-radius 0 0);
+}
+
+.ff-rounded-br {
+  .border-radius(0 0 @ff-border-radius 0);
+}
+
+.ff-rounded-bl{
+  .border-radius(0 0 0 @ff-border-radius);
+}
+
+.ff-rounded-etl {
+  .border-radius(0 @ff-border-radius @ff-border-radius @ff-border-radius);
+}
+
+.ff-rounded-etr {
+  .border-radius(@ff-border-radius 0 @ff-border-radius @ff-border-radius);
+}
+
+.ff-rounded-ebr {
+  .border-radius(@ff-border-radius @ff-border-radius 0 @ff-border-radius);
+}
+
+.ff-rounded-ebl {
+  .border-radius(@ff-border-radius @ff-border-radius @ff-border-radius 0);
+}
+
+// Text color variations
+.text-success {
+  color: @ff-success;
+}
+
+.text-danger {
+  color: @ff-danger;
+}
+
+.text-warning {
+  color: @ff-warning;
+}
+
+.text-info {
+  color: @ff-info;
+}
+
+// Margins
+.lh-margin-tb {
+  margin-top: @ff-line-height-computed;
+  margin-bottom: @ff-line-height-computed;
+}
+
+.lh-margin-t {
+  margin-top: @ff-line-height-computed;
+}
+
+.lh-margin-b {
+  margin-bottom: @ff-line-height-computed;
+}

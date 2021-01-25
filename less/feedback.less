@@ -1,0 +1,242 @@
+/* Form control feedback states */
+
+.rcw-form {
+  .has-feedback {
+    .form-control {
+      padding-right: @ff-form-control-height-base;
+    }
+    label.sr-only ~ .form-control-feedback,
+    .input-group ~ .form-control-feedback {
+      top: 0;
+    }
+  }
+  .form-control-feedback {
+    position: absolute;
+    top: (@ff-line-height-computed + @ff-label-margin-bottom);
+    right: (@grid-gutter-width / 2);
+    z-index: 2;
+    display: block;
+    width: @ff-form-control-height-base;
+    height: @ff-form-control-height-base;
+    line-height: @ff-form-control-height-base;
+    text-align: center;
+  }
+  // Colorpicker right form-control-feedback position
+  .colorpicker-right ~ .form-control-feedback {
+    right: (@grid-gutter-width / 2) + (@ff-sp-replacer-padding-horizontal * 3 + @ff-sp-dd-width + @ff-sp-preview-width + 2);
+  }
+  .has-success {
+    .form-control-validation(@ff-state-success-text; @ff-state-success-border; @ff-state-success-bg);
+  }
+  .has-warning {
+    .form-control-validation(@ff-state-warning-text; @ff-state-warning-border; @ff-state-warning-bg);
+  }
+  .has-error {
+    .form-control-validation(@ff-state-error-text; @ff-state-error-border; @ff-state-error-bg);
+  }
+}
+
+// Feedback states for checkboxes, radio buttons, icons on inputs
+
+.rcw-form .form-group {
+  &.has-error {
+    // Input icons
+    .icon-left,
+    .icon-right {
+      color: @ff-state-error-text;
+    }
+
+    // Radio buttons
+    .radio,
+    .radio-inline {
+      input[type="radio"] + label {
+        &:before {
+          border-color: @ff-state-error-border;
+          background-color: @ff-state-error-bg;
+        }
+        &:after {
+          background-color: @ff-state-error-border;
+        }
+      }
+    }
+
+    // Checkboxes
+    .checkbox,
+    .checkbox-inline {
+      input[type="checkbox"] + label {
+        &:before {
+          border-color: @ff-state-error-border;
+          background-color: @ff-state-error-bg;
+          color: @ff-state-error-text;
+        }
+      }
+      &.switch {
+        input[type="checkbox"] + label {
+          &:after {
+            background-color: @ff-state-error-border;
+          }
+        }
+      }
+      &.switch-with-text {
+        input[type="checkbox"] + label {
+          &:after {
+            background-color: @ff-state-error-border;
+          }
+        }
+      }
+    }
+
+    // Select icon
+    .form-control:focus {
+      & + .select-icon {
+        background-color: #fff;
+      }
+    }
+
+    .select-icon {
+      border-color: @ff-state-error-border;
+      color: @ff-state-error-text;
+      background-color: @ff-state-error-bg;
+    }
+
+    // File input
+    .NFI-filename {
+      background-color: @ff-state-error-bg;
+      border-color: @ff-state-error-border;
+    }
+  }
+
+  &.has-warning {
+    // Input icons
+    .icon-left,
+    .icon-right {
+      color: @ff-state-warning-text;
+    }
+
+    // Radio buttons
+    .radio,
+    .radio-inline {
+      input[type="radio"] + label {
+        &:before {
+          border-color: @ff-state-warning-border;
+          background-color: @ff-state-warning-bg;
+        }
+        &:after {
+          background-color: @ff-state-warning-border;
+        }
+      }
+    }
+
+    // Checkboxes
+    .checkbox,
+    .checkbox-inline {
+      input[type="checkbox"] + label {
+        &:before {
+          border-color: @ff-state-warning-border;
+          background-color: @ff-state-warning-bg;
+          color: @ff-state-warning-text;
+        }
+      }
+      &.switch {
+        input[type="checkbox"] + label {
+          &:after {
+            background-color: @ff-state-warning-border;
+          }
+        }
+      }
+      &.switch-with-text {
+        input[type="checkbox"] + label {
+          &:after {
+            background-color: @ff-state-warning-border;
+          }
+        }
+      }
+    }
+
+    // Select icon
+    .form-control:focus {
+      & + .select-icon {
+        background-color: #fff;
+      }
+    }
+
+    .select-icon {
+      border-color: @ff-state-warning-border;
+      color: @ff-state-warning-text;
+      background-color: @ff-state-warning-bg;
+    }
+
+    // File input
+    .NFI-filename {
+      background-color: @ff-state-warning-bg;
+      border-color: @ff-state-warning-border;
+    }
+  }
+
+  &.has-success {
+    // Input icons
+    .icon-left,
+    .icon-right {
+      color: @ff-state-success-text;
+    }
+
+    // Radio buttons
+    .radio,
+    .radio-inline {
+      input[type="radio"] + label {
+        &:before {
+          border-color: @ff-state-success-border;
+          background-color: @ff-state-success-bg;
+        }
+        &:after {
+          background-color: @ff-state-success-border;
+        }
+      }
+    }
+
+    // Checkboxes
+    .checkbox,
+    .checkbox-inline {
+      input[type="checkbox"] + label {
+        &:before {
+          border-color: @ff-state-success-border;
+          background-color: @ff-state-success-bg;
+          color: @ff-state-success-text;
+        }
+      }
+      &.switch {
+        input[type="checkbox"] + label {
+          &:after {
+            background-color: @ff-state-success-border;
+          }
+        }
+      }
+      &.switch-with-text {
+        input[type="checkbox"] + label {
+          &:after {
+            background-color: @ff-state-success-border;
+          }
+        }
+      }
+    }
+
+    // Select icon
+    .form-control:focus {
+      & + .select-icon {
+        background-color: #fff;
+      }
+    }
+
+    .select-icon {
+      border-color: @ff-state-success-border;
+      color: @ff-state-success-text;
+      background-color: @ff-state-success-bg;
+    }
+
+    // File input
+    .NFI-filename {
+      background-color: @ff-state-success-bg;
+      border-color: @ff-state-success-border;
+    }
+  }
+}

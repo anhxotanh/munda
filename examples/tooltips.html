@@ -1,0 +1,142 @@
+<!DOCTYPE html><!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Tooltips</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon and Apple Icons-->
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../apple-touch-icon-precomposed.png">
+  <!-- Google Fonts-->
+  <link href="http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,900italic" rel="stylesheet">
+  <!-- Vendor stylesheets-->
+  <link rel="stylesheet" href="../styles/vendor/normalize.css">
+  <link rel="stylesheet" href="../styles/vendor/grid.css">
+  <link rel="stylesheet" href="../styles/icomoon.css">
+  <link rel="stylesheet" href="../styles/vendor/spectrum.css">
+  <link rel="stylesheet" href="../styles/vendor/spectrum-custom.css" id="spectrum-custom">
+  <link rel="stylesheet" href="../styles/vendor/raty-custom.css">
+  <link rel="stylesheet" href="../styles/vendor/animate.css">
+  <link rel="stylesheet" href="../styles/style-switcher.css">
+  <!-- Main stylesheet-->
+  <link rel="stylesheet" href="../styles/form-framework.min.css" id="form-framework">
+  <link rel="stylesheet" href="../styles/jqueryui-theme.min.css" id="jqueryui-theme">
+  <!-- build:js scripts/vendor/modernizr.js-->
+  <script src="../../bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild-->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+  <!-- CSS3 pseudo-classes and attribute selectors support in Internet Explorer 6-8--><!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/mootools/1.5.0/mootools-core-full-compat.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+  <![endif]-->
+</head>
+<body class="example">
+  <div id="preloader" class="preloader">
+    <div id="status" class="status"></div>
+  </div>
+  <div class="style-switcher ff-rounded-etr">
+    <button type="button" id="switcher-toggle" class="switcher-toggle ff-rounded-r"><span class="icon-gear"></span></button>
+    <h3>Change styles</h3>
+    <h5>Skin</h5>
+    <ul>
+      <li><a id="carrot" href="#" title="Carrot" data-tooltip="Carrot" class="carrot skin"><span class="sr-only">Carrot</span></a></li>
+      <li><a id="greensea" href="#" title="Greensea" class="greensea skin"><span class="sr-only">Greensea</span></a></li>
+      <li><a id="pumpkin" href="#" title="Pumpkin" class="pumpkin skin"><span class="sr-only">Pumpkin</span></a></li>
+      <li><a id="sunflower" href="#" title="Sunflower" class="sunflower skin"><span class="sr-only">Sunflower</span></a></li>
+      <li><a id="turquoise" href="#" title="Turquoise" class="turquoise skin"><span class="sr-only">Turquoise</span></a></li>
+    </ul>
+    <h5>Body background</h5>
+    <ul>
+      <li><a id="food" href="#" title="Food" class="food body-bg"><span class="sr-only">Food</span></a></li>
+      <li><a id="black-linen-v2" href="#" title="Black linen v2" class="black-linen-v2 body-bg"><span class="sr-only">Black linen v2</span></a></li>
+      <li><a id="low-contrast-linen" href="#" title="Low contrast linen" class="low-contrast-linen body-bg"><span class="sr-only">Low contrast linen</span></a></li>
+      <li><a id="purty-wood" href="#" title="Purty wood" class="purty-wood body-bg"><span class="sr-only">Purty wood</span></a></li>
+      <li><a id="shattered" href="#" title="Shattered" class="shattered body-bg"><span class="sr-only">Shattered</span></a></li>
+    </ul>
+    <div class="text-right">
+      <button type="button" id="reset-style-switcher" class="reset-style-switcher ff-rounded">Reset</button>
+    </div>
+  </div>
+  <div class="form-container tooltips-form animated fadeInDown">
+    <form action="" method="post" enctype="multipart/form-data" id="tooltips-form" class="rcw-form container-fluid">
+      <header>
+        <h3 class="form-main-heading">Tooltips</h3>
+      </header>
+      <fieldset class="row">
+        <div class="col-md-12">
+          <legend><span>Tooltip positioning</span></legend>
+        </div>
+        <div class="form-group col-md-6 has-icon-left">
+          <label for="tooltip-left-center" class="sr-only">Tooltip left center</label>
+          <input type="text" name="tooltip-left-center" id="tooltip-left-center" placeholder="Tooltip left center" data-tooltip="Tooltip left center" class="form-control ff-rounded"><span class="icon-user14 icon-left"></span>
+        </div>
+        <div class="form-group col-md-6 has-icon-left">
+          <label for="tooltip-left-top" class="sr-only">Tooltip left top</label>
+          <input type="email" name="tooltip-left-top" id="tooltip-left-top" placeholder="Tooltip left top" data-tooltip="Tooltip left top" class="form-control ff-rounded"><span class="icon-envelope7 icon-left"></span>
+        </div>
+        <div class="form-group col-md-6 has-icon-left">
+          <label for="tooltip-left-bottom" class="sr-only">Tooltip left bottom</label>
+          <input type="text" name="tooltip-left-bottom" id="tooltip-left-bottom" placeholder="Tooltip left bottom" data-tooltip="Tooltip left bottom" class="form-control ff-rounded"><span class="icon-locked2 icon-left"></span>
+        </div>
+        <div class="form-group col-md-6 has-icon-left">
+          <label for="tooltip-right-center" class="sr-only">Tooltip right center</label>
+          <input type="text" name="tooltip-right-center" id="tooltip-right-center" placeholder="Tooltip right center" data-tooltip="Tooltip right center" class="form-control ff-rounded"><span class="icon-cloud8 icon-left"></span>
+        </div>
+        <div style="margin-bottom: 0;" class="form-group col-md-6 has-icon-left">
+          <label for="tooltip-right-bottom" class="sr-only">Tooltip right bottom</label>
+          <input type="text" name="tooltip-right-bottom" id="tooltip-right-bottom" placeholder="Tooltip right bottom" data-tooltip="Tooltip right bottom" class="form-control ff-rounded"><span class="icon-comment3 icon-left"></span>
+        </div>
+        <div class="form-group col-md-6 has-icon-left">
+          <label for="tooltip-right-top" class="sr-only">Tooltip right top</label>
+          <input type="text" name="tooltip-right-top" id="tooltip-right-top" placeholder="Tooltip right top" data-tooltip="Tooltip right top" class="form-control ff-rounded"><span class="icon-briefcase2 icon-left"></span>
+        </div>
+      </fieldset>
+      <fieldset class="row">
+        <div class="col-md-12">
+          <legend><span>Tooltips on icons</span></legend>
+        </div>
+        <div class="form-group col-md-6 has-icons">
+          <label for="tooltip-icon-1" class="sr-only">Tooltip on icon</label>
+          <input type="email" name="tooltip-icon-1" id="tooltip-icon-1" placeholder="Tooltip on icon" class="form-control ff-rounded"><span class="icon-envelope7 icon-left"></span><span id="tooltip-i1" title="Great info here" class="icon-question4 icon-right tooltip-icon"></span>
+        </div>
+        <div class="form-group col-md-6 has-icons">
+          <label for="tooltip-icon-2" class="sr-only">Tooltip on icon</label>
+          <input type="text" name="tooltip-icon-2" id="tooltip-icon-2" placeholder="Tooltip on icon" class="form-control ff-rounded"><span class="icon-twitter42 icon-left"></span><span id="tooltip-i2" title="Another great info tooltip" class="icon-question4 icon-right tooltip-icon"></span>
+        </div>
+        <div style="margin-bottom: 0;" class="form-group col-md-6 has-icons">
+          <label for="tooltip-icon-3" class="sr-only">Tooltip on icon</label>
+          <input type="email" name="tooltip-icon-3" id="tooltip-icon-3" placeholder="Tooltip on icon" class="form-control ff-rounded"><span class="icon-envelope7 icon-left"></span><span id="tooltip-i3" title="Tooltips are very useful" class="icon-question4 icon-right tooltip-icon"></span>
+        </div>
+        <div class="form-group col-md-6 has-icons">
+          <label for="tooltip-icon-4" class="sr-only">Tooltip on icon</label>
+          <input type="text" name="tooltip-icon-4" id="tooltip-icon-4" placeholder="Tooltip on icon" class="form-control ff-rounded"><span class="icon-twitter42 icon-left"></span><span id="tooltip-i4" title="Helpful info goes here" class="icon-question4 icon-right tooltip-icon"></span>
+        </div>
+      </fieldset>
+      <footer class="ff-rounded-b">
+        <input type="submit" name="submit" value="Submit" style="margin-right: 10px;" class="btn btn-primary ff-rounded">
+        <button type="reset" class="btn btn-default ff-rounded btn-has-icon-left"><span class="btn-icon-left icon-cancel5 ff-rounded-l"></span>Reset</button>
+      </footer>
+    </form>
+  </div>
+  <script src="../scripts/plugins/jquery.js"></script>
+  <script src="../scripts/plugins/jquery.easing.1.3.js"></script>
+  <script src="../scripts/plugins/jquery-ui.js"></script>
+  <script src="../scripts/plugins/jquery-ui-timepicker-addon.js"></script>
+  <script src="../scripts/plugins/jquery.mtz.monthpicker.js"></script>
+  <script src="../scripts/plugins/jquery-ui-sliderAccess.js"></script>
+  <script src="../scripts/plugins/jquery.maskedinput.js"></script>
+  <script src="../scripts/plugins/spectrum.js"></script>
+  <script src="../scripts/plugins/jquery.raty.js"></script>
+  <script src="../scripts/plugins/jquery.nicefileinput.min.js"></script>
+  <script src="../scripts/plugins/placeholders.min.js"></script>
+  <script src="../scripts/plugins/jquery.validate.js"></script>
+  <script src="../scripts/plugins/additional-methods.js"></script>
+  <script src="../scripts/plugins/jquery.form.js"></script>
+  <script src="../scripts/style-switcher.js"></script>
+  <script src="../scripts/preloader.js"></script>
+  <script src="../scripts/tooltips.js"></script>
+</body></html>

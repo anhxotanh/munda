@@ -1,0 +1,149 @@
+//
+// jQuery UI elements
+// --------------------------------------------------
+
+// JQUERY UI ELEMENTS
+
+// Component containers
+@ff-ui-widget-content-border-size:          1px;
+@ff-ui-widget-content-border-style:         solid;
+@ff-ui-widget-content-border-color:         @ff-form-control-border-color;
+
+@ff-ui-widget-content-bg:                   #fff;
+@ff-ui-widget-content-color:                @ff-text-color;
+
+@ff-ui-widget-header-border-size:           1px;
+@ff-ui-widget-header-border-style:          solid;
+@ff-ui-widget-header-border-color:          @ff-form-control-border-color;
+@ff-ui-widget-header-font-weight:           @ff-font-weight-bold;
+
+@ff-ui-widget-header-bg:                    @ff-form-control-bg;
+@ff-ui-widget-header-color:                 @ff-text-color;
+
+// Interaction states
+
+// Default state
+@ff-ui-state-default-border-size:           1px;
+@ff-ui-state-default-border-style:          solid;
+@ff-ui-state-default-border-color:          @ff-form-control-border-color;
+@ff-ui-state-default-font-weight:           @ff-font-weight;
+
+@ff-ui-state-default-bg:                    @ff-form-control-bg;
+@ff-ui-state-default-color:                 @ff-text-color;
+
+@ff-ui-state-default-link-color:            @ff-text-color;
+
+// Hover state
+@ff-ui-state-hover-border-size:             @ff-ui-state-default-border-size;
+@ff-ui-state-hover-border-style:            @ff-ui-state-default-border-style;
+@ff-ui-state-hover-border-color:            @ff-form-control-border-hover;
+@ff-ui-state-hover-font-weight:             @ff-font-weight;
+
+@ff-ui-state-hover-bg:                      darken(@ff-form-control-bg, 10%);
+@ff-ui-state-hover-color:                   @ff-text-color;
+
+@ff-ui-state-hover-link-color:              darken(@ff-ui-state-default-link-color, 20%);
+
+// Focus state
+@ff-ui-state-focus-border-size:             @ff-ui-state-hover-border-size;
+@ff-ui-state-focus-border-style:            @ff-ui-state-hover-border-style;
+@ff-ui-state-focus-border-color:            @ff-ui-state-hover-border-color;
+@ff-ui-state-focus-font-weight:             @ff-ui-state-hover-font-weight;
+
+@ff-ui-state-focus-bg:                      @ff-ui-state-hover-bg;
+@ff-ui-state-focus-color:                   @ff-ui-state-hover-color;
+
+@ff-ui-state-focus-link-color:              @ff-ui-state-hover-link-color;
+
+// Active state
+@ff-ui-state-active-border-size:            @ff-ui-state-default-border-size;
+@ff-ui-state-active-border-style:           @ff-ui-state-default-border-style;
+@ff-ui-state-active-border-color:           darken(@ff-primary, 10%);
+@ff-ui-state-active-font-weight:            @ff-font-weight;
+
+@ff-ui-state-active-bg:                     @ff-primary;
+@ff-ui-state-active-color:                  #fff;
+
+@ff-ui-state-active-link-color:             #fff;
+
+// Interaction cues
+
+// Highlight state
+@ff-ui-state-highlight-border-size:         @ff-ui-state-default-border-size;
+@ff-ui-state-highlight-border-style:        @ff-ui-state-default-border-style;
+@ff-ui-state-highlight-border-color:        @ff-info;
+@ff-ui-state-highlight-font-weight:         @ff-font-weight;
+
+@ff-ui-state-highlight-bg:                  @ff-info;
+@ff-ui-state-highlight-color:               #fff;
+
+@ff-ui-state-highlight-link-color:          #fff;
+
+// Error state
+@ff-ui-state-error-border-size:             @ff-ui-state-default-border-size;
+@ff-ui-state-error-border-style:            @ff-ui-state-default-border-style;
+@ff-ui-state-error-border-color:            @ff-danger;
+@ff-ui-state-error-font-weight:             @ff-font-weight;
+
+@ff-ui-state-error-bg:                      @ff-danger;
+@ff-ui-state-error-color:                   #fff;
+
+@ff-ui-state-error-link-color:              #fff;
+
+// Error state text
+@ff-ui-state-error-text-color:              @ff-danger;
+
+// Priority primary
+@ff-ui-priority-primary-font-weight:        @ff-font-weight;
+
+// Priority secondary
+@ff-ui-priority-secondary-opacity:          1;
+@ff-ui-priority-secondary-font-weight:      @ff-font-weight;
+
+// Disabled state
+@ff-ui-state-disabled-opacity:              0.6;
+
+// Misc visuals
+@ff-ui-border-radius:                       @ff-border-radius;
+
+@ff-ui-widget-overlay-bg:                   #000;
+@ff-ui-widget-overlay-opacity:              0.9;
+
+@ff-ui-widget-shadow-margin:                -5px 0 0 -5px;
+@ff-ui-widget-shadow-padding:               5px;
+@ff-ui-widget-shadow-bg:                    #000000;
+@ff-ui-widget-shadow-opacity:               0.2;
+@ff-ui-widget-shadow-border-radius:         5px;
+
+// Jqueryui icons
+@ff-ui-icon-width:                          16px;
+@ff-ui-icon-height:                         @ff-ui-icon-width;
+
+// Datepicker
+@ff-ui-datepicker-th-font-weight:           @ff-font-weight-bold;
+@ff-ui-datepicker-title-font-weight:        @ff-font-weight-bold;
+
+// Dialog
+@ff-ui-dialog-title-font-weight:            @ff-font-weight-bold;
+@ff-ui-dialog-titlebar-bg:                  @ff-primary;
+@ff-ui-dialog-titlebar-close-color:         #fff;
+
+// Progressbar
+@ff-ui-progressbar-height:                  @ff-line-height-computed;
+@ff-ui-progressbar-bg:                      lighten(#bdc3c7, 10%);
+@ff-ui-progressbar-label-font-size:         12px;
+
+// Slider
+@ff-ui-slider-bg:                           lighten(#bdc3c7, 10%);
+@ff-ui-slider-handle-width:                 (@ff-line-height-computed * 0.75);
+@ff-ui-slider-handle-height:                @ff-ui-slider-handle-width;
+@ff-ui-slider-horizontal-height:            ceil(@ff-line-height-computed / 4);
+
+// Tooltips
+@ff-ui-tooltip-bg:                          darken(@ff-text-color, 10%);
+@ff-ui-tooltip-color:                       #fff;
+@ff-ui-tooltip-font-size:                   @ff-font-size-base;
+@ff-ui-tooltip-padding-vertical:            (@ff-line-height-computed / 4);
+@ff-ui-tooltip-padding-horizontal:          (@ff-line-height-computed / 2);
+
+@ff-ui-tooltip-arrow-width:                 12px;

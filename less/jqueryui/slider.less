@@ -1,0 +1,109 @@
+//
+// Slider
+// --------------------------------------------------
+
+.ui-slider {
+  position: relative;
+  text-align: left;
+
+  .ui-slider-handle {
+    position: absolute;
+    z-index: 1;
+    width: @ff-ui-slider-handle-width;
+    height: @ff-ui-slider-handle-height;
+    cursor: default;
+    -ms-touch-action: none;
+    touch-action: none;
+  }
+
+  .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    font-size: ceil((@ff-font-size-base * 0.75));
+    display: block;
+    border: 0;
+    background-position: 0 0;
+  }
+
+  /* support: IE8 - See #6727 */
+  &.ui-state-disabled .ui-slider-handle,
+  &.ui-state-disabled .ui-slider-range {
+    filter: inherit;
+  }
+
+}
+
+// Slider horizontal
+.ui-slider-horizontal {
+  height: @ff-ui-slider-horizontal-height;
+
+  .ui-slider-handle {
+    top: (((@ff-ui-slider-handle-height - @ff-ui-slider-horizontal-height) / -2));
+    margin-left: (@ff-ui-slider-handle-width / -2);
+  }
+
+  .ui-slider-range {
+    top: 0;
+    height: 100%;
+  }
+
+  .ui-slider-range-min {
+    left: 0;
+  }
+
+  .ui-slider-range-max {
+    right: 0;
+  }
+}
+
+// Slider vertical
+.ui-slider-vertical {
+  width: @ff-ui-slider-horizontal-height;
+  height: 100px;
+
+  .ui-slider-handle {
+    left: (((@ff-ui-slider-handle-height - @ff-ui-slider-horizontal-height) / -2));
+    margin-left: 0;
+    margin-bottom: (@ff-ui-slider-handle-width / -2);
+  }
+
+  .ui-slider-range {
+    left: 0;
+    width: 100%;
+  }
+
+  .ui-slider-range-min {
+    bottom: 0;
+  }
+
+  .ui-slider-range-max {
+    top: 0;
+  }
+}
+
+//
+// Styles added by me
+// --------------------------------------------------
+
+.ui-slider {
+  &.ui-widget-content {
+    background-color: @ff-ui-slider-bg;
+    border-width: 0;
+  }
+
+  .ui-slider-handle {
+    .border-radius(50%);
+    .box-shadow(inset 0 -2px 0 0 darken(@ff-primary, 5%), 0 2px 2px 0 rgba(44, 62, 80, 0.35));
+    &.ui-state-default {
+      background-color: @ff-primary;
+    }
+    &.ui-state-active {
+      background-color: @ff-primary;
+      .box-shadow(none);
+    }
+  }
+
+  .ui-slider-range {
+    background-color: @ff-primary;
+  }
+}

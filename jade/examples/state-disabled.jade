@@ -1,0 +1,230 @@
+extends example-template.jade
+
+block title
+  title State disabled
+
+block content
+  .form-container.state-disabled-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='state-disabled-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading State disabled
+      fieldset.row(disabled)
+        .col-md-12
+          legend
+            span Inputs and textarea
+        .form-group.col-md-6.has-icons
+          label(for='name', class='sr-only') Name
+          input(type='text', name='name', id='name', class='form-control ff-rounded', placeholder='Name')
+          span.icon-user12.icon-left
+          span.icon-question4.icon-right
+        .form-group.col-md-6.has-icon-left
+          label(for='email', class='sr-only') Email
+          input(type='email', name='email', value='rcwthemes@gmail.com', id='email', class='form-control ff-rounded', placeholder='Email')
+          span.icon-email.icon-left
+        .form-group.col-md-6
+          label(for='password', class='sr-only') Password
+          input(type='password', name='password', id='password', class='form-control ff-rounded', placeholder='Password')
+        .form-group.col-md-6.has-icon-right
+          label(for='retype-password', class='sr-only') Retype password
+          input(type='password', name='retype-password', id='retype-password', class='form-control ff-rounded', placeholder='Retype password')
+          span.icon-locked5.icon-right
+        .form-group.col-md-12
+          label(for='choose-service', class='sr-only')
+          select(name='choose-service', id='choose-service', class='form-control ff-rounded')
+            option(value='', selected, disabled) Choose service
+            option(value='logo-design') Logo design
+            option(value='graphic-design') Graphic design
+            option(value='web-design') Web design
+            option(value='web-development') Web development
+          span.select-icon.icon-arrow-down8.ff-rounded-r
+        .form-group.col-md-12
+          label(for='comment', class='sr-only') Message
+          textarea(name='comment', cols='30', rows='4', id='comment', class='form-control ff-rounded', placeholder='Your message')
+        .form-group.col-md-12
+          label(for='upload-file-1', class='sr-only') Upload file
+          div
+            input(type='file', name='upload-file-1', id='upload-file-1')
+      fieldset.row
+        .col-md-12
+          legend
+            span Readonly
+        .form-group.col-md-12
+          label(for='terms-and-services') Terms and services
+          textarea(name='terms_and_services', cols='30', rows='4', id='terms-and-services', class='form-control ff-rounded', readonly )
+            | It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+            | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+      fieldset.row
+        .col-md-12
+          legend
+            span Radio buttons and checkboxes
+        .form-group.col-md-6
+          .radio
+            input(type='radio', name='fruitsb', value='bananas', id='bananas-1b', checked, disabled)
+            label(for='bananas-1b') Bananas
+          .radio
+            input(type='radio', name='fruitsb', value='apples', id='apples-1b', disabled)
+            label(for='apples-1b') Apples
+          .radio
+            input(type='radio', name='fruitsb', value='oranges', id='oranges-1b', disabled)
+            label(for='oranges-1b') Oranges
+        .form-group.col-md-6
+          .checkbox
+            input(type='checkbox', id='bananasb', checked, disabled)
+            label(for='bananasb') Bananas
+          .checkbox
+            input(type='checkbox', id='applesb', disabled)
+            label(for='applesb') Apples
+          .checkbox
+            input(type='checkbox', id='orangesb', disabled)
+            label(for='orangesb') Oranges
+      fieldset.row
+        .col-md-12
+          legend
+            span Inline radio buttons and checkboxes
+        .form-group.col-md-12
+          .radio-inline
+            input(type='radio', name='fruits-2a', value='bananas-2a', id='bananas-2a', checked, disabled)
+            label(for='bananas-2a') Bananas
+          .radio-inline
+            input(type='radio', name='fruits-2a', value='apples-2a', id='apples-2a', disabled)
+            label(for='apples-2a') Apples
+          .radio-inline
+            input(type='radio', name='fruits-2a', value='oranges-2a', id='oranges-2a', disabled)
+            label(for='oranges-2a') Oranges
+        .form-group.col-md-12
+          .checkbox-inline
+            input(type='checkbox', id='bananas-3a', checked, disabled)
+            label(for='bananas-3a') Bananas
+          .checkbox-inline
+            input(type='checkbox', id='apples-3a', disabled)
+            label(for='apples-3a') Apples
+          .checkbox-inline
+            input(type='checkbox', id='oranges-3a', disabled)
+            label(for='oranges-3a') Oranges
+      fieldset.row(disabled)
+        .col-md-12
+          legend
+            span Inline radio buttons and checkboxes
+        .form-group.col-md-12
+          .radio-inline
+            input(type='radio', name='fruits-2', value='bananas-2', id='bananas-2', checked)
+            label(for='bananas-2') Bananas
+          .radio-inline
+            input(type='radio', name='fruits-2', value='apples-2', id='apples-2')
+            label(for='apples-2') Apples
+          .radio-inline
+            input(type='radio', name='fruits-2', value='oranges-2', id='oranges-2')
+            label(for='oranges-2') Oranges
+        .form-group.col-md-12
+          .checkbox-inline
+            input(type='checkbox', id='bananas-3', checked)
+            label(for='bananas-3') Bananas
+          .checkbox-inline
+            input(type='checkbox', id='apples-3')
+            label(for='apples-3') Apples
+          .checkbox-inline
+            input(type='checkbox', id='oranges-3')
+            label(for='oranges-3') Oranges
+      fieldset.row
+        .col-md-12
+          legend
+            span Switches based on checkboxes
+        .form-group.col-md-6
+          .checkbox.switch-with-text
+            input(type='checkbox', name='bananass', value='bananas', id='switch-bananas-1s', checked, disabled)
+            label(for='switch-bananas-1s') Bananas
+          .checkbox.switch-with-text
+            input(type='checkbox', name='appless', value='apples', id='switch-apples-1s', disabled)
+            label(for='switch-apples-1s') Apples
+          .checkbox.switch-with-text
+            input(type='checkbox', name='orangess', value='oranges', id='switch-oranges-1s', disabled)
+            label(for='switch-oranges-1s') Oranges
+        .form-group.col-md-6
+          .checkbox.switch
+            input(type='checkbox', name='sw-bananass' id='sw-bananass', disabled)
+            label(for='sw-bananass') Bananas
+          .checkbox.switch
+            input(type='checkbox', name='sw-appless', id='sw-appless', checked, disabled)
+            label(for='sw-appless') Apples
+          .checkbox.switch
+            input(type='checkbox', name='sw-orangess', id='sw-orangess', disabled)
+            label(for='sw-orangess') Oranges
+      fieldset.row
+        .col-md-12
+          legend
+            span Switches inline based on checkboxes
+        .form-group.col-md-12
+          .checkbox-inline.switch-with-text
+            input(type='checkbox', name='bananas-2s', value='bananas-2', id='switch-bananas-2s', checked, disabled)
+            label(for='switch-bananas-2s') Bananas
+          .checkbox-inline.switch-with-text
+            input(type='checkbox', name='apples-2s', value='apples-2', id='switch-apples-2s', disabled)
+            label(for='switch-apples-2s') Apples
+          .checkbox-inline.switch-with-text
+            input(type='checkbox', name='oranges-2s', value='oranges-2', id='switch-oranges-2s', disabled)
+            label(for='switch-oranges-2s') Oranges
+        .form-group.col-md-12
+          .checkbox-inline.switch
+            input(type='checkbox', name='sw-bananas-3s' id='sw-bananas-3s', disabled)
+            label(for='sw-bananas-3s') Bananas
+          .checkbox-inline.switch
+            input(type='checkbox', name='sw-apples-3s' id='sw-apples-3s', checked, disabled)
+            label(for='sw-apples-3s') Apples
+          .checkbox-inline.switch
+            input(type='checkbox', name='oranges-3s' id='sw-oranges-3s', disabled)
+            label(for='sw-oranges-3s') Oranges
+      fieldset.row(disabled)
+        .col-md-12
+          legend
+            span Switches based on checkboxes
+        .form-group.col-md-6
+          .checkbox.switch-with-text
+            input(type='checkbox', name='switches-fruits', value='bananas', id='switch-bananas-1', checked)
+            label(for='switch-bananas-1') Bananas
+          .checkbox.switch-with-text
+            input(type='checkbox', name='switches-fruits', value='apples', id='switch-apples-1')
+            label(for='switch-apples-1') Apples
+          .checkbox.switch-with-text
+            input(type='checkbox', name='switches-fruits', value='oranges', id='switch-oranges-1')
+            label(for='switch-oranges-1') Oranges
+        .form-group.col-md-6
+          .checkbox.switch
+            input(type='checkbox', id='sw-bananas')
+            label(for='sw-bananas') Bananas
+          .checkbox.switch
+            input(type='checkbox', id='sw-apples')
+            label(for='sw-apples') Apples
+          .checkbox.switch
+            input(type='checkbox', id='sw-oranges', checked)
+            label(for='sw-oranges') Oranges
+      fieldset.row(disabled)
+        .col-md-12
+          legend
+            span Switches inline based on checkboxes
+        .form-group.col-md-12
+          .checkbox-inline.switch-with-text
+            input(type='checkbox', name='switches-fruits-2', value='bananas-2', id='switch-bananas-2')
+            label(for='switch-bananas-2') Bananas
+          .checkbox-inline.switch-with-text
+            input(type='checkbox', name='switches-fruits-2', value='apples-2', id='switch-apples-2', checked)
+            label(for='switch-apples-2') Apples
+          .checkbox-inline.switch-with-text
+            input(type='checkbox', name='switches-fruits-2', value='oranges-2', id='switch-oranges-2')
+            label(for='switch-oranges-2') Oranges
+        .form-group.col-md-12
+          .checkbox-inline.switch
+            input(type='checkbox', id='sw-bananas-3')
+            label(for='sw-bananas-3') Bananas
+          .checkbox-inline.switch
+            input(type='checkbox', id='sw-apples-3')
+            label(for='sw-apples-3') Apples
+          .checkbox-inline.switch
+            input(type='checkbox', id='sw-oranges-3', checked)
+            label(for='sw-oranges-3') Oranges
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Submit', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-left')
+          span.btn-icon-left.icon-cancel5.ff-rounded-l
+          | Reset
+block mainjs
+  script(src='../scripts/state-disabled.js')

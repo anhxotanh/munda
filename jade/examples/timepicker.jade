@@ -1,0 +1,109 @@
+extends example-template.jade
+
+block title
+  title Timepicker form
+
+block content
+  .form-container.timepicker-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='timepicker-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading Timepicker
+      fieldset.row
+        .col-md-12
+          legend
+            span Basic timepickers
+        .form-group.col-md-6.has-icon-right(style='margin-bottom: 0;')
+          label(for='basic-timepicker-1', class='sr-only') Pick time
+          input(type='text', name='basic-timepicker-1', id='basic-timepicker-1', class='form-control ff-rounded', placeholder='Pick time')
+          span.icon-clock2.icon-right
+        .form-group.col-md-6.has-icon-right
+          label(for='basic-timepicker-2', class='sr-only') Pick time
+          input(type='text', name='basic-timepicker-2', id='basic-timepicker-2', class='form-control ff-rounded', placeholder='Pick time')
+          span.icon-clock3.icon-right
+      fieldset.row
+        .col-md-12
+          legend
+            span Format the time
+        .form-group.col-md-12.has-icon-right
+          label(for='timepicker-format-time', class='sr-only') Pick time
+          input(type='text', name='timepicker-format-time', id='timepicker-format-time', class='form-control ff-rounded', placeholder='Pick time')
+          span.icon-clock22.icon-right
+      fieldset.row
+        .col-md-12
+          legend
+            span Using timezones
+        .form-group.col-md-6.has-icon-right
+          label(for='timepicker-timezone-1', class='sr-only') Pick time
+          input(type='text', name='timepicker-timezone-1', id='timepicker-timezone-1', class='form-control ff-rounded', placeholder='Pick time')
+          span.icon-alarm22.icon-right
+        .form-group.col-md-6.has-icon-right
+          label(for='timepicker-timezone-2', class='sr-only') Pick time
+          input(type='text', name='timepicker-timezone-2', id='timepicker-timezone-2', class='form-control ff-rounded', placeholder='Pick time')
+          span.icon-clock6.icon-right
+        .form-group.col-md-12.has-icon-right
+          label(for='timepicker-timezone-3', class='sr-only') Pick time
+          input(type='text', name='timepicker-timezone-3', id='timepicker-timezone-3', class='form-control ff-rounded', placeholder='Pick time')
+          span.icon-alarmclock.icon-right
+      fieldset.row
+        .col-md-12
+          legend
+            span Set the interval step of sliders
+        .form-group.col-md-12.has-icon-right
+          label(for='timepicker-step', class='sr-only') Pick time
+          input(type='text', name='timepicker-step', id='timepicker-step', class='form-control ff-rounded', placeholder='Pick time')
+          span.icon-clock6.icon-right
+      fieldset.row
+        .col-md-12
+          legend
+            span Add sliderAccess plugin for touch devices
+        .form-group.col-md-12.has-icon-right
+          label(for='timepicker-slideraccess', class='sr-only') Pick time
+          input(type='text', name='timepicker-slideraccess', id='timepicker-slideraccess', class='form-control ff-rounded', placeholder='Pick time')
+          span.icon-clock7.icon-right
+      fieldset.row
+        .col-md-12
+          legend
+            span Alternate fields
+        .form-group.col-md-6.has-icon-right
+          label(for='timepicker-alternate-1', class='sr-only') Pick date
+          input(type='text', name='timepicker-alternate-1', id='timepicker-alternate-1', class='form-control ff-rounded', placeholder='Pick date')
+          span.icon-calendar4.icon-right
+        .form-group.col-md-6.has-icon-right
+          label(for='timepicker-alternate-2', class='sr-only') Time
+          input(type='text', name='timepicker-alternate-2', id='timepicker-alternate-2', class='form-control ff-rounded', placeholder='Time')
+          span.icon-clock7.icon-right
+        .form-group.col-md-6.has-icon-right
+          label(for='timepicker-alternate-3', class='sr-only') Pick date
+          input(type='text', name='timepicker-alternate-3', id='timepicker-alternate-3', class='form-control ff-rounded', placeholder='Pick date')
+          span.icon-calendar7.icon-right
+        .form-group.col-md-6.has-icon-right
+          label(for='timepicker-alternate-4', class='sr-only') Date alt
+          input(type='text', name='timepicker-alternate-4', id='timepicker-alternate-4', class='form-control ff-rounded', placeholder='Date alt')
+          span.icon-calendar7.icon-right
+        .form-group.col-md-6.has-icon-right
+          label(for='timepicker-alternate-5', class='sr-only') Pick date
+          input(type='text', name='timepicker-alternate-5', id='timepicker-alternate-5', class='form-control ff-rounded', placeholder='Pick date')
+          span.icon-calendar9.icon-right
+        .form-group.col-md-6.has-icon-right
+          label(for='timepicker-alternate-6', class='sr-only') Date different format
+          input(type='text', name='timepicker-alternate-6', id='timepicker-alternate-6', class='form-control ff-rounded', placeholder='Date different format')
+          span.icon-calendar9.icon-right
+      fieldset.row
+        .col-md-12
+          legend
+            span Time restraints
+        .form-group.col-md-6.has-icon-right
+          label(for='timepicker-restrain-1', class='sr-only') Pick time
+          input(type='text', name='timepicker-restrain-1', id='timepicker-restrain-1', class='form-control ff-rounded', placeholder='Pick time')
+          span.icon-calendar4.icon-right
+        .form-group.col-md-6.has-icon-right
+          label(for='timepicker-restrain-2', class='sr-only') Pick date
+          input(type='text', name='timepicker-restrain-2', id='timepicker-restrain-2', class='form-control ff-rounded', placeholder='Pick date')
+          span.icon-calendar4.icon-right
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Submit', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-left')
+          span.btn-icon-left.icon-cancel5.ff-rounded-l
+          | Reset
+block mainjs
+  script(src='../scripts/timepicker.js')

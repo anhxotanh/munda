@@ -1,0 +1,29 @@
+/* Form horizontal */
+
+.rcw-form {
+  &.form-horizontal {
+    .radio-inline input[type="radio"] + label,
+    .checkbox-inline input[type="checkbox"] + label {
+      margin-bottom: 0;
+      margin-top: (@ff-padding-base-vertical + 3);
+    }
+
+    .radio input[type="radio"] + label,
+    .checkbox input[type="checkbox"] + label {
+      margin-bottom: 0;
+      margin-top: (@ff-padding-base-vertical + 3);
+    }
+
+    @media (min-width: @screen-sm-min) {
+      .control-label {
+        text-align: right;
+        margin-bottom: 0;
+        padding-top: (@ff-padding-base-vertical + 3);
+      }
+    }
+
+    .has-feedback .form-control-feedback {
+      top: 0;
+    }
+  }
+}

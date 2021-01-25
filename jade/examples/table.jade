@@ -1,0 +1,61 @@
+extends example-template.jade
+
+block title
+  title Table
+
+block content
+  .form-container.table-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='table-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading Table
+      fieldset.row
+        .col-md-12
+          legend
+            span Table example
+        .form-group.col-md-12
+          .table-responsive
+            table.table.table-bordered.table-hover
+              thead
+                tr
+                  th #
+                  th First name
+                  th Last name
+                  th Username
+              tbody
+                tr
+                  td.active 1
+                  td.info Mark
+                  td.danger Otto
+                  td.success @mdo
+                tr.warning
+                  td 2
+                  td Jacob
+                  td Thornton
+                  td @fat
+                tr
+                  td.danger 3
+                  td.danger Larry
+                  td.success Johnston
+                  td.success @larry_johnston
+                tr
+                  td 4
+                  td Marcus
+                  td Ottos
+                  td @mdo1
+                tr
+                  td 5
+                  td Jacobs
+                  td Thorntons
+                  td @fatu
+                tr
+                  td 6
+                  td Larrys
+                  td Johnstons
+                  td @larrys_johnstons
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Submit', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-left')
+          span.btn-icon-left.icon-cancel5.ff-rounded-l
+          | Reset
+block mainjs
+  script(src='../scripts/table.js')

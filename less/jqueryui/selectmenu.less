@@ -1,0 +1,87 @@
+//
+// Selectmenu
+// --------------------------------------------------
+
+.ui-selectmenu-menu {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+
+  .ui-menu {
+    overflow: auto;
+    // Support: IE7
+    overflow-x: hidden;
+    padding-bottom: 1px;
+
+    .ui-selectmenu-optgroup {
+      font-size: ceil(@ff-font-size-base * 0.85);
+      font-weight: 700;
+      line-height: @ff-line-height-computed;
+      padding: 0 (@ff-line-height-computed / 2);
+      margin: (@ff-line-height-computed / 2) 0 0 0;
+      height: auto;
+      border: 0;
+    }
+  }
+}
+
+.ui-selectmenu-open {
+  display: block;
+}
+
+.ui-selectmenu-button {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+
+  .ui-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .ui-selectmenu-text {
+    text-align: left;
+    padding: (@ff-line-height-computed / 2) @ff-form-control-height-base (@ff-line-height-computed / 2) (@ff-line-height-computed / 2);
+    display: block;
+    line-height: @ff-line-height-computed;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+//
+// Styles added by me
+// --------------------------------------------------
+
+.ui-selectmenu-button {
+  position: relative;
+
+  .ui-icon {
+    width: @ff-form-control-height-base;
+    height: 100%;
+    color: @ff-primary;
+    line-height: @ff-form-control-height-base;
+    text-align: center;
+    font-size: @ff-font-size-base;
+    border-left: @ff-ui-state-default-border-size @ff-ui-state-default-border-style @ff-ui-state-default-border-color;
+  }
+
+  &.ui-state-default {
+    border: 1px solid @ff-ui-state-default-border-color;
+  }
+
+  &.ui-state-hover {
+    border-color: @ff-ui-state-hover-border-color;
+    background-color: @ff-ui-state-default-bg;
+    .ui-icon {
+      border-left-color: @ff-ui-state-hover-border-color;
+    }
+  }
+}

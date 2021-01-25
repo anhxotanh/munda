@@ -1,0 +1,36 @@
+/* Embeded content */
+
+.rcw-form {
+  .youtube-video-container,
+  .google-map-container,
+  .vimeo-video-container {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+  }
+  .youtube-video-container {
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+  }
+
+  .google-map-container {
+    padding-bottom: 75%;
+  }
+
+  .vimeo-video-container {
+    padding-bottom: 54.20%;
+  }
+
+  .youtube-video-container iframe,
+  .google-map-container iframe,
+  .vimeo-video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: @ff-form-control-border-width @ff-form-control-border-style @ff-form-control-border-color;
+    padding: @ff-embeded-content-padding;
+    .border-radius(@ff-border-radius);
+  }
+}

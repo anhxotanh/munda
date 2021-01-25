@@ -1,0 +1,14 @@
+extends main-template.jade
+
+block title
+  title Munda forms | The best
+
+block content
+  include includes/preloader.jade
+  include includes/top-bar.jade
+  include includes/side-menu.jade
+  iframe#main-content.main-content(src='examples/review.html')
+block mainjs
+  // build:js scripts/index.js
+  script(src='scripts/index.js')
+  // endbuild

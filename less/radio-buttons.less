@@ -1,0 +1,63 @@
+/* Radio buttons */
+
+.rcw-form {
+  // Radio
+  .radio,
+  .radio-inline {
+    input[type="radio"] + label {
+      position: relative;
+      padding-left: @ff-radio-padding-left;
+      .transition(color 0.3s ease);
+
+      &:hover {
+        &:before {
+          border-color: @ff-form-control-border-hover;
+        }
+      }
+
+      &:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: @ff-form-control-border-width @ff-form-control-border-style @ff-form-control-border-color;
+        background-color: @ff-form-control-bg;
+        width: @ff-radio-width;
+        height: @ff-radio-height;
+        .border-radius(50%);
+        .transition(border-color 0.3s ease);
+      }
+
+      &:after {
+        content: '';
+        display: none;
+        position: absolute;
+        background-color: @ff-radio-checked-bullet-bg;
+        width: @ff-radio-checked-width;
+        height: @ff-radio-checked-height;
+        top: ((@ff-radio-height / 2) - (@ff-radio-checked-height / 2));
+        left: ((@ff-radio-width / 2) - (@ff-radio-checked-width / 2));
+        .border-radius(50%);
+      }
+    }
+
+    input[type="radio"]:checked + label {
+      &:before {
+        border-color: @ff-radio-checked-border-color;
+        background-color: @ff-radio-checked-bg;
+      }
+
+      &:after {
+        display: block;
+      }
+    }
+  } // end radio
+
+  // Radio focus state
+  input[type="radio"]:focus + label {
+    &:before {
+      border-color: @ff-form-control-border-hover;
+    }
+  }
+}

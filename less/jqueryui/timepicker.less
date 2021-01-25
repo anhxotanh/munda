@@ -1,0 +1,97 @@
+//
+// Timepicker
+// --------------------------------------------------
+
+.ui-timepicker-div {
+  dl {
+    padding: (@ff-line-height-computed / 2);
+    margin: 0;
+    > dd {
+      margin-left: 0;
+    }
+
+    > dt {
+      font-weight: @ff-ui-datepicker-th-font-weight;
+    }
+  }
+
+  .ui-widget-header {
+    border-width: 0;
+    background-color: @ff-primary;
+    border-color: @ff-primary;
+    color: #fff;
+    .box-shadow(inset 0 -2px 0 0 darken(@ff-primary, 5%));
+    .border-radius(@ff-border-radius @ff-border-radius 0 0);
+
+    .ui-datepicker-title {
+      height: @ff-form-control-height-base;
+      line-height: @ff-form-control-height-base;
+      font-weight: @ff-font-weight-bold;
+    }
+  }
+
+  .ui-button {
+    height: 30px;
+    padding: 4px;
+  }
+
+  .ui-buttonset {
+    .ui-button {
+      margin-right: 1px;
+    }
+  }
+
+  button {
+    &.ui-button-icon-only {
+      width: 30px;
+    }
+  }
+}
+
+.ui_tpicker_time_label,
+.ui_tpicker_time,
+.ui_tpicker_timezone_label,
+.ui_tpicker_timezone {
+  display: inline-block;
+}
+
+.ui_tpicker_time_label,
+.ui_tpicker_timezone_label {
+  margin-right: (@ff-line-height-computed / 2);
+}
+
+.ui_tpicker_hour_label,
+.ui_tpicker_minute_label,
+.ui_tpicker_second_label {
+  margin-top: (@ff-line-height-computed / 2);
+}
+
+.ui_tpicker_timezone_label {
+  margin-top: (@ff-line-height-computed * 0.75);
+}
+
+.ui_tpicker_timezone {
+
+  select {
+    position: relative;
+    top: 1px;
+    border: 1px solid @ff-ui-state-default-border-color;
+    color: @ff-form-control-color;
+    padding: 0 0 1px 3px;
+    .border-radius(@ff-border-radius);
+
+    & + select {
+      margin-left: (@ff-line-height-computed / 4);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.ui_tpicker_hour_slider,
+.ui_tpicker_minute_slider,
+.ui_tpicker_second_slider {
+  margin-top: (@ff-line-height-computed / 2);
+}

@@ -1,0 +1,40 @@
+/* Form framework typography */
+
+.rcw-form {
+  font-family: @ff-font-family-base;
+  font-size: @ff-font-size-base;
+  line-height: @ff-line-height-base;
+  color: @ff-text-color;
+  background-color: @ff-form-bg;
+  font-weight: @ff-font-weight;
+
+  p,
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: (@ff-line-height-computed / 2);
+  }
+
+  a {
+    color: @ff-primary;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+
+  strong {
+    font-weight: @ff-font-weight-bold;
+  }
+
+  .form-group-heading {
+    margin-bottom: (@ff-line-height-computed * 0.75);
+    font-size: @ff-font-size-base;
+    font-weight: @ff-label-font-weight;
+    color: @ff-label-color;
+  }
+}

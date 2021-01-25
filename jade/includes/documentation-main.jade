@@ -1,0 +1,1423 @@
+.container.doc-main
+  .row
+    aside.col-md-3
+      .doc-nav-container#doc-nav-container
+        include documentation-nav
+    .col-md-9
+      h3#overview I. Overview
+      p
+        strong Munda forms&nbsp;
+        |  is a set of form elements build with the help of various frameworks and libraries, that gives you the necessary tools to create any type of web form.
+      h5#tools-used I.I Tools used
+      ul.tools-list
+        li
+          a(href='http://nodejs.org/', title='Node.js', target='_blank') Node.js
+        li
+          a(href='http://gruntjs.com/', title='Grunt', target='_blank') Grunt
+        li
+          a(href='http://bower.io/', title='Bower', target='_blank') Bower
+        li
+          a(href='https://getcomposer.org/', title='Composer', target='_blank') Composer
+        li
+          a(href='https://icomoon.io/', title='IcoMoon', target='_blank') IcoMoon
+      p For the best workflow i recommand that you install&nbsp;
+        a(href='http://nodejs.org/', title='Node.js', target='_blank') Node.js,&nbsp;
+        a(href='http://bower.io/', title='Bower', target='_blank') Bower&nbsp;
+        | and&nbsp;
+        a(href='https://getcomposer.org/', title='Composer', target='_blank') Composer
+        | .
+      h6 I.I.I Node.js
+      p Once you have&nbsp;
+        strong Node.js
+        |  installed you can run the&nbsp;
+        code npm install
+        |  command which will install all the node modules (like grunt, grunt-contrib-less, grunt-contrib-watch etc), than you will have access to commands like
+        code grunt serve
+        |  which will launch a server, watch for changes on your files and automatically reload the page upon save. To configure the grunt tasks you can edit the&nbsp;
+        codeGruntfile.js
+        |  file.
+      h6 I.I.II Bower
+      p
+        strong Bower
+        |  will allow you to manage frameworks, libraries, assets, utilities etc. Run&nbsp;
+        code bower install
+        |  to install all the dependencies confingured in the&nbsp;
+        code bower.json
+        |  file.
+      h6 I.I.III Composer
+      p
+        strong Composer
+        |  will allow you to manage your PHP dependencies. Run
+        code composer update
+        |  in the&nbsp;
+        code app/php
+        |  folder to install the PHP dependencies configured in the
+        code app/php/composer.json
+        |  file.
+      h6 I.II.IV IcoMoon
+      p The icomoon selection that i've included with this package has over 800 icons (you can see all the available icons by opening the&nbsp;
+        code app/icomoon/demo.html
+        |  file). I do not recommand that you use this in production, it's best to create your own selection on the&nbsp;
+        a(href='https://icomoon.io/', title='IcoMoon', target='_blank') IcoMoon
+        |  website and use those files.
+      h3#the-css II. CSS
+      p The CSS for this form framework was build using&nbsp;
+        strong LESS
+        | . All the&nbsp;
+        strong LESS
+        |  files are located in
+        code app/less
+        |  folder. The compiled CSS files are located in&nbsp;
+        code app/styles
+        | (
+        code form-framework.css
+        | and&nbsp;
+        code form-framework.min.css
+        | ).
+      p
+        code app/less
+        |  folder content:
+      ul
+        li
+          code main.less
+          |  file - this is where all the other files are imported, here you can comment out the parts of the framework you don't need.
+        li
+          code jqueryui
+          |  folder - this is where you can find all the files that style the jQuerUI components.
+        li
+          code mixins
+          |  folder - this is where you can find all the LESS mixins used throughout the code.
+        li
+          code variables
+          |  folder - this is where you can find all the variables used throughout the code.
+      p
+        code app/styles
+        |  folder content:
+      ul
+        li
+          code form-framework.css
+          |  file - the css for the form framework.
+        li
+          code form-framework.min.css
+          |  file - the minified version of&nbsp;
+          code form-framework.css
+          | .
+        li
+          code icomoon.css
+          |  file - this is the css for the font icons. You don't need this file if you don't want to use icons. Also, here you can change the path to your font files, if you have a different site structure than the one i used in the demos.
+        li
+          code jqueryui-theme.css
+          |  file - this is the css for jQueryUI. Again, if you don't need any of the jQueryUI's functionality don't include this file.
+        li
+          code jqueryui-theme.min.css
+          |  file - the minified version of&nbsp;
+          code jqueryui-theme.css
+          | .
+        li
+          code main.css
+          |  file - this is part of the css for presenting the framework. You don't need this file.
+        li
+          code main.min.css
+          |  file - the minified version of&nbsp;
+          code main.css
+          | .
+        li
+          code vendor/animate.css
+          |  file - this the css for CSS animations. Don't include this file if you don't want CSS animations.
+        li
+          code vendor/grid.css
+          |  file - this is the css for the grid system, if you already have twitter bootstrap (version 3+) in your site don't include this file.
+        li
+          code vendor/normalize.css
+          |  file - makes browsers render all elements more consistently and in line with modern standards. If you already have it in your site, or have twitter bootsrap, or any other framework that comes with this file, or maybe you just don't want to include it, don't do it.
+        li
+          code vendor/raty-custom.css
+          |  file - css for the&nbsp;
+          a(href='http://wbotelhos.com/raty/', title='Raty', target='_blank') jQuery Raty
+          |  plugin. If you don't want the rating functionality don't include this file.
+        li
+          code vendor/shCore.css
+          |  and&nbsp;
+          code vendor/shThemeDefault.css
+          |  files - this are for the sysntax highlighting plugin. You don't need this files.
+        li
+          code vendor/spectrum.css
+          |  and&nbsp;
+          code vendor/spectrum-custom.css
+          |  files - this are the css files for the colorpicker. Don't include them if you don't need colorpicker functionality.
+      p
+        code app/styles/vendor/skins
+        |  folder contains folders for each color variation.
+      h5#rcw-form-class II.I&nbsp;
+        code .rcw-form
+        |  class
+      p For the form elements to receive all the right styles you must add the&nbsp;
+        code .rcw-form
+        |  class to your&nbsp;
+        code &lt;form&gt;
+        |  tag. You can also add this class to any element in which you want to keep the styles of this framework.
+      include documentation-buttons
+      pre(class='brush: xml')
+        form(action='', method='post', class='rcw-form')
+      ul
+        li Styles:&nbsp;
+          code app/less/typography.less
+        li Variables:
+          code app/less/variables/typography.less
+      h5#form-header II.II Form header
+      p#cli-demo-target To add a header to your form place a&nbsp;
+        code &lt;header&gt;
+        |  tag after the opening&nbsp;
+        code &lt;form&gt;
+        |  tag. Inside the&nbsp;
+        code &lt;header&gt;
+        |  tag place a
+        code &lt;h3&gt;
+        |  with the&nbsp;
+        code .form-main-heading
+        |  class.
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [2, 3, 4]')
+        form(action='', method='post', class='rcw-form')
+          header
+            h3.form-main-heading Register
+      ul
+        li Styles:&nbsp;
+          code app/less/form-header.less
+        li Variables:
+          code app/less/variables/form-header.less
+      h5#fieldsets-and-legends II.III Fieldsets and legends
+      p The&nbsp;
+        code &lt;legend&gt;
+        |  tag defines a caption for the&nbsp;
+        code &lt;fieldset&gt;
+        |  element. You can position the&nbsp;
+        code &lt;legend&gt;
+        |  tag to the left, right or center. The default&nbsp;
+        code &lt;legend&gt;
+        |  position is to the left, to position it in the center add the&nbsp;
+        code .center
+        |  class and to position it to the right add the&nbsp;
+        code .right
+        |  class.
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [3]')
+        fieldset.row
+          .col-md-12
+            legend.center
+              span Account details
+      ul
+        li Styles:&nbsp;
+          code app/less/legend.less
+        li Variables:
+          code app/less/variables/legend.less
+      h5#form-controls II.IV Form controls
+      p Individual form controls automatically receive some global styling. All textual elements with&nbsp;
+        code .form-control
+        |  are set to&nbsp;
+        code width: 100%;
+        |  by default. Wrap labels and controls in&nbsp;
+        code .form-group
+        |  for optimum spacing.
+      p Every&nbsp;
+        code .form-control
+        |  should have a label. To hide a label and only show it to screen readers you must add the&nbsp;
+        code sr-only
+        |  class.
+      p You can also add the&nbsp;
+        code .label
+        |  class to other elements to give those elements the same styles as a&nbsp;
+        code &lt;label&gt;
+        |  tag.
+
+      p You can apply&nbsp;
+        code .form-control
+        |  to any of the following form elements:
+        ul
+          li
+            code select
+          li
+            code textarea
+          li
+            code input[type='text']
+          li
+            code input[type='password']
+          li
+            code input[type='datetime']
+          li
+            code input[type='datetime-local']
+          li
+            code input[type='date']
+          li
+            code input[type='month']
+          li
+            code input[type='time']
+          li
+            code input[type='week']
+          li
+            code input[type='number']
+          li
+            code input[type='email']
+          li
+            code input[type='url']
+          li
+            code input[type='search']
+          li
+            code input[type='tel']
+          li
+            code input[type='color']
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [3, 4]')
+        form(action='', method='post', class='rcw-form')
+          .col-md-12.form-group
+            label(for='name', class='sr-only')
+            input(type='text', name='name', id='name', class='form-control', placeholder='Name')
+      ul
+        li Styles:&nbsp;
+          code app/less/form-control.less
+          |  and &nbsp;
+          code app/less/label.less
+        li Variables:
+          code app/less/variables/form-control.less
+          |  and &nbsp;
+          code app/less/variables/label.less
+      h5#form-group-icons II.V Form group icons
+      p To add an icon to the left you have to add the&nbsp;
+        code .has-icon-left
+        |  class to the&nbsp;
+        code .form-group
+        | . Inside the&nbsp;
+        code .form-group
+        |  add a&nbsp;
+        code &lt;span&gt;
+        |  tag with the&nbsp;
+        code .icon-left
+        |  class and the class for the icon.
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [1, 3]')
+        .form-group.col-md-12.has-icon-left
+          label(for='username', class='sr-only') Username
+          input(type='text', name='username', id='username', class='form-control', placeholder='Username')
+          span.icon-user14.icon-left
+      p To add an icon to the right you have to add the&nbsp;
+        code .has-icon-right
+        |  class to the
+        code .form-group
+        | . Inside the&nbsp;
+        code .form-group
+        |  add a&nbsp;
+        code &lt;span&gt;
+        |  tag with the&nbsp;
+        code .icon-right
+        |  class and the class for the icon.
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [1, 3]')
+        .form-group.col-md-12.has-icon-right
+          label(for='username', class='sr-only') Username
+          input(type='text', name='username', id='username', class='form-control', placeholder='Username')
+          span.icon-user14.icon-right
+      p To add an icons on both sides you have to add the&nbsp;
+      code .has-icons
+      |  class to the&nbsp;
+      code .form-group
+      | . Inside the&nbsp;
+      code .form-group
+      |  add two&nbsp;
+      code &lt;span&gt;
+      |  tags, one with the&nbsp;
+      code .icon-left
+      |  class and one with&nbsp;
+      code .icon-right
+      |  class.
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [1, 3]')
+        .form-group.col-md-12.has-icons
+          label(for='username', class='sr-only') Username
+          input(type='text', name='username', id='username', class='form-control', placeholder='Username')
+          span.icon-user14.icon-left
+          span.icon-info32.icon-right
+      ul
+        li Styles:&nbsp;
+          code app/less/form-group.less
+      h5#select-elements II.VI Select elements
+      p See the code below for a sample on how to add a&nbsp;
+        code &lt;select&gt;
+        |  element. The&nbsp;
+        code .select-icon
+        |  class positions the down arrow.
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [3, 4, 5, 6, 7]')
+        .form-group.col-md-12
+          label(for='gender', class='sr-only')
+          select(name='gender', id='gender', class='form-control')
+            option(value='', selected) Choose gender
+            option(value='male') Male
+            option(value='female') Female
+          span.select-icon.icon-arrow-down8
+      ul
+        li Styles:&nbsp;
+          code app/less/select.less
+        li Variables:
+          code app/less/variables/select.less
+      h5#checkboxes-and-radio-buttons II.VII Checkboxes and radio buttons
+      p To add a checkbox use a&nbsp;
+        code &lt;div&gt;
+        |  tag with the&nbsp;
+        code .checkbox
+        |  class as the container for the&nbsp;
+        code &lt;label&gt;
+        |  and&nbsp;
+        code input[type='checkbox']
+        |  elements:
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [2, 3, 4, 5, 6]')
+        .form-group.col-md-12
+          .checkbox
+            h5.form-group-heading Do you like apples?
+            input(type='checkbox', id='apple', value='Yes')
+            label(for='Yes') Yes
+      p You can transform your checkbox into a switch if you add&nbsp;
+        code .switch
+        |  or&nbsp;
+        code .switch-with-text
+        | .
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [2, 3, 4, 5, 6]')
+        .form-group.col-md-12
+          .checkbox.switch-with-text
+            h5.form-group-heading Do you like apples?
+            input(type='checkbox', id='apple', value='Yes')
+            label(for='Yes') Yes
+      p To add a radio buttons use a&nbsp;
+        code &lt;div&gt;
+        |  tag with the&nbsp;
+        code .radio
+        |  class as the container for the&nbsp;
+        code &lt;label&gt;
+        |  and&nbsp;
+        code input[type='radio']
+        |  elements:
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]')
+        .form-group.col-md-12
+          .radio
+            input(type='radio', name='payment-method', value='visa', id='visa', checked)
+            label(for='visa') Visa
+          .radio
+            input(type='radio', name='payment-method', value='mastercard', id='mastercard')
+            label(for='mastercard') MasterCard
+          .radio
+            input(type='radio', name='payment-method', value='paypal', id='paypal')
+            label(for='paypal') Paypal
+      p To add inline checkboxes use the&nbsp;
+        code .checkbox-inline
+        |  class:
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [2, 3, 4, 5, 6, 7, 8, 9]')
+        .form-group.col-md-12
+          .checkbox-inline
+            input(type='checkbox', id='apple', value='apple')
+            label(for='apple') Apple.
+          .checkbox-inline
+            input(type='checkbox', id='orange', value='orange')
+            label(for='orange') Orange.
+      p To add inline radio buttons use the&nbsp;
+        code .radio-inline
+        |  class:
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]')
+        .form-group.col-md-12
+          .radio-inline
+            input(type='radio', name='payment-method', value='visa', id='visa', checked)
+            label(for='visa') Visa
+          .radio-inline
+            input(type='radio', name='payment-method', value='mastercard', id='mastercard')
+            label(for='mastercard') MasterCard
+          .radio-inline
+            input(type='radio', name='payment-method', value='paypal', id='paypal')
+            label(for='paypal') Paypal
+      p Add heading to a form group with&nbsp;
+        code .form-group-heading
+        | .
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [2]')
+        .form-group.col-md-12
+          h5.form-group-heading High resolution
+          .radio-inline
+            input(type='radio', name='high_resolution', value='yes', id='high-resolution-yes')
+            label(for='high-resolution-yes') Yes
+          .radio-inline
+            input(type='radio', name='high_resolution', value='no', id='high-resolution-no', checked)
+            label(for='high-resolution-no') No
+          .radio-inline
+            input(type='radio', name='high_resolution', value='na', id='high-resolution-na')
+            label(for='high-resolution-na') N/A
+      ul
+        li Styles:&nbsp;
+          code app/less/radio-buttons-and-checkboxes-common-styles.less
+          | ,&nbsp;
+          code app/less/radio-buttons.less
+          |  and&nbsp;
+          code app/less/checkboxes-and-switches.less
+        li Variables:
+          code app/less/variables/radio-buttons.less
+          |  and&nbsp;
+          code app/less/variables/checkboxes-and-switches.less
+      h5#file-inputs II.VIII File inputs
+      p File inputs use the&nbsp;
+        a(href='http://moro.es/misc/jquery-nicefileinput-js/', title='NiceFileInput', target='_blank') NiceFileInput
+        |  plugin, so remember to call the&nbsp;
+        code nicefileinput()
+        |  method on the&nbsp;
+        code input[type='file']
+        |  elements from your javascript file.
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [3, 4, 5]')
+        .form-group.col-md-12
+          label(for='file-1', class='sr-only') Project related file
+          div
+            input(type='file', name='file-1', id='file-1')
+      ul
+        li Styles:&nbsp;
+          code app/less/file.less
+      h5#input-groups II.IX Input groups
+      p To add input groups to your form you use a&nbsp;
+        code &lt;div&gt;
+        |  tag with the&nbsp;
+        code .input-group
+        |  class as the container. For the actual add-on you use the&nbsp;
+        code .input-group-addon
+        |  class.
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [1, 2]')
+        .input-group
+          label(for='input-group-1', class='input-group-addon')
+            span.icon-vimeo
+          input(type='text', name='input-group-1', id='input-group-1', class='form-control', placeholder='Input group')
+      p You can also add buttons as add-ons, add the&nbsp;
+        code .input-group-btn
+        |  class to the add-on:
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [3, 4, 5]')
+        .form-group.col-md-12
+          label(for='search', class='control-label sr-only') Search
+          .input-group
+            input(type='url', name='search', id='search', placeholder='Search', class='form-control')
+            span.input-group-btn
+              button.btn.btn-info(type='button') Search
+      ul
+        li Styles:&nbsp;
+          code app/less/input-groups.less
+        li Variables:&nbsp;
+          code app/less/variables/input-gorups.less
+      h5#validation-states II.X Validation states
+      p You can add validation styles for&nbsp;
+        strong error
+        | ,&nbsp;
+        strong warning
+        |  and&nbsp;
+        strong success
+        |  states on form controls. To use, add&nbsp;
+        code .has-warning
+        | ,&nbsp;
+        code .has-error
+        |  or&nbsp;
+        code .has-success
+        |  to the parent element. Any&nbsp;
+        code .form-control
+        | ,&nbsp;
+        code .help-block
+        | ,&nbsp;
+        |  checkboxes and radio buttons within that element will receive the validation styles.
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [2, 7, 12]')
+        // success
+        .form-group.col-md-12.has-success
+          label(for='name') Name
+          input(type='text', name='name', id='name', class='form-control', placeholder='Name')
+        // error
+        .form-group.col-md-12.has-error
+          label(for='name') Name
+          input(type='text', name='name', id='name', class='form-control', placeholder='Name')
+        // warning
+        .form-group.col-md-12.has-warning
+          label(for='name') Name
+          input(type='text', name='name', id='name', class='form-control', placeholder='Name')
+      h6 With optional icons
+      p You can also add optional feedback icons with the addition of&nbsp;
+        code .has-feedback
+        |  and the right icon.
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [2, 4, 7, 9, 12, 14]')
+        // success
+        .form-group.col-md-12.has-success.has-feedback
+          label(for='email') Email
+          input(type='email', name='email', id='email', class='form-control', placeholder='Email')
+          span.icon-checkmark6.form-control-feedback
+        // error
+        .form-group.col-md-12.has-error.has-feedback
+          label(for='email') Email
+          input(type='email', name='email', id='email', class='form-control', placeholder='Email')
+          span.icon-cancel5.form-control-feedback
+        // warning
+        .form-group.col-md-6.has-warning.has-feedback
+          label(for='email') Email
+          input(type='email', name='email', id='email', class='form-control', placeholder='Email')
+          span.icon-exclamation2.form-control-feedback
+      ul
+        li Styles:&nbsp;
+          code app/less/feedback.less
+        li Variables:&nbsp;
+          code app/less/variables/feedback.less
+      h5#disabled-state II.XI Disabled state
+      p Add the&nbsp;
+        code disabled
+        |  boolean attribute on an input to prevent user input and trigger a slightly different look.
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [3]')
+        .form-group.col-md-12
+          label(for='name', class='sr-only') Name
+          input(type='text', name='name', id='name', class='form-control', placeholder='Name', disabled)
+      p Add the&nbsp;
+        code disabled
+        |  attribute to a&nbsp;
+        code &lt;fieldset&gt;
+        |  to disable all the controls within the&nbsp;
+        code &lt;fieldset&gt;
+        |  at once.
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [1]')
+        fieldset.row(disabled)
+          .col-md-12
+            legend
+              span Inputs and textarea
+          .form-group.col-md-12
+            label(for='name', class='sr-only') Name
+            input(type='text', name='name', id='name', class='form-control', placeholder='Name')
+          .form-group.col-md-12
+            label(for='email', class='sr-only') Email
+            input(type='email', name='email', id='email', class='form-control', placeholder='Email')
+      ul
+        li Styles:&nbsp;
+          code app/less/form-control.less
+          |  and&nbsp;
+          code app/less/buttons-and-checkboxes-disabled.less
+        li Variables:&nbsp;
+          code app/less/variables/main-colors.less
+      h5#readonly-inputs II.XII Readonly inputs
+      p Add the&nbsp;
+        code readonly
+        |  boolean attribute on an input to prevent user input.
+      pre(class='brush: xml; highlight: [3]')
+        .form-group.col-md-12
+          label(for='email', class='sr-only') Email
+          input(type='email', name='email', id='email', class='form-control', placeholder='Email', readonly)
+      ul
+        li Styles:&nbsp;
+          code app/less/form-control.less
+      h5#buttons II.XIII Buttons
+      p To create a button add the&nbsp;
+        code .btn
+        |  class and a color class to a link, button or input tag. For the color classes you can use any of the following classes:
+      ul
+        li
+          code .btn-default
+        li
+          code .btn-primary
+        li
+          code .btn-info
+        li
+          code .btn-danger
+        li
+          code .btn-warning
+        li
+          code .btn-success
+        li
+          code .btn-facebook
+        li
+          code .btn-googleplus
+        li
+          code .btn-twitter
+        li
+          code .btn-youtube
+        li
+          code .btn-github
+        li
+          code .btn-linkedin
+        li
+          code .btn-rss
+        li
+          code .btn-dribble
+        li
+          code .btn-flickr
+        li
+          code .btn-html5
+        li
+          code .btn-pinterest
+        li
+          code .btn-stackoverflow
+        li
+          code .btn-weibo
+        li
+          code .btn-android
+        li
+          code .btn-dropbox
+        li
+          code .btn-foursquare
+        li
+          code .btn-instagram
+        li
+          code .btn-renren
+        li
+          code .btn-windows
+        li
+          code .btn-apple
+        li
+          code .btn-skype
+        li
+          code .btn-tumblr
+        li
+          code .btn-vimeo
+        li
+          code .btn-xing
+        li
+          code .btn-css3
+        li
+          code .btn-vk
+        li
+          code .btn-flattr
+        li
+          code .btn-paypal
+        li
+          code .btn-yelp
+        li
+          code .btn-lastfm
+        li
+          code .btn-stumbleupon
+        li
+          code .btn-wordpress
+        li
+          code .btn-joomla
+        li
+          code .btn-blogger
+        li
+          code .btn-soundcloud
+        li
+          code .btn-chrome
+        li
+          code .btn-firefox
+        li
+          code .btn-ie
+        li
+          code .btn-opera
+        li
+          code .btn-safari
+        li
+          code .btn-icomoon
+        li
+          code .btn-lanyrd
+        li
+          code .btn-deviantart
+        li
+          code .btn-forrst
+        li
+          code .btn-yahoo
+        li
+          code .btn-steam
+        li
+          code .btn-reddit
+        li
+          code .btn-picasa
+        li
+          code .btn-delicious
+        li
+          code .btn-behance
+        li
+          code .btn-mixi
+        li
+          code .btn-smashing
+        li
+          code .btn-evernote
+      include documentation-buttons
+      pre(class='brush: xml; highlight: []')
+        input(type='submit', name='submit', value='Submit', class='btn btn-primary')
+        button(type='reset', class='btn btn-default') Reset
+        a(href='http://jquery.com/', title='jQuery', target='_blank', class='btn btn-info') jQuery
+      h6 Add icons
+      p You can also add icons to your buttons to the left side, right side or both.
+      p To add the icon on the left side, you use the&nbsp;
+        code .btn-has-icon-left
+        |  class on the element and the&nbsp;
+        code .btn-icon-left
+        |  on the icon.
+      include documentation-buttons
+      pre(class='brush: xml')
+        button(type='button', class='btn btn-warning btn-has-icon-left')
+          span(class='btn-icon-left icon-unlock-fill')
+          | Unlock
+      p To add the icon on the right side, you use the&nbsp;
+        code .btn-has-icon-right
+        |  class on the element and the&nbsp;
+        code .btn-icon-right
+        |  on the icon.
+      include documentation-buttons
+      pre(class='brush: xml')
+        button(type='button', class='btn btn-warning btn-has-icon-right')
+          | Unlock
+          span(class='btn-icon-right icon-unlock-fill')
+      p To add icons on both sides, you use the&nbsp;
+        code .btn-has-icons
+        |  class on the element and the&nbsp;
+        code .btn-has-icon-left
+        |  and&nbsp;
+        code .btn-has-icon-right
+        |  on the icons.
+      include documentation-buttons
+      pre(class='brush: xml')
+        button(type='button', class='btn btn-warning btn-has-icons')
+          span(class='btn-icon-left icon-unlock-fill')
+          | Unlock
+          span(class='btn-icon-right icon-right-quote-alt')
+      h6 Icon only button
+      p Use the&nbsp;
+        code .btn-icon-only
+        |  class and wrap your button text in a&nbsp;
+        code &lt;span&gt;
+        |  tag with the&nbsp;
+        code .sr-only
+        |  class.
+      include documentation-buttons
+      pre(class='brush: xml')
+        button(type='button', class='btn btn-primary btn-icon-only')
+          span(class='icon-right-quote-alt')
+          span(class='sr-only') Quote
+      h6 Block level button
+      p Use the the&nbsp;
+        code .btn-block
+        |  class to make the button stretch to it's container full width.
+      include documentation-buttons
+      pre(class='brush: xml')
+        a(href='https://www.facebook.com', title='Facebook', target='_blank', class='btn btn-block btn-facebook')
+          span(class='btn-icon-left icon-facebook22') Facebook
+      ul
+        li Styles:&nbsp;
+          code app/les/buttons.less
+        li Variables:&nbsp;
+          code app/less/variables/buttons.less
+          |  and&nbsp;
+          code app/less/variables/social-media-colors.less
+      h5#alerts II.XIV Alerts
+      p Wrap any text and an optional dismiss button in&nbsp;
+        code .alert and one of the four contextual classes (
+        code .alert-success
+        | ,&nbsp;
+        code .alert-warning
+        | ,&nbsp;
+        code .alert-info
+        | ,&nbsp;
+        code .alert-danger
+        | ) for basic alert messages.
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [2, 4, 6, 8]')
+        // success
+        .alert.alert-success
+          strong Well done!
+          |  You successfully read this important alert message.
+        // info
+        .alert.alert-info
+          strong Heads up!
+          |  This alert needs your attention, but it's not super important.
+        // warning
+        .alert.alert-warning
+          strong Warning!
+          |  Better check yourself, you're not looking too good.
+        // danger
+        .alert.alert-danger
+          strong Oh snap!
+          |  Change a few things up and try submitting again.
+      h6 Dismissible alerts
+      p Build on any alert by adding an optional&nbsp;
+        code .alert-dismissible
+        |  and&nbsp;
+        code .close
+        |  button.
+      include documentation-buttons
+      pre(class='brush: xml')
+        .alert.alert-dismissible.alert-success
+          strong Well done!
+          |  You successfully read this important alert message. Lorem&nbsp;
+          a(href='http://google.com', target='_blank', title='Google', class='alert-link') ipsum dolor
+          |  sit amet.
+          button(type='button', class='close')
+            span.icon-cancel5
+            span.sr-only Close
+      h6 Add icon on the left
+      p Add&nbsp;
+        code .has-alert-icon
+        |  to your&nbsp;
+        code .alert
+        |  and&nbsp;
+        code .alert-icon
+        |  to the icon.
+      include documentation-buttons
+      pre(class='brush: xml')
+        .alert.alert-success.alert-dismissible.has-alert-icon
+          span(class='alert-icon icon-checkmark4')
+          strong Well done!
+          |  You successfully read this important alert message.
+          button(type='button', class='close')
+            span.icon-cancel5
+            span.sr-only Close
+      h6 Links inside alerts
+      p Add the&nbsp;
+        code .alert-link
+        |  class to every link inside the alert.
+      include documentation-buttons
+      pre(class='brush: xml')
+        .alert.alert-success(role='alert')
+          strong Well done!
+          |  You successfully read this important alert message. Lorem&nbsp;
+          a(href='http://google.com', target='_blank', title='Google', class='alert-link') ipsum dolor
+          |  sit amet.
+      ul
+        li Styles:&nbsp;
+          code app/less/alerts.less
+        li Variables:&nbsp;
+          code app/less/variables/alerts.less
+      h5#embeded-content II.XV Embeded content
+      p You can embed google maps, youtube videos and vimeo videos. The embeded content will be responsive no javascript needed.
+      p To embed google maps use&nbsp;
+        code .google-map-container
+        | .
+      include documentation-buttons
+      pre(class='brush: xml')
+        .google-map-container
+          iframe(src='path/to/google-map', width='400', height='300', frameborder='', style='0')
+      p To embed youtube videos use&nbsp;
+        code .youtube-video-container
+        | .
+      include documentation-buttons
+      pre(class='brush: xml')
+        .youtube-video-container
+          iframe(width='560', height='315', src='path/to/youtube-video', frameborder='0', wmode='Opaque', allowfullscreen)
+      p To embed vimeo video us&nbsp;
+        code .vimeo-video-container
+        | .
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [1]')
+        .vimeo-video-container
+          iframe(src='path/to/vimeo-video', width='500', height='271', frameborder='0', webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
+      ul
+        li Styles:&nbsp;
+          code app/less/embeded-content.less
+        li Variables:&nbsp;
+          code app/less/variables/embeded-content.less
+      h5#help-block II.XVI Help Block
+      p Use the&nbsp;
+        code .help-block
+        |  class do add hints for the users.
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [4]')
+        .form-group.col-md-12
+          label(for='name', class='sr-only') Name
+          input(type='text', name='name', id='name', class='form-control', placeholder='Name *')
+          .help-block Between 2 and 50 characters.
+      p Use the&nbsp;
+        code .big
+        |  class on&nbsp;
+        code .help-block
+        |  for a bigger top margin between the&nbsp;
+        code .help-block
+        |  and the element above.
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [4]')
+        .form-group.col-md-12
+          label(for='name', class='sr-only') Name
+          input(type='text', name='name', id='name', class='form-control', placeholder='Name *')
+          .help-block.big Between 2 and 50 characters.
+      ul
+        li Styles:&nbsp;
+          code app/less/help-block.less
+        li Variables:&nbsp;
+          code app/less/variables/help-block.less
+      h5#rating II.XVII Rating &amp; raty
+      p For star ratings i used the&nbsp;
+        a(href='http://wbotelhos.com/raty/' title='Raty' target='_blank') Raty
+        |  jQuery plugin.
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [2]')
+        .form-group.col-md-12
+          span.rating-text Product quality
+          #product-quality.rating-icons
+      ul
+        li Styles:&nbsp;
+          code app/less/rating.less
+          |  and&nbsp;
+          code app/less/raty.less
+        li Variables:&nbsp;
+          code app/less/variables/raty.less
+      p The&nbsp;
+        code app/less/rating.less
+        |  file is compiled into&nbsp;
+        code raty-custom.css
+        | .
+      h5#colorpicker II.XVIII Colorpicker
+      p For the colorpicker i used the&nbsp;
+        a(href='http://bgrins.github.io/spectrum/', title='Spectrum', target='_blank') Spectrum
+        |  jQuery plugin.
+      ul
+        li Styles:&nbsp;
+          code app/styles/spectrum.css
+          |  and&nbsp;
+          code app/less/spectrum.less
+        li Variables:&nbsp;
+          code app/less/variables/spectrum.less
+      p The&nbsp;
+        code app/less/spectrum.less
+        |  file is compiled into&nbsp;
+        code spectrum-custom.css
+        | .
+      h5#tables II.XIX Tables
+      p For basic styling, light padding and only horizontal dividers, add the base class&nbsp;
+        code .table
+        |  to any&nbsp;
+        code &lt;table&gt;
+        | .
+      include documentation-buttons
+      pre(class='brush: xml;')
+        table.table
+      h6 Striped rows
+      p Use&nbsp;
+        code .table-striped
+        |  to add zebra-striping to any table row within the&nbsp;
+        code &lt;tbody&gt;
+        | .
+      include documentation-buttons
+      pre(class='brush: xml;')
+        table.table.table-striped
+      h6 Bordered table
+      p Add&nbsp;
+        code .table-bordered
+        |  for borders on all sides of the table and cells.
+      include documentation-buttons
+      pre(class='brush: xml;')
+        table.table.table-bordered
+      h6 Hover rows
+      p Add&nbsp;
+        code .table-hover
+        |  to enable a hover state on table rows within a&nbsp;
+        code &lt;tbody&gt;
+        | .
+      include documentation-buttons
+      pre(class='brush: xml;')
+        table.table.table-hover
+      h6 Condensed table
+      p Add&nbsp;
+        code .table-condensed
+        |  to make tables more compact by cutting cell padding in half.
+      include documentation-buttons
+      pre(class='brush: xml;')
+        table.table.table-condensed
+      h6 Contextual classes
+      p Use contextual classes to color table rows or individual cells.
+      ul
+        li
+          code .active
+          |  - applies the hover color to a particular row or cell
+        li
+          code .success
+          |  - indicates a successful or positive action
+        li
+          code .info
+          |  - indicates a neutral informative change or action
+        li
+          code .warning
+          |  - indicates a warning that might need attention
+        li
+          code .danger
+          |  - indicates a dangerous or potentially negative action
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [12, 20, 21, 22, 23]')
+        table.table
+          thead
+            tr
+              th #
+              th First name
+              th Last name
+              th Username
+          tbody
+            // on row
+            tr.active
+              td 1
+              td Mark
+              td Otto
+              td @mdo
+            // on cells
+            tr
+              td.warning 2
+              td.info Jacob
+              td.danger Thornton
+              td.success @fat
+      h6 Responsive tables
+      p Create responsive tables by wrapping any&nbsp;
+        code .table
+        |  in&nbsp;
+        code .table-responsive
+        |  to make them scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, you will not see any difference in these tables.
+      include documentation-buttons
+      pre(class='brush: xml;')
+        .table-responsive
+          table.table
+      ul
+        li Styles:&nbsp;
+          code app/less/tables.less
+        li Variables:&nbsp;
+          code app/less/variables/tables.less
+      h5#helper-classes II.XX Helper classes
+      p This classes will help you customize your forms.
+      h6 II.XX.I Positioning
+      ul
+        li
+          code .pull-left
+          |  - floats an element to the left.
+        li
+          code .pull-right
+          |  - floats an element to the right.
+      h6 II.XX.II Rounded corners
+      ul
+        li
+          code .ff-rounded
+          |  - adds rounded corners to all corners of the element.
+        li
+          code .ff-rounded-t
+          |  - adds rounded corners to the top-left and top-right corners of the element.
+        li
+          code .ff-rounded-b
+          |  - adds rounded corners to the bottom-left and bottom-right corners of the element.
+        li
+          code .ff-rounded-r
+          |  - adds rounded corners to the top-right and bottom-right corners of the element.
+        li
+          code .ff-rounded-l
+          |  - adds rounded corners to the top-left and bottom-left corners of the element.
+        li
+          code .ff-rounded-tl-br
+          |  - adds rounded corners to the top-left and bottom-right corners of the element.
+        li
+          code .ff-rounded-tr-bl
+          |  - adds rounded corners to the top-right and bottom-left corners of the element.
+        li
+          code .ff-rounded-tl
+          |  - adds rounded corner to the top-left corner of the element.
+        li
+          code .ff-rounded-tr
+          |  - adds rounded corner to the top-right corner of the element.
+        li
+          code .ff-rounded-br
+          |  - adds rounded corner to the bottom-right corner of the element.
+        li
+          code .ff-rounded-bl
+          |  - adds rounded corner to the bottom-left corner of the element.
+        li
+          code .ff-rounded-etl
+          |  - adds rounded corners to all corners of the element, except the top-left one.
+        li
+          code .ff-rounded-etr
+          |  - adds rounded corners to all corners of the element, except the top-right one.
+        li
+          code .ff-rounded-ebr
+          |  - adds rounded corners to all corners of the element, except the bottom-right one.
+        li
+          code .ff-rounded-ebl
+          |  - adds rounded corners to all corners of the element, except the bottom-left one.
+      h6 II.XX.III Alignment
+      ul
+        li
+          code .text-left
+          |  - align text to the left.
+        li
+          code .text-right
+          |  - align text to the right.
+        li
+          code .text-center
+          |  - align text to the center.
+        li
+          code .text-justify
+          |  - justified text.
+        li
+          code .text-nowrap
+          |  - text will never wrap to the next line.
+      h6 II.XX.IV Transformation
+      ul
+        li
+          code .text-lowercase
+          |  - transforms text to lowercase.
+        li
+          code .text-uppercase
+          |  - transforms text to uppercase.
+        li
+          code .text-capitalize
+          |  - the first letter of each word is converted to uppercase.
+      h6 II.XX.V Text color variations
+      ul
+        li
+          code .text-success
+          |  - the color will be color used for the success state.
+        li
+          code .text-danger
+          |  - the color will be color used for the error state.
+        li
+          code .text-warning
+          |  - the color will be color used for the warning state.
+        li
+          code .text-info
+          |  - the color will be color used for the info state.
+      h6 II.XX.VI Margins
+      ul
+        li
+          code .lh-margin-tb
+          |  - adds margins to the top and bottom of the element (the margin is equal to the computed line height)
+        li
+          code .lh-margin-t
+          |  - add top margin to the element (the margin is equal to the computed line height)
+        li
+          code .lh-margin-b
+          |  - add bottom margin to the element (the margin is equal to the computed line height)
+      h6 II.XX.VII Files
+      ul
+        li Styles:&nbsp;
+          code app/less/helper-classes.less
+        li Variables:&nbsp;
+          code app/less/variables/helper-classes.less
+      h5#grid-system II.XXI Grid system
+      p The form framework uses&nbsp;
+        a(href='http://getbootstrap.com/css/#grid', title='Grid system', target='_blank') bootstrap's grid system
+        |  to create different form layout.
+      h5#form-footer II.XXII Form footer
+      include documentation-buttons
+      pre(class='brush: xml; highlight: [2, 3, 4, 5]')
+        form(action='', method='post', class='rcw-form')
+          footer
+            input(type='submit', name='submit', value='Submit', class='btn btn-primary')
+            button(type='reset', class='btn btn-default') Reset
+      ul
+        li Styles:&nbsp;
+          code app/less/form-footer.less
+        li Variables:&nbsp;
+          code app/less/variables/form-footer.less
+      h5#inline-form II.XXIII Inline form
+      p Add&nbsp;
+        code .form-inline
+        |  to your&nbsp;
+        code &lt;form&gt;
+        |  for left-aligned and inline-block controls. This only applies to forms within viewports that are at least 768px wide.
+      include documentation-buttons
+      pre(class='brush: xml')
+        form(action='', method='post', class='rcw-form form-inline')
+      ul
+        li Styles:&nbsp;
+          code app/less/form-inline.less
+      h5#horizontal-form II.XXIV Horizontal form
+      p Align labels and groups of form controls in a horizontal layout by adding
+        code .form-horizontal
+        |  to the form.
+      include documentation-buttons
+      pre(class='brush: xml')
+        form(action='', method='post', class='rcw-form form-horizontal')
+      ul
+        li Styles:&nbsp;
+          code app/less/form-horizontal.less
+      h3#the-javascript III. Javascript
+      p The forms use various javascript libraries to enhance their functionality.
+      ul.javascript-libraries
+        li
+          a(href='http://jquery.com/', title='jQuery', target='_blank') jQuery
+        li
+          a(href='http://gsgd.co.uk/sandbox/jquery/easing/', title='jQuery Easing', target='_blank') jQuery Easing
+          |  - used for advanced easing options.
+        li
+          a(href='http://jqueryui.com/', title='jQueryUI', target='_blank') jQueryUI
+          |  - jQuery UI allows you to add accordions, buttons, datepickers, dialogs, menus, progressbars, selectmenus, sliders, spinners, tabs, tooltips, custom effects and interactions to your forms.
+        li
+          a(href='http://touchpunch.furf.com/', title='jQuery UI Touch Punch', target='_blank') jQueryUI Touch Punch
+          |  - is a small hack that enables the use of touch events on sites using the jQuery UI user interface library.
+        li
+          a(href='http://trentrichardson.com/examples/timepicker/', title='Timepicker', target='_blank') Timepicker
+          |  - adds a timepicker to the jQueryUI datepicker.
+        li
+          a(href='http://trentrichardson.com/examples/jQuery-SliderAccess/', title='jQuery Slider Access', target='_blank') Slider Access
+          |  - add touch accessibility to the jQueryUI slider.
+        li
+          a(href='http://lucianocosta.info/jquery.mtz.monthpicker/', title='Monthpicker', target='_blank') Monthpicker
+          |  - calendar widget that allows you to pick just month and year.
+        li
+          a(href='http://digitalbush.com/projects/masked-input-plugin/', title='Masked input', target='_blank') Masked input
+          |  - allows a user to more easily enter fixed width input.
+        li
+          a(href='http://bgrins.github.io/spectrum/' title='Spectrum' target='_blank') Spectrum
+          |  - jQuery colorpicker.
+        li
+          a(href='http://wbotelhos.com/raty/', title='Raty', target='_blank') jQuery Raty
+          |  - jQuery star rating plugin.
+        li
+          a(href='http://moro.es/misc/jquery-nicefileinput-js/', title='NiceFileInput', target='_blank') NiceFileInput
+          |  - allows you to add custom styles to file inputs.
+        li
+          a(href='http://jqueryvalidation.org/', title='jQuery Validation', target='_blank') jQuery Validation
+          |  - client side validation.
+        li
+          a(href='http://malsup.com/jquery/form/', title='jQuery Form', target='_blank') jQuery Form
+          |  - allows you to easily and unobtrusively upgrade HTML forms to use AJAX.
+      p You can click on each of the links above to find documentation for each plugin.
+      p In the&nbsp;
+        code app/examples
+        |  folder you can find the HTML examples.
+      p In the&nbsp;
+        code app/scripts
+        |  folder you can find the corresponding javascript file for each HTML example.
+      p In the&nbsp;
+        code app/scripts/plugins
+        |  folder you can find all the scripts
+      h5#jqueryui III.I jQueryUI
+      p Each of the jQueryUI widgets has a separate LESS file (in&nbsp;
+        code app/less/jqueryui
+        | ). In each of the files (where was needed) there is a comment ("Styles added by me"), from there down i recommand you put your custom styles.
+      p For the javascript functionality i recommand you checkout the&nbsp;
+        a(href='http://jqueryui.com/', title='jQueryUI', target='_blank') jQueryUI
+        |  documentation and also viewing the source code of the demos that i have included.
+      h5#ie8 III.II Internet Explorer 8
+      p For the CSS to work properly on Internet Explorer 8, i've used conditional comments to load the libraries (this will load only if the user uses Internet Explorer and below):
+      include documentation-buttons
+      pre(class='brush: xml')
+        <!--[if lt IE 9]>
+        script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+        script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+        script(src='http://cdnjs.cloudflare.com/ajax/libs/mootools/1.5.0/mootools-core-full-compat.min.js')
+        script(src='http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js')
+        <![endif]-->
+      ul
+        li
+          strong html5shiv.js
+          |  - enables use of HTML5 sectioning elements in legacy Internet Explorer and provides basic HTML5 styling for Internet Explorer 6-9, Safari 4.x (and iPhone 3.x), and Firefox 3.x.
+        li
+          strong respond.min.js
+          |  - a fast &amp; lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more).
+        li
+          strong mootools-core-full-compat.min.js
+          |  - is a dependency for&nbsp;
+          strong selectivizr-min.js
+          | .
+        li
+          strong selectivizr-min.js
+          |  - JavaScript utility that emulates CSS3 pseudo-classes and attribute selectors in Internet Explorer 6-8.
+
+      p The&nbsp;
+        a(href='http://modernizr.com/', title='Modernizr', target='_blank') Modernizr
+        |  library is also included, this will help you detect HTML5 and CSS3 features in the user’s browser.
+
+      h3#the-php IV. PHP
+      p I've used
+        a(href='https://getcomposer.org/', title='Composer', target='_blank') Composer
+        |  to install the following packages:
+      ul.composer-packages
+        li
+          a(href='https://github.com/Respect/Validation', title='Respect Validation', target='_blank') Respect Validation
+          |  - server side validation.
+        li
+          a(href='https://github.com/Gregwar/Captcha', title='Captcha' target='_blank') Captcha
+          |  - captcha library.
+        li
+          a(href='https://github.com/Synchro/PHPMailer', title='PHPMailer', target='_blank') PHPMailer
+          |  - full-featured email creation and transfer class for PHP.
+        li
+          a(href='https://github.com/illuminate/database', title='Illuminate Database', target='_blank') Illuminate Database
+          |  - full database toolkit for PHP
+        li
+          a(href='https://github.com/ircmaxell/password_compat', title='Password compat', target='_blank') Pasword compat
+          |  - compatibility library for the proposed simplified password hashing algorithm
+        li
+          a(href='http://htmlpurifier.org/', title='HTML Purifier', target='_blank') HTML Purifier
+          |  - will not only remove all malicious code (better known as XSS) with a thoroughly audited, secure yet permissive whitelist, it will also make sure your documents are standards compliant.
+      p When you download this item from&nbsp;
+        strong codecanyon
+        |  you'll not have any of the libraries installed. To install them, all you have to do is run&nbsp;
+        code composer update
+        |  in the&nbsp;
+        code app/php/
+        |  folder.
+
+      p In the&nbsp;
+        code app/php/
+        |  folder you will find 3 fully functional forms(&nbsp;
+        code contact.php
+        | ,&nbsp;
+        code request-quote.php
+        |  and&nbsp;
+        code register.php
+        | ), use these files (and the other included files) as the starting point for your forms.
+      p For the forms to function properly, you need to modify the&nbsp;
+        code app/php/creds.php
+        |  file and link it in (see&nbsp;
+        strong line 7
+        |  in register.php, or&nbsp;
+        strong line 8
+        |  in contact.php and request-quote.php).
+      h3#quick-start V. Quick start
+      ol
+        li Link the CSS files into your project, i've explained&nbsp;
+          a(href='#the-css', data-scroll) here
+          |  what each of the file does. Based on that you can decide if you need to include the file into you project.
+        li Link the javascript files, you can see&nbsp;
+          a(href='#the-javascript', data-scroll) here
+          |  what each of the library does and you can decide if you need it in your project.
+        li Each of the HTML demos (located in the&nbsp;
+          code app/examples
+          |  folder) has it's own specific javascript file, where all the javascript for that specific form is located. E.g.&nbsp;
+          code review.html
+          |  has a&nbsp;
+          code review.js
+          |  file. Use this HTML files as starting points for you forms.
+        li The fully functional AJAX forms (contact, request-quote, register) are located in the&nbsp;
+          code app/php
+          |  folder. In order to make them work you need to run&nbsp;
+          code composer update
+          |  inside the&nbsp;
+          code app/php
+          |  folder. This command will install all the necessary php dependencies. Next you need to edit the&nbsp;
+          code creds.php
+          |  file with your credentials, then change the line (from contact.php, request-quote.php, register.php, email-checker.php, username-checker.php) that says&nbsp;
+          code require_once '../../../../CREDS/index.php';
+          |  to&nbsp;
+          code require_once 'creds.php';
+          | . For the&nbsp;
+          code register.php
+          |  you also need to create a&nbsp;
+          code users
+          |  table in you database with the following columns:&nbsp;
+          strong id
+          | ,&nbsp;
+          strong username
+          | ,&nbsp;
+          strong first_name
+          | ,&nbsp;
+          strong last_name
+          | ,&nbsp;
+          strong gender
+          | ,&nbsp;
+          strong email_address
+          | ,&nbsp;
+          strong password
+          | ,&nbsp;
+          strong subscription
+          | ,&nbsp;
+          strong registration_date
+          | . I warn you however that this is not a complete login and registration system, this is mostly to demonstrate database interaction.
+        li Read the documentation for more information.
+        li If you get stuck, or have any questions about this item, please send me an email via my&nbsp;
+          a(href='http://themeforest.net/user/rcwthemes#contact', title='Codecanyon', target='_blank') codecanyon profile
+          |  or you can contact me on skype (my id is:&nbsp;
+          strong rcwthemes
+          | ).
+      p(style='margin-bottom: 72px;') ***** The&nbsp;
+        strong Copy to clipboard
+        |  button only works if you put your files on a web server.

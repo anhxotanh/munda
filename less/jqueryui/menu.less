@@ -1,0 +1,90 @@
+//
+// Menu
+// --------------------------------------------------
+
+.ui-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  outline: none;
+
+  .ui-menu {
+    position: absolute;
+  }
+
+  .ui-menu-item {
+    position: relative;
+    margin: 0;
+    padding: (@ff-line-height-computed / 4) (@ff-line-height-computed / 2 + @ff-ui-icon-width);
+    cursor: pointer;
+    min-height: 0;  // support: IE7
+    // Support: IE10, see #8844
+    list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+  }
+
+  .ui-menu-divider {
+    margin: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    border-width: 1px 0 0 0;
+  }
+
+  .ui-state-focus,
+  .ui-state-active {
+    margin: 0;
+  }
+
+  // Left aligned
+  .ui-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: (@ff-line-height-computed / 4);
+    margin: auto 0;
+  }
+
+  // Right aligned
+  .ui-menu-icon {
+    left: auto;
+    right: 0;
+  }
+}
+
+// Icon support
+.ui-menu-icons {
+  position: relative;
+
+  .ui-menu-item {
+    padding-left: (@ff-line-height-computed / 2 + @ff-ui-icon-width);
+  }
+}
+
+//
+// Styles added by me
+// --------------------------------------------------
+
+.ui-menu {
+  .ui-menu-item {
+    &.ui-state-focus {
+      border-width: 0;
+    }
+
+    &.ui-state-active {
+      border-width: 0;
+    }
+
+    a {
+      display: block;
+      color: @ff-ui-widget-content-color;
+      text-decoration: none;
+    }
+  }
+
+  &.ui-state-disabled {
+    .ui-menu-item:focus {
+      outline: none;
+    }
+  }
+}

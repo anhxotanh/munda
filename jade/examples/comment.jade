@@ -1,0 +1,34 @@
+extends example-template.jade
+
+block title
+  title Comment form
+
+block content
+  .form-container.comment-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='comment-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading Comment
+      fieldset.row
+        .form-group.col-md-12.has-icon-right
+          label(for='name', class='sr-only') Name
+          input(type='text', name='name', id='name', class='form-control ff-rounded', placeholder='Name')
+          span.icon-user14.icon-right
+        .form-group.col-md-12.has-icon-right
+          label(for='email', class='sr-only') Email address
+          input(type='email', name='email', id='email', class='form-control ff-rounded', placeholder='Email address')
+          span.icon-envelope7.icon-right
+        .form-group.col-md-12.has-icon-right
+          label(for='website', class='sr-only')
+          input(type='url', name='website', id='website', class='form-control ff-rounded', placeholder='Website')
+          span.icon-earth22.icon-right
+        .form-group.col-md-12.has-icon-right
+          label(for='your-comment', class='sr-only') Your comment
+          textarea(name='your-comment', cols='30', rows='4', id='your-comment', class='form-control ff-rounded', placeholder='Your comment')
+          span.icon-pen3.icon-right
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Comment', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-left')
+          span.btn-icon-left.icon-cancel5.ff-rounded-l
+          | Reset
+block mainjs
+  script(src='../scripts/comment.js')

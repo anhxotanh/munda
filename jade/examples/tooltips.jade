@@ -1,0 +1,69 @@
+extends example-template.jade
+
+block title
+  title Tooltips
+
+block content
+  .form-container.tooltips-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='tooltips-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading Tooltips
+      fieldset.row
+        .col-md-12
+          legend
+            span Tooltip positioning
+        .form-group.col-md-6.has-icon-left
+          label(for='tooltip-left-center', class='sr-only') Tooltip left center
+          input(type='text', name='tooltip-left-center', id='tooltip-left-center', class='form-control ff-rounded', placeholder='Tooltip left center', data-tooltip='Tooltip left center')
+          span.icon-user14.icon-left
+        .form-group.col-md-6.has-icon-left
+          label(for='tooltip-left-top', class='sr-only') Tooltip left top
+          input(type='email', name='tooltip-left-top', id='tooltip-left-top', class='form-control ff-rounded', placeholder='Tooltip left top', data-tooltip='Tooltip left top')
+          span.icon-envelope7.icon-left
+        .form-group.col-md-6.has-icon-left
+          label(for='tooltip-left-bottom', class='sr-only') Tooltip left bottom
+          input(type='text', name='tooltip-left-bottom', id='tooltip-left-bottom', class='form-control ff-rounded', placeholder='Tooltip left bottom', data-tooltip='Tooltip left bottom')
+          span.icon-locked2.icon-left
+        .form-group.col-md-6.has-icon-left
+          label(for='tooltip-right-center', class='sr-only') Tooltip right center
+          input(type='text', name='tooltip-right-center', id='tooltip-right-center', class='form-control ff-rounded', placeholder='Tooltip right center', data-tooltip='Tooltip right center')
+          span.icon-cloud8.icon-left
+        .form-group.col-md-6.has-icon-left(style='margin-bottom: 0;')
+          label(for='tooltip-right-bottom', class='sr-only') Tooltip right bottom
+          input(type='text', name='tooltip-right-bottom', id='tooltip-right-bottom', class='form-control ff-rounded', placeholder='Tooltip right bottom', data-tooltip='Tooltip right bottom')
+          span.icon-comment3.icon-left
+        .form-group.col-md-6.has-icon-left
+          label(for='tooltip-right-top', class='sr-only') Tooltip right top
+          input(type='text', name='tooltip-right-top', id='tooltip-right-top', class='form-control ff-rounded', placeholder='Tooltip right top', data-tooltip='Tooltip right top')
+          span.icon-briefcase2.icon-left
+      fieldset.row
+        .col-md-12
+          legend
+            span Tooltips on icons
+        .form-group.col-md-6.has-icons
+          label(for='tooltip-icon-1', class='sr-only') Tooltip on icon
+          input(type='email', name='tooltip-icon-1', id='tooltip-icon-1', class='form-control ff-rounded', placeholder='Tooltip on icon')
+          span.icon-envelope7.icon-left
+          span.icon-question4.icon-right.tooltip-icon#tooltip-i1(title='Great info here')
+        .form-group.col-md-6.has-icons
+          label(for='tooltip-icon-2', class='sr-only') Tooltip on icon
+          input(type='text', name='tooltip-icon-2', id='tooltip-icon-2', class='form-control ff-rounded', placeholder='Tooltip on icon')
+          span.icon-twitter42.icon-left
+          span.icon-question4.icon-right.tooltip-icon#tooltip-i2(title='Another great info tooltip')
+        .form-group.col-md-6.has-icons(style='margin-bottom: 0;')
+          label(for='tooltip-icon-3', class='sr-only') Tooltip on icon
+          input(type='email', name='tooltip-icon-3', id='tooltip-icon-3', class='form-control ff-rounded', placeholder='Tooltip on icon')
+          span.icon-envelope7.icon-left
+          span.icon-question4.icon-right.tooltip-icon#tooltip-i3(title='Tooltips are very useful')
+        .form-group.col-md-6.has-icons
+          label(for='tooltip-icon-4', class='sr-only') Tooltip on icon
+          input(type='text', name='tooltip-icon-4', id='tooltip-icon-4', class='form-control ff-rounded', placeholder='Tooltip on icon')
+          span.icon-twitter42.icon-left
+          span.icon-question4.icon-right.tooltip-icon#tooltip-i4(title='Helpful info goes here')
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Submit', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-left')
+          span.btn-icon-left.icon-cancel5.ff-rounded-l
+          | Reset
+block mainjs
+  script(src='../scripts/tooltips.js')

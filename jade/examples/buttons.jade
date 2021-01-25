@@ -1,0 +1,209 @@
+extends example-template.jade
+
+block title
+  title Buttons
+
+block content
+  .form-container.buttons-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='buttons-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading Buttons
+      fieldset.row
+        .col-md-12
+          legend
+            span Buttons styles no icons
+        .form-group.col-md-12(style='font-size: 0;')
+          a(href='login.html', title='Login form', class='btn btn-primary ff-rounded') Link
+          button(type='button', class='btn btn-primary ff-rounded') Button
+          input(type='button', value='Submit', class='btn btn-primary ff-rounded')
+          a(href='../index.html', title='Home', class='btn btn-primary ff-rounded btn-has-icon-left')
+            span.btn-icon-left.icon-heart.ff-rounded-l
+            | Like
+          button(type='button', class='btn btn-primary ff-rounded btn-has-icon-right')
+            | Reply
+            span.btn-icon-right.icon-reply.ff-rounded-r
+        .form-group.col-md-12(style='font-size: 0;')
+          a(href='login.html', title='Login form', class='btn btn-success ff-rounded') Link
+          button(type='button', class='btn btn-success ff-rounded') Button
+          input(type='button', value='Submit', class='btn btn-success ff-rounded')
+          a(href='login.html', title='Login form', class='btn btn-success ff-rounded btn-has-icon-left')
+            span.btn-icon-left.icon-heart.ff-rounded-l
+            | Like
+          button(type='button', class='btn btn-success ff-rounded btn-has-icon-right')
+            | Reply
+            span.btn-icon-right.icon-reply.ff-rounded-r
+        .form-group.col-md-12(style='font-size: 0;')
+          a(href='login.html', title='Login form', class='btn btn-info ff-rounded') Link
+          button(type='button', class='btn btn-info ff-rounded') Button
+          input(type='button', value='Submit', class='btn btn-info ff-rounded')
+          a(href='login.html', title='Login form', class='btn btn-info ff-rounded btn-has-icon-left')
+            span.btn-icon-left.icon-heart.ff-rounded-l
+            | Like
+          button(type='button', class='btn btn-info ff-rounded btn-has-icon-right')
+            | Reply
+            span.btn-icon-right.icon-reply.ff-rounded-r
+        .form-group.col-md-12(style='font-size: 0;')
+          a(href='login.html', title='Login form', class='btn btn-danger ff-rounded') Link
+          button(type='button', class='btn btn-danger ff-rounded') Button
+          input(type='button', value='Submit', class='btn btn-danger ff-rounded')
+          a(href='login.html', title='Login form', class='btn btn-danger ff-rounded btn-has-icon-left')
+            span.btn-icon-left.icon-heart.ff-rounded-l
+            | Like
+          button(type='button', class='btn btn-danger ff-rounded btn-has-icon-right')
+            | Reply
+            span.btn-icon-right.icon-reply.ff-rounded-r
+        .form-group.col-md-12(style='font-size: 0;')
+          a(href='login.html', title='Login form', class='btn btn-warning ff-rounded') Link
+          button(type='button', class='btn btn-warning ff-rounded') Button
+          input(type='button', value='Submit', class='btn btn-warning ff-rounded')
+          a(href='login.html', title='Login form', class='btn btn-warning ff-rounded btn-has-icon-left')
+            span.btn-icon-left.icon-heart.ff-rounded-l
+            | Like
+          button(type='button', class='btn btn-warning ff-rounded btn-has-icon-right')
+            | Reply
+            span.btn-icon-right.icon-reply.ff-rounded-r
+        .form-group.col-md-12(style='font-size: 0;')
+          a(href='login.html', title='Login form', class='btn btn-default ff-rounded') Link
+          button(type='button', class='btn btn-default ff-rounded') Button
+          input(type='button', value='Submit', class='btn btn-default ff-rounded')
+          a(href='login.html', title='Login form', class='btn btn-default ff-rounded btn-has-icon-left')
+            span.btn-icon-left.icon-heart.ff-rounded-l
+            | Like
+          button(type='button', class='btn btn-default ff-rounded btn-has-icon-right')
+            | Reply
+            span.btn-icon-right.icon-reply.ff-rounded-r
+      fieldset.row
+        .col-md-12
+          legend
+            span Buttons styles with icons
+        .form-group.col-md-12
+          a(href='login.html', title='Login form', class='btn btn-primary ff-rounded btn-has-icon-left')
+            span.btn-icon-left.icon-camera3.ff-rounded-l
+            | Gallery
+          a(href='login.html', title='Login form', class='btn btn-success ff-rounded btn-has-icon-left')
+            span.btn-icon-left.icon-folder.ff-rounded-l
+            | Secret
+          a(href='login.html', title='Login form', class='btn btn-info ff-rounded btn-has-icon-left')
+            span.btn-icon-left.icon-search2.ff-rounded-l
+            | Search
+          a(href='login.html', title='Login form', class='btn btn-danger ff-rounded-tl-br btn-has-icon-left')
+            span.btn-icon-left.icon-thumbsup.ff-rounded-tl
+            | Like
+          a(href='login.html', title='Login form', class='btn btn-warning ff-rounded-tr-bl btn-has-icon-left')
+            span.btn-icon-left.icon-coffee.ff-rounded-bl
+            | Take break
+        .form-group.col-md-12
+          button(type='button', class='btn btn-primary ff-rounded btn-has-icon-right')
+            | Quote
+            span.btn-icon-right.icon-right-quote-alt.ff-rounded-r
+          button(type='button', class='btn btn-success ff-rounded btn-has-icon-right')
+            | Read
+            span.btn-icon-right.icon-article.ff-rounded-r
+          button(type='button', class='btn btn-info ff-rounded-tl-br btn-has-icon-right')
+            | Post image
+            span.btn-icon-right.icon-camera2.ff-rounded-br
+          button(type='button', class='btn btn-danger ff-rounded-tr-bl btn-has-icon-right')
+            | Statistics
+            span.btn-icon-right.icon-chart.ff-rounded-tr
+          button(type='button', class='btn btn-primary ff-rounded btn-has-icons')
+            span.btn-icon-left.icon-unlock-fill.ff-rounded-l
+            | Quote
+            span.btn-icon-right.icon-right-quote-alt.ff-rounded-r
+      fieldset.row
+        .col-md-12
+          legend
+            span Buttons icons only
+        .form-group.col-md-12
+          a(href='login.html', title='Photo gallery', class='btn btn-primary ff-rounded btn-icon-only')
+            span.icon-camera3
+            span.sr-only Photo gallery
+          a(href='login.html', title='Login form', class='btn btn-success ff-rounded btn-icon-only')
+            span.icon-folder
+            span.sr-only Files
+          a(href='login.html', title='Login form', class='btn btn-info ff-rounded btn-icon-only')
+            span.icon-search2
+            span.sr-only Search
+          a(href='login.html', title='Login form', class='btn btn-danger ff-rounded btn-icon-only')
+            span.icon-thumbsup
+            span.sr-only Thumbs Up
+          a(href='login.html', title='Login form', class='btn btn-warning ff-rounded btn-icon-only')
+            span.icon-coffee
+            span.sr-only Buy me coffee
+          button(type='button', class='btn btn-primary ff-rounded btn-icon-only')
+            span.icon-right-quote-alt
+            span.sr-only Request quote
+          button(type='button', class='btn btn-success ff-rounded btn-icon-only')
+            span.icon-article
+            span.sr-only Read article
+          button(type='button', class='btn btn-info ff-rounded btn-icon-only')
+            span.icon-camera2
+            span.sr-only Photo gallery
+          button(type='button', class='btn btn-danger ff-rounded btn-icon-only')
+            span.icon-chart
+            span.sr-only Statistics
+          button(type='button', class='btn btn-warning ff-rounded btn-icon-only')
+            span.icon-pen-alt-fill
+            span.sr-only Edit
+      fieldset.row
+        .col-md-12
+          legend
+            span jQueryUI buttons
+        .form-group.col-md-12
+          a(href='login.html', title='Login form', id='jqueryui-link') Gallery
+          button(type='button', id='jqueryui-btn') Secret
+          input(type='button', value='Input', id='jqueryui-input')
+      fieldset.row
+        .col-md-12
+          legend
+            span jQueryUI checkboxes
+        .form-group.col-md-6
+          input(type='checkbox', name='jqueryui-checkbox', id='jqueryui-checkbox')
+          label(for='jqueryui-checkbox') Toggle
+        .form-group.col-md-6
+          #checkbox-group
+            input(type='checkbox', name='jqueryui-checkbox-1', id='jqueryui-checkbox-1')
+            label(for='jqueryui-checkbox-1') A
+            input(type='checkbox', name='jqueryui-checkbox-2', id='jqueryui-checkbox-2', checked)
+            label(for='jqueryui-checkbox-2') B
+            input(type='checkbox', name='jqueryui-checkbox-3', id='jqueryui-checkbox-3')
+            label(for='jqueryui-checkbox-3') C
+      fieldset.row
+        .col-md-12
+          legend
+            span jQueryUI icons on buttons
+        .form-group.col-md-12
+          button(type='button', id='jqueryui-icon-only-1') Icon only
+          button(type='button', id='jqueryui-icon-on-left') Button with icon on left
+          button(type='button', id='jqueryui-icon-on-both') Button with icon on both
+          button(type='button', id='jqueryui-icon-only-2') Icons only
+      fieldset.row
+        .col-md-12
+          legend
+            span jQueryUI radio buttons
+        .form-group.col-md-12
+          #radio-group
+            input(type='radio', name='jqueryui-radio', id='jqueryui-radio-1', value='radio-1', checked)
+            label(for='jqueryui-radio-1') A
+            input(type='radio', name='jqueryui-radio', id='jqueryui-radio-2', value='radio-2')
+            label(for='jqueryui-radio-2') B
+            input(type='radio', name='jqueryui-radio', id='jqueryui-radio-3', value='radio-3')
+            label(for='jqueryui-radio-3') C
+      fieldset.row
+        .col-md-12
+          legend
+            span jQueryUI split button
+        .form-group.col-md-12
+          .split-button
+            button(type='button', id='rerun') Run last action
+            button(type='button', id='select') Select a action
+          ul
+            li Open...
+            li Save
+            li Delete
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Submit', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-right')
+          | Reset
+          span.btn-icon-right.icon-cancel5.ff-rounded-r
+block mainjs
+  script(src='../scripts/buttons.js')

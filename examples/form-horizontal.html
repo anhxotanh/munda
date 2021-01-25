@@ -1,0 +1,124 @@
+<!DOCTYPE html><!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Horizontal form</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon and Apple Icons-->
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../apple-touch-icon-precomposed.png">
+  <!-- Google Fonts-->
+  <link href="http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,900italic" rel="stylesheet">
+  <!-- Vendor stylesheets-->
+  <link rel="stylesheet" href="../styles/vendor/normalize.css">
+  <link rel="stylesheet" href="../styles/vendor/grid.css">
+  <link rel="stylesheet" href="../styles/icomoon.css">
+  <link rel="stylesheet" href="../styles/vendor/spectrum.css">
+  <link rel="stylesheet" href="../styles/vendor/spectrum-custom.css" id="spectrum-custom">
+  <link rel="stylesheet" href="../styles/vendor/raty-custom.css">
+  <link rel="stylesheet" href="../styles/vendor/animate.css">
+  <link rel="stylesheet" href="../styles/style-switcher.css">
+  <!-- Main stylesheet-->
+  <link rel="stylesheet" href="../styles/form-framework.min.css" id="form-framework">
+  <link rel="stylesheet" href="../styles/jqueryui-theme.min.css" id="jqueryui-theme">
+  <!-- build:js scripts/vendor/modernizr.js-->
+  <script src="../../bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild-->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+  <!-- CSS3 pseudo-classes and attribute selectors support in Internet Explorer 6-8--><!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/mootools/1.5.0/mootools-core-full-compat.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+  <![endif]-->
+</head>
+<body class="example">
+  <div id="preloader" class="preloader">
+    <div id="status" class="status"></div>
+  </div>
+  <div class="style-switcher ff-rounded-etr">
+    <button type="button" id="switcher-toggle" class="switcher-toggle ff-rounded-r"><span class="icon-gear"></span></button>
+    <h3>Change styles</h3>
+    <h5>Skin</h5>
+    <ul>
+      <li><a id="carrot" href="#" title="Carrot" data-tooltip="Carrot" class="carrot skin"><span class="sr-only">Carrot</span></a></li>
+      <li><a id="greensea" href="#" title="Greensea" class="greensea skin"><span class="sr-only">Greensea</span></a></li>
+      <li><a id="pumpkin" href="#" title="Pumpkin" class="pumpkin skin"><span class="sr-only">Pumpkin</span></a></li>
+      <li><a id="sunflower" href="#" title="Sunflower" class="sunflower skin"><span class="sr-only">Sunflower</span></a></li>
+      <li><a id="turquoise" href="#" title="Turquoise" class="turquoise skin"><span class="sr-only">Turquoise</span></a></li>
+    </ul>
+    <h5>Body background</h5>
+    <ul>
+      <li><a id="food" href="#" title="Food" class="food body-bg"><span class="sr-only">Food</span></a></li>
+      <li><a id="black-linen-v2" href="#" title="Black linen v2" class="black-linen-v2 body-bg"><span class="sr-only">Black linen v2</span></a></li>
+      <li><a id="low-contrast-linen" href="#" title="Low contrast linen" class="low-contrast-linen body-bg"><span class="sr-only">Low contrast linen</span></a></li>
+      <li><a id="purty-wood" href="#" title="Purty wood" class="purty-wood body-bg"><span class="sr-only">Purty wood</span></a></li>
+      <li><a id="shattered" href="#" title="Shattered" class="shattered body-bg"><span class="sr-only">Shattered</span></a></li>
+    </ul>
+    <div class="text-right">
+      <button type="button" id="reset-style-switcher" class="reset-style-switcher ff-rounded">Reset</button>
+    </div>
+  </div>
+  <div class="form-container horizontal-form animated fadeInDown">
+    <form action="" method="post" id="horizontal-form" class="rcw-form form-horizontal container-fluid">
+      <header>
+        <h3 class="form-main-heading">Horizontal form</h3>
+      </header>
+      <fieldset class="row">
+        <div class="form-group col-md-12">
+          <div class="row">
+            <label for="email" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+              <label for="email" class="sr-only">Email address</label>
+              <input type="email" name="email" id="email" placeholder="Email address" class="form-control ff-rounded">
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-md-12">
+          <div class="row">
+            <label for="new-password" class="col-sm-2 control-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" id="new-password" placeholder="New password" class="form-control ff-rounded">
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-md-12">
+          <div class="row">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="checkbox">
+                <input type="checkbox" name="remember-me" value="yes" id="remember-me" checked>
+                <label for="remember-me">Remember me</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-md-12">
+          <div class="row">
+            <div class="col-sm-offset-2 col-sm-10">
+              <input type="submit" name="submit" value="Log in" class="btn btn-primary ff-rounded">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <script src="../scripts/plugins/jquery.js"></script>
+  <script src="../scripts/plugins/jquery.easing.1.3.js"></script>
+  <script src="../scripts/plugins/jquery-ui.js"></script>
+  <script src="../scripts/plugins/jquery-ui-timepicker-addon.js"></script>
+  <script src="../scripts/plugins/jquery.mtz.monthpicker.js"></script>
+  <script src="../scripts/plugins/jquery-ui-sliderAccess.js"></script>
+  <script src="../scripts/plugins/jquery.maskedinput.js"></script>
+  <script src="../scripts/plugins/spectrum.js"></script>
+  <script src="../scripts/plugins/jquery.raty.js"></script>
+  <script src="../scripts/plugins/jquery.nicefileinput.min.js"></script>
+  <script src="../scripts/plugins/placeholders.min.js"></script>
+  <script src="../scripts/plugins/jquery.validate.js"></script>
+  <script src="../scripts/plugins/additional-methods.js"></script>
+  <script src="../scripts/plugins/jquery.form.js"></script>
+  <script src="../scripts/style-switcher.js"></script>
+  <script src="../scripts/preloader.js"></script>
+  <script src="../scripts/form-horizontal.js"></script>
+</body></html>

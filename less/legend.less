@@ -1,0 +1,47 @@
+/* Legend */
+
+.rcw-form {
+  legend {
+    position: relative;
+    z-index: 1;
+    font-family: @ff-legend-font-family;
+    font-size: @ff-legend-font-size;
+    color: @ff-legend-color;
+    line-height: unit(@ff-line-height-computed / @ff-legend-font-size);
+    margin-bottom: @ff-line-height-computed;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      z-index: -1;
+      height: @ff-legend-border-height;
+      background-color: @ff-legend-border-color;
+    }
+
+    > span {
+      padding-right: @ff-legend-text-padding-right;
+      background-color: @ff-form-bg;
+      font-weight: @ff-legend-text-font-weight;
+    }
+
+    &.center {
+      text-align: center;
+
+      > span {
+        padding-left: @ff-legend-text-padding-right;
+      }
+    }
+
+    &.right {
+      text-align: right;
+
+      > span {
+        padding-right: 0;
+        padding-left: @ff-legend-text-padding-right;
+      }
+    }
+  }
+}

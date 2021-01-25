@@ -1,0 +1,90 @@
+extends example-template.jade
+
+block title
+  title Icons
+
+block content
+  .form-container.icons-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='icons-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading Icons
+      fieldset.row
+        .col-md-12
+          legend
+            span No icons
+        .form-group.col-md-6
+          label(for='no-label-1', class='sr-only') No label
+          input(type='text', name='no-label-1', id='no-label-1', class='form-control ff-rounded', placeholder='No label')
+        .form-group.col-md-6
+          label(for='no-label-2', class='sr-only') No label
+          input(type='text', name='no-label-2', id='no-label-2', class='form-control ff-rounded', placeholder='No label')
+        .form-group.col-md-12
+          label(for='textarea-no-label', class='sr-only') No label
+          textarea(name='textarea-no-label', cols='30', rows='4', id='textarea-no-label', class='form-control ff-rounded', placeholder='No label')
+      fieldset.row
+        .col-md-12
+          legend
+            span Icons on the left
+        .form-group.col-md-6.has-icon-left
+          label(for='icons-on-the-left-1', class='sr-only') Icon on the left
+          input(type='text', name='icons-on-the-left-1', id='icons-on-the-left-1', class='form-control ff-rounded', placeholder='Icon on the left')
+          span.icon-user14.icon-left
+        .form-group.col-md-6.has-icon-left
+          label(for='icons-on-the-left-2', class='sr-only') Icon on the left
+          input(type='email', name='icons-on-the-left-2', id='icons-on-the-left-2', class='form-control ff-rounded', placeholder='Icon on the left')
+          span.icon-envelope7.icon-left
+        .form-group.col-md-12.has-icon-left
+          label(for='icons-on-the-left-3', class='sr-only') Icon on the left
+          textarea(name='icons-on-the-left-3', cols='30', rows='4', id='icons-on-the-left-3', class='form-control ff-rounded', placeholder='Icon on the left')
+          span.icon-pen2.icon-left
+      fieldset.row
+        .col-md-12
+          legend
+            span Icons on the right
+        .form-group.col-md-6.has-icon-right
+          label(for='icons-on-the-right-1', class='sr-only') Icon on the right
+          input(type='text', name='icons-on-the-right-1', id='icons-on-the-right-1', class='form-control ff-rounded', placeholder='Icon on the right')
+          span.icon-user14.icon-right
+        .form-group.col-md-6.has-icon-right
+          label(for='icons-on-the-right-2', class='sr-only') Icon on the right
+          input(type='email', name='icons-on-the-right-2', id='icons-on-the-right-2', class='form-control ff-rounded', placeholder='Icon on the right')
+          span.icon-envelope7.icon-right
+        .form-group.col-md-12.has-icon-right
+          label(for='icons-on-the-right-3', class='sr-only') Icon on the right
+          textarea(name='icons-on-the-right-3', cols='30', rows='4', id='icons-on-the-right-3', class='form-control ff-rounded', placeholder='Icon on the right')
+          span.icon-pen2.icon-right
+      fieldset.row
+        .col-md-12
+          legend
+            span Icons on both sides
+        .form-group.col-md-6.has-icons(style='margin-bottom: 0;')
+          label(for='icons-on-both-sides-1', class='sr-only') Icons on both sides
+          input(type='email', name='icons-on-both-sides-1', id='icons-on-both-sides-1', class='form-control ff-rounded', placeholder='Icons on both sides')
+          span.icon-envelope7.icon-left
+          span.icon-question4.icon-right
+        .form-group.col-md-6.has-icons
+          label(for='icons-on-both-sides-2', class='sr-only') Icons on both sides
+          input(type='text', name='icons-on-both-sides-2', id='icons-on-both-sides-2', class='form-control ff-rounded', placeholder='Icons on both sides')
+          span.icon-twitter42.icon-left
+          span.icon-question4.icon-right
+      fieldset.row
+        .col-md-12
+          legend
+            span Input groups
+        .form-group.col-md-6
+          .input-group
+            label(for='input-group-1', class='input-group-addon ff-rounded-l')
+              span.icon-vimeo
+            input(type='text', name='input-group-1', id='input-group-1', class='form-control ff-rounded-r', placeholder='Input group')
+        .form-group.col-md-6
+          .input-group
+            input(type='text', name='input-group-2', id='input-group-2', class='form-control ff-rounded-l', placeholder='Input group')
+            label(for='input-group-2', class='input-group-addon ff-rounded-r')
+              span.icon-github62
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Submit', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-left')
+          span.btn-icon-left.icon-cancel5.ff-rounded-l
+          | Reset
+block mainjs
+  script(src='../scripts/icons.js')

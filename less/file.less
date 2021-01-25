@@ -1,0 +1,50 @@
+/* Fiele input */
+
+.rcw-form {
+  .NFI-button {
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+    background-image: none;
+    white-space: nowrap;
+    text-decoration: none;
+    .button-size(@ff-btn-padding-vertical; @ff-btn-padding-horizontal; @ff-btn-height);
+    .user-select(none);
+    width: 35%;
+    .button-variant(@ff-btn-primary-color; @ff-btn-primary-bg);
+    .border-radius(@ff-border-radius 0 0 @ff-border-radius);
+
+    @media (min-width: @screen-sm-min) {
+      width: 25%;
+    }
+  }
+
+  // Button inside disabled fieldset
+  fieldset[disabled] {
+    .NFI-button {
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        cursor: default;
+        .fieldset-disabled-button(@ff-btn-primary-bg);
+      }
+    }
+  }
+
+  .NFI-filename {
+    width: 65%;
+    height: @ff-form-control-height-base;
+    line-height: @ff-line-height-base;
+    color: @ff-readonly-color;
+    border: @ff-form-control-border-width @ff-form-control-border-style @ff-form-control-border-color-disabled;
+    background-color: @ff-form-control-bg;
+    background-image: none;
+    .border-radius(0 @ff-border-radius @ff-border-radius 0);
+
+    @media (min-width: @screen-sm-min) {
+      width: 75%;
+    }
+  }
+}

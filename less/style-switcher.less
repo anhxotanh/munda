@@ -1,0 +1,232 @@
+/* Style switcher version 1.0.0 */
+
+// Import variables
+@import "variables.less";
+
+// Import mixins
+@import "mixins/clearfix.less";
+@import "mixins/lesshat.less";
+@import "mixins/form-framework.less";
+
+@import "scaffolding.less";
+
+.style-switcher {
+  .box-sizing(border-box);
+  position: fixed;
+  top: (@ff-line-height-computed * 4);
+  left: -(@ff-line-height-computed * 11.5);
+  z-index: 9999998;
+  width: (@ff-line-height-computed * 11.5);
+  background-color: #fff;
+  padding: @ff-line-height-computed;
+  .transition(left 0.2s ease);
+
+  &:before,
+  &:after {
+    .box-sizing(border-box);
+  }
+  h3,
+  h5,
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  h3,
+  h5 {
+    text-align: center;
+    margin-bottom: (@ff-line-height-computed / 2);
+  }
+
+  ul {
+    list-style: none;
+    .clearfix();
+
+    li {
+      float: left;
+
+      a {
+        position: relative;
+        display: block;
+        width: (@ff-line-height-computed * 1.5);
+        height: (@ff-line-height-computed * 1.5);
+        border: @ff-form-control-border-width solid @ff-form-control-border-color;
+        .border-radius(@ff-border-radius);
+        margin: 0 (@ff-line-height-computed / 4) (@ff-line-height-computed / 2) 0;
+
+        &:hover {
+          border-color: @ff-form-control-border-hover;
+        }
+
+        &:active {
+          border-color: @ff-primary;
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: (@ff-line-height-computed / 8);
+          left: (@ff-line-height-computed / 8);
+          width: @ff-line-height-computed + (@ff-line-height-computed / 4);
+          height: @ff-line-height-computed + (@ff-line-height-computed / 4);
+          .border-radius(@ff-border-radius - 1);
+        }
+      }
+    }
+  }
+
+  h3 {
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+
+  h5 {
+    font-size: 14px;
+    line-height: 1.714285714285714;
+  }
+
+  .switcher-toggle {
+    position: absolute;
+    top: 0;
+    right: (@ff-line-height-computed * -2);
+    width: (@ff-line-height-computed * 2);
+    height: (@ff-line-height-computed * 2);
+    text-align: center;
+    line-height: (@ff-line-height-computed * 2);
+    background-color: #fff;
+    color: @ff-danger;
+    border: none;
+    outline: none;
+  }
+
+  &.open {
+    left: 0;
+  }
+
+  // Reset button
+  .reset-style-switcher {
+    border: none;
+    background-color: @ff-danger;
+    color: #fff;
+    height: (@ff-line-height-computed * 1.25);
+    line-height: (@ff-line-height-computed * 1.25);
+    font-size: 12px;
+    margin-top: (@ff-line-height-computed / 2);
+    outline: none;
+    padding: 0 (@ff-line-height-computed / 2);
+    .box-shadow(inset 0 -2px 0 0 darken(@ff-danger, 10%));
+
+    &:hover {
+      background-color: lighten(@ff-danger, 10%);
+      .box-shadow(inset 0 -2px 0 0 darken(@ff-danger, 5%));
+    }
+
+    &:active {
+      background-color: @ff-text-color;
+      .box-shadow(inset 0 2px 0 0 @ff-text-color);
+    }
+  }
+}
+
+// Skins color variations
+
+.alizarin {
+  &:before {
+    background-color: #e74c3c;
+  }
+}
+
+.amethyst {
+  &:before {
+    background-color: #9b59b6;
+  }
+}
+
+.carrot {
+  &:before {
+    background-color: #e67e22;
+  }
+}
+
+.emerald {
+  &:before {
+    background-color: #2ecc71;
+  }
+}
+
+.greensea {
+  &:before {
+    background-color: #16a085;
+  }
+}
+
+.pumpkin {
+  &:before {
+    background-color: #d35400;
+  }
+}
+
+.sunflower {
+  &:before {
+    background-color: #f1c40f;
+  }
+}
+
+.turquoise {
+  &:before {
+    background-color: #1abc9c;
+  }
+}
+
+.wetasphalt {
+  &:before {
+    background-color: #34495e;
+  }
+}
+
+.wisteria {
+  &:before {
+    background-color: #8e44ad;
+  }
+}
+
+
+// Body background
+
+.food {
+  &:before {
+    background: url(../images/textures/food.png) 0 0 repeat;
+  }
+}
+
+.black-linen-v2 {
+  &:before {
+    background: url(../images/textures/black-linen-v2.png) 0 0 repeat;
+  }
+}
+
+.low-contrast-linen {
+  &:before {
+    background: url(../images/textures/low-contrast-linen.png) 0 0 repeat;
+  }
+}
+
+.purty-wood {
+  &:before {
+    background: url(../images/textures/purty-wood.png) 0 0 repeat;
+  }
+}
+
+.retina-wood {
+  &:before {
+    background: url(../images/textures/retina-wood.png) 0 0 repeat;
+  }
+}
+
+.shattered {
+  &:before {
+    background: url(../images/textures/shattered.png) 0 0 repeat;
+  }
+}

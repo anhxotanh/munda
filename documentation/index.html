@@ -1,0 +1,1057 @@
+<!DOCTYPE html><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Documentation</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon and Apple Icons-->
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../apple-touch-icon-precomposed.png">
+  <!-- Google Fonts-->
+  <link href="http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,900italic" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/vendor/normalize.css">
+  <link rel="stylesheet" href="../styles/vendor/grid.css">
+  <link rel="stylesheet" href="../styles/icomoon.css">
+  <link rel="stylesheet" href="../styles/vendor/spectrum.css">
+  <link rel="stylesheet" href="../styles/vendor/spectrum-custom.css">
+  <link rel="stylesheet" href="../styles/vendor/raty-custom.css">
+  <link rel="stylesheet" href="../styles/vendor/shCore.css">
+  <link rel="stylesheet" href="../styles/vendor/shThemeDefault.css">
+  <link rel="stylesheet" href="../styles/vendor/animate.css">
+  <link rel="stylesheet" href="../styles/form-framework.css">
+  <link rel="stylesheet" href="../styles/main.css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+  <!-- CSS3 pseudo-classes and attribute selectors support in Internet Explorer 6-8--><!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/mootools/1.5.0/mootools-core-full-compat.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div id="preloader" class="preloader">
+    <div id="status" class="status"></div>
+  </div>
+  <div id="top-bar" class="top-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-10"><span class="top-email"><span class="sr-only">my-email-address</span></span><span class="sep">|</span><span class="top-skype"><span>Skype: rcwthemes</span></span></div>
+        <div class="col-xs-2 home-btn-container"><a href="../index.html" title="Home" class="home-btn"><span class="sr-only">Home</span><span class="icon-home6"></span></a></div>
+      </div>
+    </div>
+  </div>
+  <header id="doc-header" class="doc-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Documentation</h3>
+          <h4 class="version">1.0.0</h4>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container doc-main">
+    <div class="row">
+      <aside class="col-md-3">
+        <div id="doc-nav-container" class="doc-nav-container">
+          <ul class="nav doc-nav">
+            <li><a href="#overview" data-scroll>Overview</a>
+              <ul class="nav">
+                <li><a href="#tools-used" data-scroll>Tools used</a></li>
+              </ul>
+            </li>
+            <li><a href="#the-css" data-scroll>CSS</a>
+              <ul class="nav">
+                <li><a href="#rcw-form-class" data-scroll>.rcw-form class</a></li>
+                <li><a href="#form-header" data-scroll>Form header</a></li>
+                <li><a href="#fieldsets-and-legends" data-scroll>Fieldsets and legends</a></li>
+                <li><a href="#form-controls" data-scroll>Form controls</a></li>
+                <li><a href="#form-group-icons" data-scroll>Form group icons</a></li>
+                <li><a href="#select-elements" data-scroll>Select elements</a></li>
+                <li><a href="#checkboxes-and-radio-buttons" data-scroll>Checkboxes and radio buttons</a></li>
+                <li><a href="#file-inputs" data-scroll>File inputs</a></li>
+                <li><a href="#input-groups" data-scroll>Input groups</a></li>
+                <li><a href="#validation-states" data-scroll>Validation states</a></li>
+                <li><a href="#disabled-state" data-scroll>Disabled state</a></li>
+                <li><a href="#readonly-inputs" data-scroll>Readonly inputs</a></li>
+                <li><a href="#buttons" data-scroll>Buttons</a></li>
+                <li><a href="#alerts" data-scroll>Alerts</a></li>
+                <li><a href="#embeded-content" data-scroll>Embeded content</a></li>
+                <li><a href="#help-block" data-scroll>Help block</a></li>
+                <li><a href="#rating" data-scroll>Rating &amp; raty</a></li>
+                <li><a href="#colorpicker" data-scroll>Colorpicker</a></li>
+                <li><a href="#tables" data-scroll>Tables</a></li>
+                <li><a href="#helper-classes" data-scroll>Helper classes</a></li>
+                <li><a href="#grid-system" data-scroll>Grid system</a></li>
+                <li><a href="#form-footer" data-scroll>Form footer</a></li>
+                <li><a href="#inline-form" data-scroll>Inline form</a></li>
+                <li><a href="#horizontal-form" data-scroll>Horizontal form</a></li>
+              </ul>
+            </li>
+            <li><a href="#the-javascript" data-scroll>Javascript</a>
+              <ul class="nav">
+                <li><a href="#jqueryui" data-scroll>jQueryUI</a></li>
+                <li><a href="#ie8" data-scroll>Internet Explorer 8</a></li>
+              </ul>
+            </li>
+            <li><a href="#the-php" data-scroll>PHP</a></li>
+            <li><a href="#quick-start" data-scroll>Quick start</a></li>
+          </ul>
+        </div>
+      </aside>
+      <div class="col-md-9">
+        <h3 id="overview">I. Overview</h3>
+        <p><strong>Munda forms&nbsp;</strong> is a set of form elements build with the help of various frameworks and libraries, that gives you the necessary tools to create any type of web form.</p>
+        <h5 id="tools-used">I.I Tools used</h5>
+        <ul class="tools-list">
+          <li><a href="http://nodejs.org/" title="Node.js" target="_blank">Node.js</a></li>
+          <li><a href="http://gruntjs.com/" title="Grunt" target="_blank">Grunt</a></li>
+          <li><a href="http://bower.io/" title="Bower" target="_blank">Bower</a></li>
+          <li><a href="https://getcomposer.org/" title="Composer" target="_blank">Composer</a></li>
+          <li><a href="https://icomoon.io/" title="IcoMoon" target="_blank">IcoMoon</a></li>
+        </ul>
+        <p>For the best workflow i recommand that you install&nbsp;<a href="http://nodejs.org/" title="Node.js" target="_blank">Node.js,&nbsp;</a><a href="http://bower.io/" title="Bower" target="_blank">Bower&nbsp;</a>and&nbsp;<a href="https://getcomposer.org/" title="Composer" target="_blank">Composer</a>.</p>
+        <h6>I.I.I Node.js</h6>
+        <p>Once you have&nbsp;<strong>Node.js</strong> installed you can run the&nbsp;<code>npm install</code> command which will install all the node modules (like grunt, grunt-contrib-less, grunt-contrib-watch etc), than you will have access to commands like<code>grunt serve</code> which will launch a server, watch for changes on your files and automatically reload the page upon save. To configure the grunt tasks you can edit the&nbsp;
+          <codeGruntfile class="js"></codeGruntfile> file.
+        </p>
+        <h6>I.I.II Bower</h6>
+        <p><strong>Bower</strong> will allow you to manage frameworks, libraries, assets, utilities etc. Run&nbsp;<code>bower install</code> to install all the dependencies confingured in the&nbsp;<code>bower.json</code> file.</p>
+        <h6>I.I.III Composer</h6>
+        <p><strong>Composer</strong> will allow you to manage your PHP dependencies. Run<code>composer update</code> in the&nbsp;<code>app/php</code> folder to install the PHP dependencies configured in the<code>app/php/composer.json</code> file.</p>
+        <h6>I.II.IV IcoMoon</h6>
+        <p>The icomoon selection that i've included with this package has over 800 icons (you can see all the available icons by opening the&nbsp;<code>app/icomoon/demo.html</code> file). I do not recommand that you use this in production, it's best to create your own selection on the&nbsp;<a href="https://icomoon.io/" title="IcoMoon" target="_blank">IcoMoon</a> website and use those files.</p>
+        <h3 id="the-css">II. CSS</h3>
+        <p>The CSS for this form framework was build using&nbsp;<strong>LESS</strong>. All the&nbsp;<strong>LESS</strong> files are located in<code>app/less</code> folder. The compiled CSS files are located in&nbsp;<code>app/styles</code>(<code>form-framework.css</code>and&nbsp;<code>form-framework.min.css</code>).</p>
+        <p><code>app/less</code> folder content:</p>
+        <ul>
+          <li><code>main.less</code> file - this is where all the other files are imported, here you can comment out the parts of the framework you don't need.</li>
+          <li><code>jqueryui</code> folder - this is where you can find all the files that style the jQuerUI components.</li>
+          <li><code>mixins</code> folder - this is where you can find all the LESS mixins used throughout the code.</li>
+          <li><code>variables</code> folder - this is where you can find all the variables used throughout the code.</li>
+        </ul>
+        <p><code>app/styles</code> folder content:</p>
+        <ul>
+          <li><code>form-framework.css</code> file - the css for the form framework.</li>
+          <li><code>form-framework.min.css</code> file - the minified version of&nbsp;<code>form-framework.css</code>.</li>
+          <li><code>icomoon.css</code> file - this is the css for the font icons. You don't need this file if you don't want to use icons. Also, here you can change the path to your font files, if you have a different site structure than the one i used in the demos.</li>
+          <li><code>jqueryui-theme.css</code> file - this is the css for jQueryUI. Again, if you don't need any of the jQueryUI's functionality don't include this file.</li>
+          <li><code>jqueryui-theme.min.css</code> file - the minified version of&nbsp;<code>jqueryui-theme.css</code>.</li>
+          <li><code>main.css</code> file - this is part of the css for presenting the framework. You don't need this file.</li>
+          <li><code>main.min.css</code> file - the minified version of&nbsp;<code>main.css</code>.</li>
+          <li><code>vendor/animate.css</code> file - this the css for CSS animations. Don't include this file if you don't want CSS animations.</li>
+          <li><code>vendor/grid.css</code> file - this is the css for the grid system, if you already have twitter bootstrap (version 3+) in your site don't include this file.</li>
+          <li><code>vendor/normalize.css</code> file - makes browsers render all elements more consistently and in line with modern standards. If you already have it in your site, or have twitter bootsrap, or any other framework that comes with this file, or maybe you just don't want to include it, don't do it.</li>
+          <li><code>vendor/raty-custom.css</code> file - css for the&nbsp;<a href="http://wbotelhos.com/raty/" title="Raty" target="_blank">jQuery Raty</a> plugin. If you don't want the rating functionality don't include this file.</li>
+          <li><code>vendor/shCore.css</code> and&nbsp;<code>vendor/shThemeDefault.css</code> files - this are for the sysntax highlighting plugin. You don't need this files.</li>
+          <li><code>vendor/spectrum.css</code> and&nbsp;<code>vendor/spectrum-custom.css</code> files - this are the css files for the colorpicker. Don't include them if you don't need colorpicker functionality.</li>
+        </ul>
+        <p><code>app/styles/vendor/skins</code> folder contains folders for each color variation.</p>
+        <h5 id="rcw-form-class">II.I&nbsp;<code>.rcw-form</code> class</h5>
+        <p>For the form elements to receive all the right styles you must add the&nbsp;<code>.rcw-form</code> class to your&nbsp;<code>&lt;form&gt;</code> tag. You can also add this class to any element in which you want to keep the styles of this framework.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml">
+          <form action="" method="post" class="rcw-form"></form></pre>
+        <ul>
+          <li>Styles:&nbsp;<code>app/less/typography.less</code></li>
+          <li>Variables:<code>app/less/variables/typography.less</code></li>
+        </ul>
+        <h5 id="form-header">II.II Form header</h5>
+        <p id="cli-demo-target">To add a header to your form place a&nbsp;<code>&lt;header&gt;</code> tag after the opening&nbsp;<code>&lt;form&gt;</code> tag. Inside the&nbsp;<code>&lt;header&gt;</code> tag place a<code>&lt;h3&gt;</code> with the&nbsp;<code>.form-main-heading</code> class.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [2, 3, 4]">
+          <form action="" method="post" class="rcw-form">
+            <header>
+              <h3 class="form-main-heading">Register</h3>
+            </header>
+          </form></pre>
+        <ul>
+          <li>Styles:&nbsp;<code>app/less/form-header.less</code></li>
+          <li>Variables:<code>app/less/variables/form-header.less</code></li>
+        </ul>
+        <h5 id="fieldsets-and-legends">II.III Fieldsets and legends</h5>
+        <p>The&nbsp;<code>&lt;legend&gt;</code> tag defines a caption for the&nbsp;<code>&lt;fieldset&gt;</code> element. You can position the&nbsp;<code>&lt;legend&gt;</code> tag to the left, right or center. The default&nbsp;<code>&lt;legend&gt;</code> position is to the left, to position it in the center add the&nbsp;<code>.center</code> class and to position it to the right add the&nbsp;<code>.right</code> class.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [3]">
+          <fieldset class="row">
+            <div class="col-md-12">
+              <legend class="center"><span>Account details</span></legend>
+            </div>
+          </fieldset></pre>
+        <ul>
+          <li>Styles:&nbsp;<code>app/less/legend.less</code></li>
+          <li>Variables:<code>app/less/variables/legend.less</code></li>
+        </ul>
+        <h5 id="form-controls">II.IV Form controls</h5>
+        <p>Individual form controls automatically receive some global styling. All textual elements with&nbsp;<code>.form-control</code> are set to&nbsp;<code>width: 100%;</code> by default. Wrap labels and controls in&nbsp;<code>.form-group</code> for optimum spacing.</p>
+        <p>Every&nbsp;<code>.form-control</code> should have a label. To hide a label and only show it to screen readers you must add the&nbsp;<code>sr-only</code> class.</p>
+        <p>You can also add the&nbsp;<code>.label</code> class to other elements to give those elements the same styles as a&nbsp;<code>&lt;label&gt;</code> tag.</p>
+        <p>You can apply&nbsp;<code>.form-control</code> to any of the following form elements:
+          <ul>
+            <li><code>select</code></li>
+            <li><code>textarea</code></li>
+            <li><code>input[type='text']</code></li>
+            <li><code>input[type='password']</code></li>
+            <li><code>input[type='datetime']</code></li>
+            <li><code>input[type='datetime-local']</code></li>
+            <li><code>input[type='date']</code></li>
+            <li><code>input[type='month']</code></li>
+            <li><code>input[type='time']</code></li>
+            <li><code>input[type='week']</code></li>
+            <li><code>input[type='number']</code></li>
+            <li><code>input[type='email']</code></li>
+            <li><code>input[type='url']</code></li>
+            <li><code>input[type='search']</code></li>
+            <li><code>input[type='tel']</code></li>
+            <li><code>input[type='color']</code></li>
+          </ul>
+        </p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [3, 4]">
+          <form action="" method="post" class="rcw-form">
+            <div class="col-md-12 form-group">
+              <label for="name" class="sr-only"></label>
+              <input type="text" name="name" id="name" placeholder="Name" class="form-control">
+            </div>
+          </form></pre>
+        <ul>
+          <li>Styles:&nbsp;<code>app/less/form-control.less</code> and &nbsp;<code>app/less/label.less</code></li>
+          <li>Variables:<code>app/less/variables/form-control.less</code> and &nbsp;<code>app/less/variables/label.less</code></li>
+        </ul>
+        <h5 id="form-group-icons">II.V Form group icons</h5>
+        <p>To add an icon to the left you have to add the&nbsp;<code>.has-icon-left</code> class to the&nbsp;<code>.form-group</code>. Inside the&nbsp;<code>.form-group</code> add a&nbsp;<code>&lt;span&gt;</code> tag with the&nbsp;<code>.icon-left</code> class and the class for the icon.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [1, 3]">
+          <div class="form-group col-md-12 has-icon-left">
+            <label for="username" class="sr-only">Username</label>
+            <input type="text" name="username" id="username" placeholder="Username" class="form-control"><span class="icon-user14 icon-left"></span>
+          </div></pre>
+        <p>To add an icon to the right you have to add the&nbsp;<code>.has-icon-right</code> class to the<code>.form-group</code>. Inside the&nbsp;<code>.form-group</code> add a&nbsp;<code>&lt;span&gt;</code> tag with the&nbsp;<code>.icon-right</code> class and the class for the icon.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [1, 3]">
+          <div class="form-group col-md-12 has-icon-right">
+            <label for="username" class="sr-only">Username</label>
+            <input type="text" name="username" id="username" placeholder="Username" class="form-control"><span class="icon-user14 icon-right"></span>
+          </div></pre>
+        <p>To add an icons on both sides you have to add the&nbsp;</p><code>.has-icons</code> class to the&nbsp;<code>.form-group</code>. Inside the&nbsp;<code>.form-group</code> add two&nbsp;<code>&lt;span&gt;</code> tags, one with the&nbsp;<code>.icon-left</code> class and one with&nbsp;<code>.icon-right</code> class.
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [1, 3]">
+          <div class="form-group col-md-12 has-icons">
+            <label for="username" class="sr-only">Username</label>
+            <input type="text" name="username" id="username" placeholder="Username" class="form-control"><span class="icon-user14 icon-left"></span><span class="icon-info32 icon-right"></span>
+          </div></pre>
+        <ul>
+          <li>Styles:&nbsp;<code>app/less/form-group.less</code></li>
+        </ul>
+        <h5 id="select-elements">II.VI Select elements</h5>
+        <p>See the code below for a sample on how to add a&nbsp;<code>&lt;select&gt;</code> element. The&nbsp;<code>.select-icon</code> class positions the down arrow.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [3, 4, 5, 6, 7]">
+          <div class="form-group col-md-12">
+            <label for="gender" class="sr-only"></label>
+            <select name="gender" id="gender" class="form-control">
+              <option value="" selected>Choose gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select><span class="select-icon icon-arrow-down8"></span>
+          </div></pre>
+        <ul>
+          <li>Styles:&nbsp;<code>app/less/select.less</code></li>
+          <li>Variables:<code>app/less/variables/select.less</code></li>
+        </ul>
+        <h5 id="checkboxes-and-radio-buttons">II.VII Checkboxes and radio buttons</h5>
+        <p>To add a checkbox use a&nbsp;<code>&lt;div&gt;</code> tag with the&nbsp;<code>.checkbox</code> class as the container for the&nbsp;<code>&lt;label&gt;</code> and&nbsp;<code>input[type='checkbox']</code> elements:</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [2, 3, 4, 5, 6]">
+          <div class="form-group col-md-12">
+            <div class="checkbox">
+              <h5 class="form-group-heading">Do you like apples?</h5>
+              <input type="checkbox" id="apple" value="Yes">
+              <label for="Yes">Yes</label>
+            </div>
+          </div></pre>
+        <p>You can transform your checkbox into a switch if you add&nbsp;<code>.switch</code> or&nbsp;<code>.switch-with-text</code>.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [2, 3, 4, 5, 6]">
+          <div class="form-group col-md-12">
+            <div class="checkbox switch-with-text">
+              <h5 class="form-group-heading">Do you like apples?</h5>
+              <input type="checkbox" id="apple" value="Yes">
+              <label for="Yes">Yes</label>
+            </div>
+          </div></pre>
+        <p>To add a radio buttons use a&nbsp;<code>&lt;div&gt;</code> tag with the&nbsp;<code>.radio</code> class as the container for the&nbsp;<code>&lt;label&gt;</code> and&nbsp;<code>input[type='radio']</code> elements:</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]">
+          <div class="form-group col-md-12">
+            <div class="radio">
+              <input type="radio" name="payment-method" value="visa" id="visa" checked>
+              <label for="visa">Visa</label>
+            </div>
+            <div class="radio">
+              <input type="radio" name="payment-method" value="mastercard" id="mastercard">
+              <label for="mastercard">MasterCard</label>
+            </div>
+            <div class="radio">
+              <input type="radio" name="payment-method" value="paypal" id="paypal">
+              <label for="paypal">Paypal</label>
+            </div>
+          </div></pre>
+        <p>To add inline checkboxes use the&nbsp;<code>.checkbox-inline</code> class:</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [2, 3, 4, 5, 6, 7, 8, 9]">
+          <div class="form-group col-md-12">
+            <div class="checkbox-inline">
+              <input type="checkbox" id="apple" value="apple">
+              <label for="apple">Apple.</label>
+            </div>
+            <div class="checkbox-inline">
+              <input type="checkbox" id="orange" value="orange">
+              <label for="orange">Orange.</label>
+            </div>
+          </div></pre>
+        <p>To add inline radio buttons use the&nbsp;<code>.radio-inline</code> class:</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]">
+          <div class="form-group col-md-12">
+            <div class="radio-inline">
+              <input type="radio" name="payment-method" value="visa" id="visa" checked>
+              <label for="visa">Visa</label>
+            </div>
+            <div class="radio-inline">
+              <input type="radio" name="payment-method" value="mastercard" id="mastercard">
+              <label for="mastercard">MasterCard</label>
+            </div>
+            <div class="radio-inline">
+              <input type="radio" name="payment-method" value="paypal" id="paypal">
+              <label for="paypal">Paypal</label>
+            </div>
+          </div></pre>
+        <p>Add heading to a form group with&nbsp;<code>.form-group-heading</code>.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [2]">
+          <div class="form-group col-md-12">
+            <h5 class="form-group-heading">High resolution</h5>
+            <div class="radio-inline">
+              <input type="radio" name="high_resolution" value="yes" id="high-resolution-yes">
+              <label for="high-resolution-yes">Yes</label>
+            </div>
+            <div class="radio-inline">
+              <input type="radio" name="high_resolution" value="no" id="high-resolution-no" checked>
+              <label for="high-resolution-no">No</label>
+            </div>
+            <div class="radio-inline">
+              <input type="radio" name="high_resolution" value="na" id="high-resolution-na">
+              <label for="high-resolution-na">N/A</label>
+            </div>
+          </div></pre>
+        <ul>
+          <li>Styles:&nbsp;<code>app/less/radio-buttons-and-checkboxes-common-styles.less</code>,&nbsp;<code>app/less/radio-buttons.less</code> and&nbsp;<code>app/less/checkboxes-and-switches.less</code></li>
+          <li>Variables:<code>app/less/variables/radio-buttons.less</code> and&nbsp;<code>app/less/variables/checkboxes-and-switches.less</code></li>
+        </ul>
+        <h5 id="file-inputs">II.VIII File inputs</h5>
+        <p>File inputs use the&nbsp;<a href="http://moro.es/misc/jquery-nicefileinput-js/" title="NiceFileInput" target="_blank">NiceFileInput</a> plugin, so remember to call the&nbsp;<code>nicefileinput()</code> method on the&nbsp;<code>input[type='file']</code> elements from your javascript file.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [3, 4, 5]">
+          <div class="form-group col-md-12">
+            <label for="file-1" class="sr-only">Project related file</label>
+            <div>
+              <input type="file" name="file-1" id="file-1">
+            </div>
+          </div></pre>
+        <ul>
+          <li>Styles:&nbsp;<code>app/less/file.less</code></li>
+        </ul>
+        <h5 id="input-groups">II.IX Input groups</h5>
+        <p>To add input groups to your form you use a&nbsp;<code>&lt;div&gt;</code> tag with the&nbsp;<code>.input-group</code> class as the container. For the actual add-on you use the&nbsp;<code>.input-group-addon</code> class.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [1, 2]">
+          <div class="input-group">
+            <label for="input-group-1" class="input-group-addon"><span class="icon-vimeo"></span></label>
+            <input type="text" name="input-group-1" id="input-group-1" placeholder="Input group" class="form-control">
+          </div></pre>
+        <p>You can also add buttons as add-ons, add the&nbsp;<code>.input-group-btn</code> class to the add-on:</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [3, 4, 5]">
+          <div class="form-group col-md-12">
+            <label for="search" class="control-label sr-only">Search</label>
+            <div class="input-group">
+              <input type="url" name="search" id="search" placeholder="Search" class="form-control"><span class="input-group-btn">
+                <button type="button" class="btn btn-info">Search</button></span>
+            </div>
+          </div></pre>
+        <ul>
+          <li>Styles:&nbsp;<code>app/less/input-groups.less</code></li>
+          <li>Variables:&nbsp;<code>app/less/variables/input-gorups.less</code></li>
+        </ul>
+        <h5 id="validation-states">II.X Validation states</h5>
+        <p>You can add validation styles for&nbsp;<strong>error</strong>,&nbsp;<strong>warning</strong> and&nbsp;<strong>success</strong> states on form controls. To use, add&nbsp;<code>.has-warning</code>,&nbsp;<code>.has-error</code> or&nbsp;<code>.has-success</code> to the parent element. Any&nbsp;<code>.form-control</code>,&nbsp;<code>.help-block</code>,&nbsp;
+           checkboxes and radio buttons within that element will receive the validation styles.
+        </p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [2, 7, 12]">
+          <!-- success-->
+          <div class="form-group col-md-12 has-success">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Name" class="form-control">
+          </div>
+          <!-- error-->
+          <div class="form-group col-md-12 has-error">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Name" class="form-control">
+          </div>
+          <!-- warning-->
+          <div class="form-group col-md-12 has-warning">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Name" class="form-control">
+          </div></pre>
+        <h6>With optional icons</h6>
+        <p>You can also add optional feedback icons with the addition of&nbsp;<code>.has-feedback</code> and the right icon.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [2, 4, 7, 9, 12, 14]">
+          <!-- success-->
+          <div class="form-group col-md-12 has-success has-feedback">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" class="form-control"><span class="icon-checkmark6 form-control-feedback"></span>
+          </div>
+          <!-- error-->
+          <div class="form-group col-md-12 has-error has-feedback">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" class="form-control"><span class="icon-cancel5 form-control-feedback"></span>
+          </div>
+          <!-- warning-->
+          <div class="form-group col-md-6 has-warning has-feedback">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" class="form-control"><span class="icon-exclamation2 form-control-feedback"></span>
+          </div></pre>
+        <ul>
+          <li>Styles:&nbsp;<code>app/less/feedback.less</code></li>
+          <li>Variables:&nbsp;<code>app/less/variables/feedback.less</code></li>
+        </ul>
+        <h5 id="disabled-state">II.XI Disabled state</h5>
+        <p>Add the&nbsp;<code>disabled</code> boolean attribute on an input to prevent user input and trigger a slightly different look.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [3]">
+          <div class="form-group col-md-12">
+            <label for="name" class="sr-only">Name</label>
+            <input type="text" name="name" id="name" placeholder="Name" disabled class="form-control">
+          </div></pre>
+        <p>Add the&nbsp;<code>disabled</code> attribute to a&nbsp;<code>&lt;fieldset&gt;</code> to disable all the controls within the&nbsp;<code>&lt;fieldset&gt;</code> at once.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [1]">
+          <fieldset disabled class="row">
+            <div class="col-md-12">
+              <legend><span>Inputs and textarea</span></legend>
+            </div>
+            <div class="form-group col-md-12">
+              <label for="name" class="sr-only">Name</label>
+              <input type="text" name="name" id="name" placeholder="Name" class="form-control">
+            </div>
+            <div class="form-group col-md-12">
+              <label for="email" class="sr-only">Email</label>
+              <input type="email" name="email" id="email" placeholder="Email" class="form-control">
+            </div>
+          </fieldset></pre>
+        <ul>
+          <li>Styles:&nbsp;<code>app/less/form-control.less</code> and&nbsp;<code>app/less/buttons-and-checkboxes-disabled.less</code></li>
+          <li>Variables:&nbsp;<code>app/less/variables/main-colors.less</code></li>
+        </ul>
+        <h5 id="readonly-inputs">II.XII Readonly inputs</h5>
+        <p>Add the&nbsp;<code>readonly</code> boolean attribute on an input to prevent user input.</p>
+        <pre class="brush: xml; highlight: [3]">
+          <div class="form-group col-md-12">
+            <label for="email" class="sr-only">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" readonly class="form-control">
+          </div></pre>
+        <ul>
+          <li>Styles:&nbsp;<code>app/less/form-control.less</code></li>
+        </ul>
+        <h5 id="buttons">II.XIII Buttons</h5>
+        <p>To create a button add the&nbsp;<code>.btn</code> class and a color class to a link, button or input tag. For the color classes you can use any of the following classes:</p>
+        <ul>
+          <li><code>.btn-default</code></li>
+          <li><code>.btn-primary</code></li>
+          <li><code>.btn-info</code></li>
+          <li><code>.btn-danger</code></li>
+          <li><code>.btn-warning</code></li>
+          <li><code>.btn-success</code></li>
+          <li><code>.btn-facebook</code></li>
+          <li><code>.btn-googleplus</code></li>
+          <li><code>.btn-twitter</code></li>
+          <li><code>.btn-youtube</code></li>
+          <li><code>.btn-github</code></li>
+          <li><code>.btn-linkedin</code></li>
+          <li><code>.btn-rss</code></li>
+          <li><code>.btn-dribble</code></li>
+          <li><code>.btn-flickr</code></li>
+          <li><code>.btn-html5</code></li>
+          <li><code>.btn-pinterest</code></li>
+          <li><code>.btn-stackoverflow</code></li>
+          <li><code>.btn-weibo</code></li>
+          <li><code>.btn-android</code></li>
+          <li><code>.btn-dropbox</code></li>
+          <li><code>.btn-foursquare</code></li>
+          <li><code>.btn-instagram</code></li>
+          <li><code>.btn-renren</code></li>
+          <li><code>.btn-windows</code></li>
+          <li><code>.btn-apple</code></li>
+          <li><code>.btn-skype</code></li>
+          <li><code>.btn-tumblr</code></li>
+          <li><code>.btn-vimeo</code></li>
+          <li><code>.btn-xing</code></li>
+          <li><code>.btn-css3</code></li>
+          <li><code>.btn-vk</code></li>
+          <li><code>.btn-flattr</code></li>
+          <li><code>.btn-paypal</code></li>
+          <li><code>.btn-yelp</code></li>
+          <li><code>.btn-lastfm</code></li>
+          <li><code>.btn-stumbleupon</code></li>
+          <li><code>.btn-wordpress</code></li>
+          <li><code>.btn-joomla</code></li>
+          <li><code>.btn-blogger</code></li>
+          <li><code>.btn-soundcloud</code></li>
+          <li><code>.btn-chrome</code></li>
+          <li><code>.btn-firefox</code></li>
+          <li><code>.btn-ie</code></li>
+          <li><code>.btn-opera</code></li>
+          <li><code>.btn-safari</code></li>
+          <li><code>.btn-icomoon</code></li>
+          <li><code>.btn-lanyrd</code></li>
+          <li><code>.btn-deviantart</code></li>
+          <li><code>.btn-forrst</code></li>
+          <li><code>.btn-yahoo</code></li>
+          <li><code>.btn-steam</code></li>
+          <li><code>.btn-reddit</code></li>
+          <li><code>.btn-picasa</code></li>
+          <li><code>.btn-delicious</code></li>
+          <li><code>.btn-behance</code></li>
+          <li><code>.btn-mixi</code></li>
+          <li><code>.btn-smashing</code></li>
+          <li><code>.btn-evernote</code></li>
+        </ul>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: []">
+          <input type="submit" name="submit" value="Submit" class="btn btn-primary">
+          <button type="reset" class="btn btn-default">Reset</button><a href="http://jquery.com/" title="jQuery" target="_blank" class="btn btn-info">jQuery</a></pre>
+        <h6>Add icons</h6>
+        <p>You can also add icons to your buttons to the left side, right side or both.</p>
+        <p>To add the icon on the left side, you use the&nbsp;<code>.btn-has-icon-left</code> class on the element and the&nbsp;<code>.btn-icon-left</code> on the icon.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml">
+          <button type="button" class="btn btn-warning btn-has-icon-left"><span class="btn-icon-left icon-unlock-fill"></span>Unlock</button></pre>
+        <p>To add the icon on the right side, you use the&nbsp;<code>.btn-has-icon-right</code> class on the element and the&nbsp;<code>.btn-icon-right</code> on the icon.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml">
+          <button type="button" class="btn btn-warning btn-has-icon-right">Unlock<span class="btn-icon-right icon-unlock-fill"></span></button></pre>
+        <p>To add icons on both sides, you use the&nbsp;<code>.btn-has-icons</code> class on the element and the&nbsp;<code>.btn-has-icon-left</code> and&nbsp;<code>.btn-has-icon-right</code> on the icons.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml">
+          <button type="button" class="btn btn-warning btn-has-icons"><span class="btn-icon-left icon-unlock-fill"></span>Unlock<span class="btn-icon-right icon-right-quote-alt"></span></button></pre>
+        <h6>Icon only button</h6>
+        <p>Use the&nbsp;<code>.btn-icon-only</code> class and wrap your button text in a&nbsp;<code>&lt;span&gt;</code> tag with the&nbsp;<code>.sr-only</code> class.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml">
+          <button type="button" class="btn btn-primary btn-icon-only"><span class="icon-right-quote-alt"></span><span class="sr-only">Quote</span></button></pre>
+        <h6>Block level button</h6>
+        <p>Use the the&nbsp;<code>.btn-block</code> class to make the button stretch to it's container full width.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml"><a href="https://www.facebook.com" title="Facebook" target="_blank" class="btn btn-block btn-facebook"><span class="btn-icon-left icon-facebook22">Facebook</span></a></pre>
+        <ul>
+          <li>Styles:&nbsp;<code>app/les/buttons.less</code></li>
+          <li>Variables:&nbsp;<code>app/less/variables/buttons.less</code> and&nbsp;<code>app/less/variables/social-media-colors.less</code></li>
+        </ul>
+        <h5 id="alerts">II.XIV Alerts</h5>
+        <p>Wrap any text and an optional dismiss button in&nbsp;<code>.alert and one of the four contextual classes (</code><code>.alert-success</code>,&nbsp;<code>.alert-warning</code>,&nbsp;<code>.alert-info</code>,&nbsp;<code>.alert-danger</code>) for basic alert messages.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [2, 4, 6, 8]">
+          <!-- success-->
+          <div class="alert alert-success"><strong>Well done!</strong> You successfully read this important alert message.</div>
+          <!-- info-->
+          <div class="alert alert-info"><strong>Heads up!</strong> This alert needs your attention, but it's not super important.</div>
+          <!-- warning-->
+          <div class="alert alert-warning"><strong>Warning!</strong> Better check yourself, you're not looking too good.</div>
+          <!-- danger-->
+          <div class="alert alert-danger"><strong>Oh snap!</strong> Change a few things up and try submitting again.</div></pre>
+        <h6>Dismissible alerts</h6>
+        <p>Build on any alert by adding an optional&nbsp;<code>.alert-dismissible</code> and&nbsp;<code>.close</code> button.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml">
+          <div class="alert alert-dismissible alert-success"><strong>Well done!</strong> You successfully read this important alert message. Lorem&nbsp;<a href="http://google.com" target="_blank" title="Google" class="alert-link">ipsum dolor</a> sit amet.
+            <button type="button" class="close"><span class="icon-cancel5"></span><span class="sr-only">Close</span></button>
+          </div></pre>
+        <h6>Add icon on the left</h6>
+        <p>Add&nbsp;<code>.has-alert-icon</code> to your&nbsp;<code>.alert</code> and&nbsp;<code>.alert-icon</code> to the icon.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml">
+          <div class="alert alert-success alert-dismissible has-alert-icon"><span class="alert-icon icon-checkmark4"></span><strong>Well done!</strong> You successfully read this important alert message.
+            <button type="button" class="close"><span class="icon-cancel5"></span><span class="sr-only">Close</span></button>
+          </div></pre>
+        <h6>Links inside alerts</h6>
+        <p>Add the&nbsp;<code>.alert-link</code> class to every link inside the alert.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml">
+          <div role="alert" class="alert alert-success"><strong>Well done!</strong> You successfully read this important alert message. Lorem&nbsp;<a href="http://google.com" target="_blank" title="Google" class="alert-link">ipsum dolor</a> sit amet.</div></pre>
+        <ul>
+          <li>Styles:&nbsp;<code>app/less/alerts.less</code></li>
+          <li>Variables:&nbsp;<code>app/less/variables/alerts.less</code></li>
+        </ul>
+        <h5 id="embeded-content">II.XV Embeded content</h5>
+        <p>You can embed google maps, youtube videos and vimeo videos. The embeded content will be responsive no javascript needed.</p>
+        <p>To embed google maps use&nbsp;<code>.google-map-container</code>.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml">
+          <div class="google-map-container">
+            <iframe src="path/to/google-map" width="400" height="300" frameborder="" style="0"></iframe>
+          </div></pre>
+        <p>To embed youtube videos use&nbsp;<code>.youtube-video-container</code>.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml">
+          <div class="youtube-video-container">
+            <iframe width="560" height="315" src="path/to/youtube-video" frameborder="0" wmode="Opaque" allowfullscreen></iframe>
+          </div></pre>
+        <p>To embed vimeo video us&nbsp;<code>.vimeo-video-container</code>.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [1]">
+          <div class="vimeo-video-container">
+            <iframe src="path/to/vimeo-video" width="500" height="271" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div></pre>
+        <ul>
+          <li>Styles:&nbsp;<code>app/less/embeded-content.less</code></li>
+          <li>Variables:&nbsp;<code>app/less/variables/embeded-content.less</code></li>
+        </ul>
+        <h5 id="help-block">II.XVI Help Block</h5>
+        <p>Use the&nbsp;<code>.help-block</code> class do add hints for the users.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [4]">
+          <div class="form-group col-md-12">
+            <label for="name" class="sr-only">Name</label>
+            <input type="text" name="name" id="name" placeholder="Name *" class="form-control">
+            <div class="help-block">Between 2 and 50 characters.</div>
+          </div></pre>
+        <p>Use the&nbsp;<code>.big</code> class on&nbsp;<code>.help-block</code> for a bigger top margin between the&nbsp;<code>.help-block</code> and the element above.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [4]">
+          <div class="form-group col-md-12">
+            <label for="name" class="sr-only">Name</label>
+            <input type="text" name="name" id="name" placeholder="Name *" class="form-control">
+            <div class="help-block big">Between 2 and 50 characters.</div>
+          </div></pre>
+        <ul>
+          <li>Styles:&nbsp;<code>app/less/help-block.less</code></li>
+          <li>Variables:&nbsp;<code>app/less/variables/help-block.less</code></li>
+        </ul>
+        <h5 id="rating">II.XVII Rating &amp; raty</h5>
+        <p>For star ratings i used the&nbsp;<a href="http://wbotelhos.com/raty/" title="Raty" target="_blank">Raty</a> jQuery plugin.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [2]">
+          <div class="form-group col-md-12"><span class="rating-text">Product quality</span>
+            <div id="product-quality" class="rating-icons"></div>
+          </div></pre>
+        <ul>
+          <li>Styles:&nbsp;<code>app/less/rating.less</code> and&nbsp;<code>app/less/raty.less</code></li>
+          <li>Variables:&nbsp;<code>app/less/variables/raty.less</code></li>
+        </ul>
+        <p>The&nbsp;<code>app/less/rating.less</code> file is compiled into&nbsp;<code>raty-custom.css</code>.</p>
+        <h5 id="colorpicker">II.XVIII Colorpicker</h5>
+        <p>For the colorpicker i used the&nbsp;<a href="http://bgrins.github.io/spectrum/" title="Spectrum" target="_blank">Spectrum</a> jQuery plugin.</p>
+        <ul>
+          <li>Styles:&nbsp;<code>app/styles/spectrum.css</code> and&nbsp;<code>app/less/spectrum.less</code></li>
+          <li>Variables:&nbsp;<code>app/less/variables/spectrum.less</code></li>
+        </ul>
+        <p>The&nbsp;<code>app/less/spectrum.less</code> file is compiled into&nbsp;<code>spectrum-custom.css</code>.</p>
+        <h5 id="tables">II.XIX Tables</h5>
+        <p>For basic styling, light padding and only horizontal dividers, add the base class&nbsp;<code>.table</code> to any&nbsp;<code>&lt;table&gt;</code>.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml;">
+          <table class="table"></table></pre>
+        <h6>Striped rows</h6>
+        <p>Use&nbsp;<code>.table-striped</code> to add zebra-striping to any table row within the&nbsp;<code>&lt;tbody&gt;</code>.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml;">
+          <table class="table table-striped"></table></pre>
+        <h6>Bordered table</h6>
+        <p>Add&nbsp;<code>.table-bordered</code> for borders on all sides of the table and cells.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml;">
+          <table class="table table-bordered"></table></pre>
+        <h6>Hover rows</h6>
+        <p>Add&nbsp;<code>.table-hover</code> to enable a hover state on table rows within a&nbsp;<code>&lt;tbody&gt;</code>.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml;">
+          <table class="table table-hover"></table></pre>
+        <h6>Condensed table</h6>
+        <p>Add&nbsp;<code>.table-condensed</code> to make tables more compact by cutting cell padding in half.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml;">
+          <table class="table table-condensed"></table></pre>
+        <h6>Contextual classes</h6>
+        <p>Use contextual classes to color table rows or individual cells.</p>
+        <ul>
+          <li><code>.active</code> - applies the hover color to a particular row or cell</li>
+          <li><code>.success</code> - indicates a successful or positive action</li>
+          <li><code>.info</code> - indicates a neutral informative change or action</li>
+          <li><code>.warning</code> - indicates a warning that might need attention</li>
+          <li><code>.danger</code> - indicates a dangerous or potentially negative action</li>
+        </ul>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [12, 20, 21, 22, 23]">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- on row-->
+              <tr class="active">
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <!-- on cells-->
+              <tr>
+                <td class="warning">2</td>
+                <td class="info">Jacob</td>
+                <td class="danger">Thornton</td>
+                <td class="success">@fat</td>
+              </tr>
+            </tbody>
+          </table></pre>
+        <h6>Responsive tables</h6>
+        <p>Create responsive tables by wrapping any&nbsp;<code>.table</code> in&nbsp;<code>.table-responsive</code> to make them scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, you will not see any difference in these tables.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml;">
+          <div class="table-responsive">
+            <table class="table"></table>
+          </div></pre>
+        <ul>
+          <li>Styles:&nbsp;<code>app/less/tables.less</code></li>
+          <li>Variables:&nbsp;<code>app/less/variables/tables.less</code></li>
+        </ul>
+        <h5 id="helper-classes">II.XX Helper classes</h5>
+        <p>This classes will help you customize your forms.</p>
+        <h6>II.XX.I Positioning</h6>
+        <ul>
+          <li><code>.pull-left</code> - floats an element to the left.</li>
+          <li><code>.pull-right</code> - floats an element to the right.</li>
+        </ul>
+        <h6>II.XX.II Rounded corners</h6>
+        <ul>
+          <li><code>.ff-rounded</code> - adds rounded corners to all corners of the element.</li>
+          <li><code>.ff-rounded-t</code> - adds rounded corners to the top-left and top-right corners of the element.</li>
+          <li><code>.ff-rounded-b</code> - adds rounded corners to the bottom-left and bottom-right corners of the element.</li>
+          <li><code>.ff-rounded-r</code> - adds rounded corners to the top-right and bottom-right corners of the element.</li>
+          <li><code>.ff-rounded-l</code> - adds rounded corners to the top-left and bottom-left corners of the element.</li>
+          <li><code>.ff-rounded-tl-br</code> - adds rounded corners to the top-left and bottom-right corners of the element.</li>
+          <li><code>.ff-rounded-tr-bl</code> - adds rounded corners to the top-right and bottom-left corners of the element.</li>
+          <li><code>.ff-rounded-tl</code> - adds rounded corner to the top-left corner of the element.</li>
+          <li><code>.ff-rounded-tr</code> - adds rounded corner to the top-right corner of the element.</li>
+          <li><code>.ff-rounded-br</code> - adds rounded corner to the bottom-right corner of the element.</li>
+          <li><code>.ff-rounded-bl</code> - adds rounded corner to the bottom-left corner of the element.</li>
+          <li><code>.ff-rounded-etl</code> - adds rounded corners to all corners of the element, except the top-left one.</li>
+          <li><code>.ff-rounded-etr</code> - adds rounded corners to all corners of the element, except the top-right one.</li>
+          <li><code>.ff-rounded-ebr</code> - adds rounded corners to all corners of the element, except the bottom-right one.</li>
+          <li><code>.ff-rounded-ebl</code> - adds rounded corners to all corners of the element, except the bottom-left one.</li>
+        </ul>
+        <h6>II.XX.III Alignment</h6>
+        <ul>
+          <li><code>.text-left</code> - align text to the left.</li>
+          <li><code>.text-right</code> - align text to the right.</li>
+          <li><code>.text-center</code> - align text to the center.</li>
+          <li><code>.text-justify</code> - justified text.</li>
+          <li><code>.text-nowrap</code> - text will never wrap to the next line.</li>
+        </ul>
+        <h6>II.XX.IV Transformation</h6>
+        <ul>
+          <li><code>.text-lowercase</code> - transforms text to lowercase.</li>
+          <li><code>.text-uppercase</code> - transforms text to uppercase.</li>
+          <li><code>.text-capitalize</code> - the first letter of each word is converted to uppercase.</li>
+        </ul>
+        <h6>II.XX.V Text color variations</h6>
+        <ul>
+          <li><code>.text-success</code> - the color will be color used for the success state.</li>
+          <li><code>.text-danger</code> - the color will be color used for the error state.</li>
+          <li><code>.text-warning</code> - the color will be color used for the warning state.</li>
+          <li><code>.text-info</code> - the color will be color used for the info state.</li>
+        </ul>
+        <h6>II.XX.VI Margins</h6>
+        <ul>
+          <li><code>.lh-margin-tb</code> - adds margins to the top and bottom of the element (the margin is equal to the computed line height)</li>
+          <li><code>.lh-margin-t</code> - add top margin to the element (the margin is equal to the computed line height)</li>
+          <li><code>.lh-margin-b</code> - add bottom margin to the element (the margin is equal to the computed line height)</li>
+        </ul>
+        <h6>II.XX.VII Files</h6>
+        <ul>
+          <li>Styles:&nbsp;<code>app/less/helper-classes.less</code></li>
+          <li>Variables:&nbsp;<code>app/less/variables/helper-classes.less</code></li>
+        </ul>
+        <h5 id="grid-system">II.XXI Grid system</h5>
+        <p>The form framework uses&nbsp;<a href="http://getbootstrap.com/css/#grid" title="Grid system" target="_blank">bootstrap's grid system</a> to create different form layout.</p>
+        <h5 id="form-footer">II.XXII Form footer</h5>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml; highlight: [2, 3, 4, 5]">
+          <form action="" method="post" class="rcw-form">
+            <footer>
+              <input type="submit" name="submit" value="Submit" class="btn btn-primary">
+              <button type="reset" class="btn btn-default">Reset</button>
+            </footer>
+          </form></pre>
+        <ul>
+          <li>Styles:&nbsp;<code>app/less/form-footer.less</code></li>
+          <li>Variables:&nbsp;<code>app/less/variables/form-footer.less</code></li>
+        </ul>
+        <h5 id="inline-form">II.XXIII Inline form</h5>
+        <p>Add&nbsp;<code>.form-inline</code> to your&nbsp;<code>&lt;form&gt;</code> for left-aligned and inline-block controls. This only applies to forms within viewports that are at least 768px wide.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml">
+          <form action="" method="post" class="rcw-form form-inline"></form></pre>
+        <ul>
+          <li>Styles:&nbsp;<code>app/less/form-inline.less</code></li>
+        </ul>
+        <h5 id="horizontal-form">II.XXIV Horizontal form</h5>
+        <p>Align labels and groups of form controls in a horizontal layout by adding<code>.form-horizontal</code> to the form.</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml">
+          <form action="" method="post" class="rcw-form form-horizontal"></form></pre>
+        <ul>
+          <li>Styles:&nbsp;<code>app/less/form-horizontal.less</code></li>
+        </ul>
+        <h3 id="the-javascript">III. Javascript</h3>
+        <p>The forms use various javascript libraries to enhance their functionality.</p>
+        <ul class="javascript-libraries">
+          <li><a href="http://jquery.com/" title="jQuery" target="_blank">jQuery</a></li>
+          <li><a href="http://gsgd.co.uk/sandbox/jquery/easing/" title="jQuery Easing" target="_blank">jQuery Easing</a> - used for advanced easing options.</li>
+          <li><a href="http://jqueryui.com/" title="jQueryUI" target="_blank">jQueryUI</a> - jQuery UI allows you to add accordions, buttons, datepickers, dialogs, menus, progressbars, selectmenus, sliders, spinners, tabs, tooltips, custom effects and interactions to your forms.</li>
+          <li><a href="http://touchpunch.furf.com/" title="jQuery UI Touch Punch" target="_blank">jQueryUI Touch Punch</a> - is a small hack that enables the use of touch events on sites using the jQuery UI user interface library.</li>
+          <li><a href="http://trentrichardson.com/examples/timepicker/" title="Timepicker" target="_blank">Timepicker</a> - adds a timepicker to the jQueryUI datepicker.</li>
+          <li><a href="http://trentrichardson.com/examples/jQuery-SliderAccess/" title="jQuery Slider Access" target="_blank">Slider Access</a> - add touch accessibility to the jQueryUI slider.</li>
+          <li><a href="http://lucianocosta.info/jquery.mtz.monthpicker/" title="Monthpicker" target="_blank">Monthpicker</a> - calendar widget that allows you to pick just month and year.</li>
+          <li><a href="http://digitalbush.com/projects/masked-input-plugin/" title="Masked input" target="_blank">Masked input</a> - allows a user to more easily enter fixed width input.</li>
+          <li><a href="http://bgrins.github.io/spectrum/" title="Spectrum" target="_blank">Spectrum</a> - jQuery colorpicker.</li>
+          <li><a href="http://wbotelhos.com/raty/" title="Raty" target="_blank">jQuery Raty</a> - jQuery star rating plugin.</li>
+          <li><a href="http://moro.es/misc/jquery-nicefileinput-js/" title="NiceFileInput" target="_blank">NiceFileInput</a> - allows you to add custom styles to file inputs.</li>
+          <li><a href="http://jqueryvalidation.org/" title="jQuery Validation" target="_blank">jQuery Validation</a> - client side validation.</li>
+          <li><a href="http://malsup.com/jquery/form/" title="jQuery Form" target="_blank">jQuery Form</a> - allows you to easily and unobtrusively upgrade HTML forms to use AJAX.</li>
+        </ul>
+        <p>You can click on each of the links above to find documentation for each plugin.</p>
+        <p>In the&nbsp;<code>app/examples</code> folder you can find the HTML examples.</p>
+        <p>In the&nbsp;<code>app/scripts</code> folder you can find the corresponding javascript file for each HTML example.</p>
+        <p>In the&nbsp;<code>app/scripts/plugins</code> folder you can find all the scripts</p>
+        <h5 id="jqueryui">III.I jQueryUI</h5>
+        <p>Each of the jQueryUI widgets has a separate LESS file (in&nbsp;<code>app/less/jqueryui</code>). In each of the files (where was needed) there is a comment ("Styles added by me"), from there down i recommand you put your custom styles.</p>
+        <p>For the javascript functionality i recommand you checkout the&nbsp;<a href="http://jqueryui.com/" title="jQueryUI" target="_blank">jQueryUI</a> documentation and also viewing the source code of the demos that i have included.</p>
+        <h5 id="ie8">III.II Internet Explorer 8</h5>
+        <p>For the CSS to work properly on Internet Explorer 8, i've used conditional comments to load the libraries (this will load only if the user uses Internet Explorer and below):</p>
+        <div class="btns-container">
+          <button id="cli-demo" type="button" class="btn-clipboard"><span class="icon-copy4"></span><span class="sr-only">Copy</span></button>
+          <button type="button" title="Show/hide code" class="btn-code"><span class="icon-chevron-circle-right"></span><span class="btn-code-text">Hide code</span></button>
+        </div>
+        <pre class="brush: xml"><!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+          <script src="http://cdnjs.cloudflare.com/ajax/libs/mootools/1.5.0/mootools-core-full-compat.min.js"></script>
+          <script src="http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script><![endif]--></pre>
+        <ul>
+          <li><strong>html5shiv.js</strong> - enables use of HTML5 sectioning elements in legacy Internet Explorer and provides basic HTML5 styling for Internet Explorer 6-9, Safari 4.x (and iPhone 3.x), and Firefox 3.x.</li>
+          <li><strong>respond.min.js</strong> - a fast &amp; lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more).</li>
+          <li><strong>mootools-core-full-compat.min.js</strong> - is a dependency for&nbsp;<strong>selectivizr-min.js</strong>.</li>
+          <li><strong>selectivizr-min.js</strong> - JavaScript utility that emulates CSS3 pseudo-classes and attribute selectors in Internet Explorer 6-8.</li>
+        </ul>
+        <p>The&nbsp;<a href="http://modernizr.com/" title="Modernizr" target="_blank">Modernizr</a> library is also included, this will help you detect HTML5 and CSS3 features in the user’s browser.</p>
+        <h3 id="the-php">IV. PHP</h3>
+        <p>I've used<a href="https://getcomposer.org/" title="Composer" target="_blank">Composer</a> to install the following packages:</p>
+        <ul class="composer-packages">
+          <li><a href="https://github.com/Respect/Validation" title="Respect Validation" target="_blank">Respect Validation</a> - server side validation.</li>
+          <li><a href="https://github.com/Gregwar/Captcha" title="Captcha" target="_blank">Captcha</a> - captcha library.</li>
+          <li><a href="https://github.com/Synchro/PHPMailer" title="PHPMailer" target="_blank">PHPMailer</a> - full-featured email creation and transfer class for PHP.</li>
+          <li><a href="https://github.com/illuminate/database" title="Illuminate Database" target="_blank">Illuminate Database</a> - full database toolkit for PHP</li>
+          <li><a href="https://github.com/ircmaxell/password_compat" title="Password compat" target="_blank">Pasword compat</a> - compatibility library for the proposed simplified password hashing algorithm</li>
+          <li><a href="http://htmlpurifier.org/" title="HTML Purifier" target="_blank">HTML Purifier</a> - will not only remove all malicious code (better known as XSS) with a thoroughly audited, secure yet permissive whitelist, it will also make sure your documents are standards compliant.</li>
+        </ul>
+        <p>When you download this item from&nbsp;<strong>codecanyon</strong> you'll not have any of the libraries installed. To install them, all you have to do is run&nbsp;<code>composer update</code> in the&nbsp;<code>app/php/</code> folder.</p>
+        <p>In the&nbsp;<code>app/php/</code> folder you will find 3 fully functional forms(&nbsp;<code>contact.php</code>,&nbsp;<code>request-quote.php</code> and&nbsp;<code>register.php</code>), use these files (and the other included files) as the starting point for your forms.</p>
+        <p>For the forms to function properly, you need to modify the&nbsp;<code>app/php/creds.php</code> file and link it in (see&nbsp;<strong>line 7</strong> in register.php, or&nbsp;<strong>line 8</strong> in contact.php and request-quote.php).</p>
+        <h3 id="quick-start">V. Quick start</h3>
+        <ol>
+          <li>Link the CSS files into your project, i've explained&nbsp;<a href="#the-css" data-scroll>here</a> what each of the file does. Based on that you can decide if you need to include the file into you project.</li>
+          <li>Link the javascript files, you can see&nbsp;<a href="#the-javascript" data-scroll>here</a> what each of the library does and you can decide if you need it in your project.</li>
+          <li>Each of the HTML demos (located in the&nbsp;<code>app/examples</code> folder) has it's own specific javascript file, where all the javascript for that specific form is located. E.g.&nbsp;<code>review.html</code> has a&nbsp;<code>review.js</code> file. Use this HTML files as starting points for you forms.</li>
+          <li>The fully functional AJAX forms (contact, request-quote, register) are located in the&nbsp;<code>app/php</code> folder. In order to make them work you need to run&nbsp;<code>composer update</code> inside the&nbsp;<code>app/php</code> folder. This command will install all the necessary php dependencies. Next you need to edit the&nbsp;<code>creds.php</code> file with your credentials, then change the line (from contact.php, request-quote.php, register.php, email-checker.php, username-checker.php) that says&nbsp;<code>require_once '../../../../CREDS/index.php';</code> to&nbsp;<code>require_once 'creds.php';</code>. For the&nbsp;<code>register.php</code> you also need to create a&nbsp;<code>users</code> table in your database with the following columns:&nbsp;<strong>id</strong>,&nbsp;<strong>username</strong>,&nbsp;<strong>first_name</strong>,&nbsp;<strong>last_name</strong>,&nbsp;<strong>gender</strong>,&nbsp;<strong>email_address</strong>,&nbsp;<strong>password</strong>,&nbsp;<strong>subscription</strong>,&nbsp;<strong>registration_date</strong>. I warn you however that this is not a complete login and registration system, this is mostly to demonstrate database interaction.</li>
+          <li>Read the documentation for more information.</li>
+          <li>If you get stuck, or have any questions about this item, please send me an email via my&nbsp;<a href="http://themeforest.net/user/rcwthemes#contact" title="Codecanyon" target="_blank">codecanyon profile</a> or you can contact me on skype (my id is:&nbsp;<strong>rcwthemes</strong>).</li>
+        </ol>
+        <p style="margin-bottom: 72px;">***** The&nbsp;<strong>Copy to clipboard</strong> button only works if you put your files on a web server.</p>
+      </div>
+    </div>
+  </div>
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="copyright-info">Copyright &copy; 2015 rcwthemes</p><a href="#top" class="go-top"><i class="icon-arrow-up2"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../scripts/plugins/jquery.js"></script>
+  <script src="../scripts/plugins/jquery.easing.1.3.js"></script>
+  <script src="../scripts/plugins/bs-tooltip.js"></script>
+  <script src="../scripts/plugins/shCore.js"></script>
+  <script src="../scripts/plugins/shBrushXml.js"></script>
+  <script src="../scripts/plugins/shBrushJScript.js"></script>
+  <script src="../scripts/plugins/shBrushCss.js"></script>
+  <script src="../scripts/plugins/jquery.ui.touch-punch.js"></script>
+  <script src="../scripts/plugins/affix.js"></script>
+  <script src="../scripts/plugins/scrollspy.js"></script>
+  <script src="../scripts/plugins/jquery.nicescroll.js"></script>
+  <script src="../scripts/plugins/smooth-scroll.js"></script>
+  <script src="../scripts/plugins/ZeroClipboard.js"></script>
+  <script src="../scripts/documentation.js"></script>
+</body></html>

@@ -1,0 +1,160 @@
+extends example-template.jade
+
+block title
+  title State success
+
+block content
+  .form-container.state-success-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='state-success-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading State success
+      fieldset.row
+        .col-md-12
+          legend
+            span Inputs and textarea
+        .form-group.col-md-6.has-icons.has-success
+          label(for='name') Name
+          input(type='text', name='name', id='name', class='form-control ff-rounded', placeholder='Name')
+          span.icon-user12.icon-left
+          span.icon-question4.icon-right
+        .form-group.col-md-6.has-icon-left.has-success.has-feedback
+          label(for='email') Email
+          input(type='email', name='email', id='email', class='form-control ff-rounded', placeholder='Email')
+          span.icon-email.icon-left
+          span.icon-checkmark6.form-control-feedback
+        .form-group.col-md-6.has-success.has-feedback
+          label(for='password', class='sr-only') Password
+          input(type='password', name='password', id='password', class='form-control ff-rounded', placeholder='Password')
+          span.icon-checkmark6.form-control-feedback
+        .form-group.col-md-6.has-icon-right.has-success
+          label(for='retype-password', class='sr-only') Retype password
+          input(type='password', name='retype-password', id='retype-password', class='form-control ff-rounded', placeholder='Retype password')
+          span.icon-locked5.icon-right
+        .form-group.col-md-12.has-success
+          label(for='choose-service', class='sr-only')
+          select(name='choose-service', id='choose-service', class='form-control ff-rounded')
+            option(value='', selected, disabled) Choose service
+            option(value='logo-design') Logo design
+            option(value='graphic-design') Graphic design
+            option(value='web-design') Web design
+            option(value='web-development') Web development
+          span.select-icon.icon-arrow-down8.ff-rounded-r
+        .form-group.col-md-12.has-success.has-feedback
+          .input-group
+            label(for='input-group-1', class='input-group-addon ff-rounded-l')
+              span.icon-vimeo
+            input(type='text', name='input-group-1', id='input-group-1', class='form-control ff-rounded-r', placeholder='Input group')
+          span.icon-checkmark6.form-control-feedback
+          span.help-block This text will explain what you have to write in the input above.
+        .form-group.col-md-12.has-success
+          label(for='comment', class='sr-only') Message
+          textarea(name="comment", cols="30", rows="4", id='comment', class='form-control ff-rounded', placeholder='Your message')
+          span.help-block This text will explain what you have to write in the input above.
+        .form-group.col-md-12.has-success
+          label(for='upload-file-1', class='sr-only') Upload file
+          div
+            input(type='file', name='upload-file-1', id='upload-file-1')
+      fieldset.row
+        .col-md-12
+          legend
+            span Radio buttons and checkboxes
+        .form-group.col-md-6.has-success
+          .radio
+            input(type='radio', name='fruits', value='bananas', id='bananas-1')
+            label(for='bananas-1') Bananas
+          .radio
+            input(type='radio', name='fruits', value='apples', id='apples-1', checked)
+            label(for='apples-1') Apples
+          .radio
+            input(type='radio', name='fruits', value='oranges', id='oranges-1')
+            label(for='oranges-1') Oranges
+        .form-group.col-md-6.has-success
+          .checkbox
+            input(type='checkbox', id='bananas', checked)
+            label(for='bananas') Bananas
+          .checkbox
+            input(type='checkbox', id='apples')
+            label(for='apples') Apples
+          .checkbox
+            input(type='checkbox', id='oranges')
+            label(for='oranges') Orange
+      fieldset.row
+        .col-md-12
+          legend
+            span Inline radio buttons and checkboxes
+        .form-group.col-md-12.has-success
+          .radio-inline
+            input(type='radio', name='fruits-2', value='bananas-2', id='bananas-2', checked)
+            label(for='bananas-2') Bananas
+          .radio-inline
+            input(type='radio', name='fruits-2', value='apples-2', id='apples-2')
+            label(for='apples-2') Apples
+          .radio-inline
+            input(type='radio', name='fruits-2', value='oranges-2', id='oranges-2')
+            label(for='oranges-2') Oranges
+        .form-group.col-md-12.has-success
+          .checkbox-inline
+            input(type='checkbox', id='bananas-3', checked)
+            label(for='bananas-3') Bananas
+          .checkbox-inline
+            input(type='checkbox', id='apples-3')
+            label(for='apples-3') Apples
+          .checkbox-inline
+            input(type='checkbox', id='oranges-3')
+            label(for='oranges-3') Oranges
+      fieldset.row
+        .col-md-12
+          legend
+            span Switches based on checkboxes
+        .form-group.col-md-6.has-success
+          .checkbox.switch-with-text
+            input(type='checkbox', name='switches-fruits', value='bananas', id='switch-bananas-1', checked)
+            label(for='switch-bananas-1') Bananas
+          .checkbox.switch-with-text
+            input(type='checkbox', name='switches-fruits', value='apples', id='switch-apples-1')
+            label(for='switch-apples-1') Apples
+          .checkbox.switch-with-text
+            input(type='checkbox', name='switches-fruits', value='oranges', id='switch-oranges-1')
+            label(for='switch-oranges-1') Oranges
+        .form-group.col-md-6.has-success
+          .checkbox.switch
+            input(type='checkbox', id='sw-bananas')
+            label(for='sw-bananas') Bananas
+          .checkbox.switch
+            input(type='checkbox', id='sw-apples')
+            label(for='sw-apples') Apples
+          .checkbox.switch
+            input(type='checkbox', id='sw-oranges')
+            label(for='sw-oranges') Oranges
+      fieldset.row
+        .col-md-12
+          legend
+            span Switches inline based on checkboxes
+        .form-group.col-md-12.has-success
+          .checkbox-inline.switch-with-text
+            input(type='checkbox', name='switches-fruits-2', value='bananas-2', id='switch-bananas-2')
+            label(for='switch-bananas-2') Bananas
+          .checkbox-inline.switch-with-text
+            input(type='checkbox', name='switches-fruits-2', value='apples-2', id='switch-apples-2')
+            label(for='switch-apples-2') Apples
+          .checkbox-inline.switch-with-text
+            input(type='checkbox', name='switches-fruits-2', value='oranges-2', id='switch-oranges-2')
+            label(for='switch-oranges-2') Oranges
+        .form-group.col-md-12.has-success
+          .checkbox-inline.switch
+            input(type='checkbox', id='sw-bananas-3')
+            label(for='sw-bananas-3') Bananas
+          .checkbox-inline.switch
+            input(type='checkbox', id='sw-apples-3')
+            label(for='sw-apples-3') Apples
+          .checkbox-inline.switch
+            input(type='checkbox', id='sw-oranges-3')
+            label(for='sw-oranges-3') Oranges
+          span.help-block.big This text will explain what you have to write in the input above.
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Submit', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-left')
+          span.btn-icon-left.icon-cancel5.ff-rounded-l
+          | Reset
+block mainjs
+  script(src='../scripts/state-success.js')

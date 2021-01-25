@@ -1,0 +1,64 @@
+extends example-template.jade
+
+block title
+  title jQueryUI Slider
+
+block content
+  .form-container.slider-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='slider-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading jQueryUI Slider
+      fieldset.row
+        .col-md-12
+          legend
+            span Horizontal sliders
+        .form-group.col-md-12
+          span.label Basic slider
+          #basic-slider
+        .form-group.col-md-12
+          span.label Range slider
+          .row
+            .col-sm-9
+              #range-slider
+            .col-sm-3
+              span#amount.amount
+        .form-group.col-md-12
+          span.label Range with fixed maximum
+          .row
+            .col-sm-10
+              #max-range-slider
+            .col-sm-2
+              span#max-amount.amount
+        .form-group.col-md-12
+          span.label Range with fixed minimum
+          .row
+            .col-sm-10
+              #min-range-slider
+            .col-sm-2
+              span#min-amount.amount
+        .form-group.col-md-12
+          span.label Snap to increments
+          .row
+            .col-sm-10
+              #increments-slider
+            .col-sm-2
+              span#increments-amount.amount
+      fieldset.row
+        .col-md-12
+          legend
+            span Vertical sliders
+        .form-group.col-xs-6
+          span.label Basic vertical slider
+          #basic-vertical-slider(style='height: 200px; margin-bottom: 10px;')
+          span#basic-vertical-amount
+        .form-group.col-xs-6
+          span.label Range vertical slider
+          #range-vertical-slider(style='height: 200px; margin-bottom: 10px;')
+          span#range-vertical-amount
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Submit', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-left')
+          span.btn-icon-left.icon-cancel5.ff-rounded-l
+          | Reset
+block mainjs
+  script(src='../scripts/slider.js')

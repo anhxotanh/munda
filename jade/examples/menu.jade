@@ -1,0 +1,91 @@
+extends example-template.jade
+
+block title
+  title Menu
+
+block content
+  .form-container.menu-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='menu-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading Menu
+      fieldset.row
+        .col-md-12
+          legend
+            span Basic menu
+        .form-group.col-md-12
+          ul#basic-menu
+            li.ui-state-disabled
+              a(href='#')
+                span.ui-icon.icon-cloud42
+                | Aberdeen
+            li
+              a(href='http://google.com')
+                span.ui-icon.icon-disk22
+                | Ada
+            li
+              span.ui-icon.icon-archive9
+              | Adamsville
+            li -
+            li
+              span.ui-icon.icon-trash32
+              | Addyston
+            li
+              span.ui-icon.icon-upload42
+              | Delphi
+              ul
+                li.ui-state-disabled
+                  span.ui-icon.icon-trash32
+                  | Ada
+                li
+                  span.ui-icon.icon-lock-open2
+                  | Saarland
+                li
+                  span.ui-icon.icon-upload42
+                  | Munchen
+            li
+              span.ui-icon.icon-install
+              | Saarland
+            li -
+            li
+              span.ui-icon.icon-bookmarks2
+              | Salzburg
+              ul
+                li
+                  span.ui-icon.icon-lock-open2
+                  | Delphi
+                  ul
+                    li
+                      span.ui-icon.icon-logout
+                      | Ada
+                    li
+                      span.ui-icon.icon-login
+                      | Saarland
+                    li
+                      span.ui-icon.icon-checkmark32
+                      | Salzburg
+                li
+                  span.ui-icon.icon-plus22
+                  | Adamsville
+                  ul
+                    li
+                      span.ui-icon.icon-cross22
+                      | Addyston
+                    li
+                      span.ui-icon.icon-minus32
+                      | Ada
+                    li
+                      span.ui-icon.icon-plus32
+                      | Amesville
+                li
+                  span.ui-icon.icon-info42
+                  | Perch
+            li.ui-state-disabled
+              span.ui-icon.icon-video22
+              | Amesville
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Submit', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-left')
+          span.btn-icon-left.icon-cancel5.ff-rounded-l
+          | Reset
+block mainjs
+  script(src='../scripts/menu.js')

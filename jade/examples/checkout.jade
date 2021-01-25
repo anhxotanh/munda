@@ -1,0 +1,101 @@
+extends example-template.jade
+
+block title
+  title Checkout form
+
+block content
+  .form-container.checkout-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='checkout-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading Checkout
+      fieldset.row
+        .col-md-12
+          legend
+            span Personal information
+        .form-group.col-md-6.has-icon-left
+          label(for='first-name', class='sr-only') First name
+          input(type='text', name='first-name', id='first-name', class='form-control ff-rounded', placeholder='First name')
+          span.icon-user14.icon-left
+        .form-group.col-md-6.has-icon-left
+          label(for='last-name', class='sr-only') Last name
+          input(type='text', name='last-name', id='last-name', class='form-control ff-rounded', placeholder='Last name')
+          span.icon-user14.icon-left
+        .form-group.col-md-6.has-icon-left
+          label(for='email', class='sr-only') Email address
+          input(type='email', name='email', id='email', class='form-control ff-rounded', placeholder='Email address')
+          span.icon-envelope7.icon-left
+        .form-group.col-md-6.has-icon-left
+          label(for='phone-number', class='sr-only') Phone number
+          input(type='text', name='phone-number', id='phone-number', class='form-control ff-rounded', placeholder='Phone number')
+          span.icon-phone32.icon-left
+        .form-group.col-md-5
+          label(for='country', class='sr-only')
+          select(name='country', id='country', class='form-control ff-rounded')
+            option(value='', disabled, selected) Country
+            option(value='logo-design') England
+            option(value='graphic-design') Germany
+            option(value='web-design') France
+            option(value='web-development') Spain
+          span.select-icon.icon-arrow-down8.ff-rounded-r
+        .form-group.col-md-4
+          label(for='city', class='sr-only') City
+          input(type='text', name='city', id='city', class='form-control ff-rounded', placeholder='City')
+        .form-group.col-md-3
+          label(for='postal-code', class='sr-only') Postal code
+          input(type='text', name='postal-code', id='postal-code', class='form-control ff-rounded', placeholder='Postal code')
+        .form-group.col-md-12
+          label(for='address', class='sr-only') Address
+          input(type='text', name='address', id='address', class='form-control ff-rounded', placeholder='Address')
+        .form-group.col-md-12
+          label(for='additional-info', class='sr-only') Additional info
+          textarea(name='additional-info', cols='30', rows='4', id='additional-info', class='form-control ff-rounded', placeholder='Additional info')
+      fieldset.row
+        .col-md-12
+          legend
+            span Payment method information
+        .form-group.col-md-12
+          .radio-inline
+            input(type='radio', name='payment-method', value='visa', id='visa', checked)
+            label(for='visa') Visa
+          .radio-inline
+            input(type='radio', name='payment-method', value='mastercard', id='mastercard')
+            label(for='mastercard') MasterCard
+          .radio-inline
+            input(type='radio', name='payment-method', value='paypal', id='paypal')
+            label(for='paypal') Paypal
+        .form-group.col-md-12
+          label(for='name-on-card', class='sr-only') Name on card
+          input(type='text', name='name-on-card', id='name-on-card', class='form-control ff-rounded', placeholder='Name on card')
+        .form-group.col-sm-9
+          label(for='card-number', class='sr-only') Card number
+          input(type='text', name='card-number', id='card-number', class='form-control ff-rounded', placeholder='Card number')
+        .form-group.col-sm-3
+          label(for='cvv2', class='sr-only') CVV2
+          input(type='text', name='cvv2', id='cvv2', class='form-control ff-rounded', placeholder='CVV2')
+        .form-group.col-sm-5
+          p.form-control-static Expiration date
+        .form-group.col-sm-4
+          label(for='month', class='sr-only')
+          select(name='month', id='month', class='form-control ff-rounded')
+            option(value='', selected) Month
+            option(value='january') January
+            option(value='february') February
+            option(value='march') March
+            option(value='june') June
+            option(value='july') July
+            option(value='august') August
+            option(value='september') September
+            option(value='october') October
+            option(value='november') November
+            option(value='december') December
+          span.select-icon.icon-arrow-down8.ff-rounded-r
+        .form-group.col-sm-3
+          label(for='year', class='sr-only') Year
+          input(type='text', name='year', id='year', class='form-control ff-rounded', placeholder='Year')
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Checkout', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-left')
+          span.btn-icon-left.icon-cancel5.ff-rounded-l
+          | Reset
+block mainjs
+  script(src='../scripts/checkout.js')

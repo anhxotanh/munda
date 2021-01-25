@@ -1,0 +1,35 @@
+extends example-template.jade
+
+block title
+  title Embeded content
+
+block content
+  .form-container.embeded-content-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='embeded-content-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading Embeded content
+      fieldset.row
+        .col-md-12
+          legend <span>Google maps</span>
+        .form-group.col-md-12
+          .google-map-container
+            iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999841.293321203!2d-75.80920405!3d42.755942049999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew+York%2C+USA!5e0!3m2!1sen!2sro!4v1412438522934', width='400', height='300', frameborder='', style='0')
+      fieldset.row
+        .col-md-12
+          legend <span>Youtube videos</span>
+        .form-group.col-md-12
+          .youtube-video-container
+            iframe(width='560', height='315', src='//www.youtube.com/embed/wz-4iTtT7LE?wmode=transparent', frameborder='0', wmode='Opaque', allowfullscreen)
+      fieldset.row
+        .col-md-12
+          legend <span>Vimeo videos</span>
+        .form-group.col-md-12
+          .vimeo-video-container
+            iframe(src='//player.vimeo.com/video/84085884?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff', width='500', height='271', frameborder='0', webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Submit', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-left')
+          | Reset
+          span.btn-icon-left.ff-rounded-l.icon-cancel5
+block mainjs
+  script(src='../scripts/embeded-content.js')

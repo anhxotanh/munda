@@ -1,0 +1,47 @@
+extends example-template.jade
+
+block title
+  title Review form
+
+block content
+  .form-container.review-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='review-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading Product review
+      fieldset.row
+        .col-md-12
+          legend
+            span Your details
+        .form-group.col-md-12.has-icon-left
+          label(for='name', class='sr-only') Name
+          input(type='text', name='name', id='name', class='form-control ff-rounded', placeholder='Name')
+          span.icon-user14.icon-left
+        .form-group.col-md-12.has-icon-left
+          label(for='email', class='sr-only') Email address
+          input(type='email', name='email', id='email', class='form-control ff-rounded', placeholder='Email address')
+          span.icon-envelope7.icon-left
+        .form-group.col-md-12.has-icon-left
+          label(for='review', class='sr-only') Your review
+          textarea(name="review", cols="30", rows="4", id='review', class='form-control ff-rounded', placeholder='Your review')
+          span.icon-pen3.icon-left
+      fieldset.row
+        .col-md-12
+          legend
+            span Your ratings
+        .form-group.col-md-12
+          span.rating-text Product quality
+          #product-quality.rating-icons
+        .form-group.col-md-12
+          span.rating-text Product performance
+          #product-performance.rating-icons
+        .form-group.col-md-12
+          span.rating-text Quality / price ratio
+          #quality-price-ratio.rating-icons
+          //- span.icon-star10.rating-icon
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Submit review', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-left')
+          span.btn-icon-left.icon-cancel5.ff-rounded-l
+          | Reset
+block mainjs
+  script(src='../scripts/review.js')

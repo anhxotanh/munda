@@ -1,0 +1,52 @@
+extends example-template.jade
+
+block title
+  title Contact form
+
+block content
+  .form-container.contact-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='contact-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading Contact us
+      fieldset.row
+        .form-group.col-md-12
+          p.fields-required
+            span.text-danger *
+            | All form fields are required.
+        .col-md-12
+          legend
+            span Enter your details
+        .form-group.col-md-6.has-icon-right
+          label(for='name', class='sr-only') Name
+          input(type='text', name='name', id='name', class='form-control ff-rounded', placeholder='Name')
+          span.icon-user14.icon-right
+        .form-group.col-md-6.has-icon-right
+          label(for='email', class='sr-only') Email address
+          input(type='email', name='email', id='email', class='form-control ff-rounded', placeholder='Email address')
+          span.icon-envelope7.icon-right
+        .form-group.col-md-12.has-icon-right
+          label(for='subject', class='sr-only') Subject
+          input(type='text', name='subject', id='subject', class='form-control ff-rounded', placeholder='Subject')
+          span.icon-tag10.icon-right
+        .form-group.col-md-12.has-icon-right
+          label(for='message', class='sr-only') Message
+          textarea(name='message', cols='30', rows='6', id='message', class='form-control ff-rounded', placeholder='Your message')
+          span.help-block
+            | You may use these HTML tags and attributes: &lt;a href=&quot;&quot; title=&quot;&quot;&gt;, &lt;abbr title=&quot;&quot;&gt;, &lt;b&gt;, &lt;blockquote cite=&quot;&quot;&gt;, &lt;cite&gt;, &lt;code&gt;, &lt;del datetime=&quot;&quot;&gt;,&lt;ins&gt;, &lt;em&gt;, &lt;i&gt;, &lt;q cite=&quot;&quot;&gt;, &lt;strike&gt;, &lt;strong&gt;.
+          span.icon-pen2.icon-right
+        .form-group.col-md-12
+          label(for='verificatin-code', class='sr-only') Verification code
+          .input-group
+            input(type='text', name='verificatin-code', id='verificatin-code', class='form-control ff-rounded-l', placeholder='Enter result')
+            span.input-group-addon.ff-rounded-r 5 + 2 ?
+        .form-group.col-md-12
+          .checkbox-inline
+            input(type='checkbox', name='email_copy', id='email-copy')
+            label(for='email-copy') Send a copy of the email to me
+      footer.ff-rounded-b
+        button(type='submit', name='submit', id='submit', style='margin-right: 10px;', class='btn btn-primary ff-rounded') Contact
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-left')
+          span.btn-icon-left.icon-cancel5.ff-rounded-l
+          | Reset
+block mainjs
+  script(src='../scripts/contact.js')

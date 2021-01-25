@@ -1,0 +1,38 @@
+extends example-template.jade
+
+block title
+  title Selectmenu
+
+block content
+  .form-container.selectmenu-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='selectmenu-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading Selectmenu
+      fieldset.row
+        .col-md-12
+          legend
+            span Basic slectmenu
+        .form-group.col-md-6
+          label(for='speed', class='sr-only') Select a speed
+          select(name='speed', id='speed')
+            option(value='slower') Slower
+            option(value='slow') Slow
+            option(value='medium', selected) Medium
+            option(value='fast') Fast
+            option(value='faster') Faster
+        .form-group.col-md-6
+          label(for='files', class='sr-only') Select a file
+          select(name='files', id='files')
+            optgroup(label='Scripts')
+              option(value='jquery') jQuery.js
+              option(value='jqueryui') ui.jQuery.js
+            optgroup(label='Other files')
+              option(value='somefile') Some unknown file
+              option(value='someotherfile') Some other file with a very long option text
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Submit', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-left')
+          span.btn-icon-left.icon-cancel5.ff-rounded-l
+          | Reset
+block mainjs
+  script(src='../scripts/selectmenu.js')

@@ -1,0 +1,29 @@
+//
+// Monthpicker
+// --------------------------------------------------
+
+div[id^="monthpicker_"] {
+  overflow: visible !important;
+}
+
+table.mtz-monthpicker {
+  border-collapse: separate;
+  border-spacing: 1px;
+
+  .mtz-monthpicker-month {
+    &.ui-state-default {
+      border-width: 0;
+      background-color: @ff-ui-state-default-bg;
+
+      &:hover {
+        background-color: @ff-ui-state-hover-bg;
+      }
+    }
+    &.ui-state-active {
+      background-color: @ff-primary;
+      &:hover {
+        background-color: @ff-primary;
+      }
+    }
+  }
+}

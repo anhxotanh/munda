@@ -1,0 +1,214 @@
+/* Radio buttons and checkboxes - disabled state */
+
+.rcw-form {
+  fieldset[disabled] {
+    // Checkboxes and switches inside disabled fieldset
+    .checkbox,
+    .checkbox-inline {
+      input + label {
+        cursor: not-allowed;
+        color: @ff-text-color-disabled;
+
+        &:before {
+          border-color: @ff-form-control-border-color-disabled;
+        }
+
+        &:hover {
+          &:before {
+            border-color: @ff-form-control-border-color-disabled;
+          }
+        }
+      }
+
+      input:checked + label {
+        &:before {
+          color: @ff-primary-disabled;
+          border-color: @ff-primary-disabled;
+        }
+      }
+
+      &.switch,
+      &.switch-with-text {
+        input + label {
+          &:after {
+            background-color: @ff-form-control-border-color-disabled;
+          }
+        }
+
+        input:checked + label {
+          &:after {
+            background-color: @ff-primary-disabled;
+          }
+        }
+      }
+    }
+
+    // Radio buttons inside fieldset
+    .radio,
+    .radio-inline {
+      input[type="radio"] + label {
+        cursor: not-allowed;
+        color: @ff-text-color-disabled;
+
+        &:before {
+          border-color: @ff-form-control-border-color-disabled;
+        }
+
+        &:hover {
+          &:before {
+            border-color: @ff-form-control-border-color-disabled;
+          }
+        }
+      }
+
+      input[type="radio"]:checked + label {
+        &:before {
+          border-color: @ff-primary-disabled;
+        }
+
+        &:after {
+          background-color: @ff-primary-disabled;
+        }
+      }
+    }
+
+    // Feedback states
+    .has-success {
+      .radio,
+      .radio-inline {
+        input[type="radio"] + label {
+          &:hover {
+            &:before {
+              border-color: @ff-success;
+            }
+          }
+        }
+        input[type="radio"]:checked + label {
+          &:before {
+            border-color: @ff-success;
+          }
+          &:after {
+            background-color: @ff-success;
+          }
+        }
+      }
+    }
+    .has-error {
+      .radio,
+      .radio-inline {
+        input[type="radio"] + label {
+          &:hover {
+            &:before {
+              border-color: @ff-danger;
+            }
+          }
+        }
+        input[type="radio"]:checked + label {
+          &:before {
+            border-color: @ff-danger;
+          }
+          &:after {
+            background-color: @ff-danger;
+          }
+        }
+      }
+    }
+    .has-warning {
+      .radio,
+      .radio-inline {
+        input[type="radio"] + label {
+          &:hover {
+            &:before {
+              border-color: @ff-warning;
+            }
+          }
+        }
+        input[type="radio"]:checked + label {
+          &:before {
+            border-color: @ff-warning;
+          }
+          &:after {
+            background-color: @ff-warning;
+          }
+        }
+      }
+    }
+  } // end fieldset
+
+  // Disabled checkboxes and switches
+  .checkbox,
+  .checkbox-inline {
+    input[disabled] + label {
+      cursor: not-allowed;
+      color: @ff-text-color-disabled;
+
+      &:before {
+        border-color: @ff-form-control-border-color-disabled;
+      }
+
+      &:hover {
+        &:before {
+          border-color: @ff-form-control-border-color-disabled;
+        }
+      }
+    }
+
+    input[disabled]:checked + label {
+      &:before {
+        color: @ff-primary-disabled;
+        border-color: @ff-primary-disabled;
+      }
+    }
+
+    &.switch,
+    &.switch-with-text {
+      input[disabled] + label {
+        &:after {
+          background-color: @ff-form-control-border-color-disabled;
+        }
+
+        &:hover {
+          &:after {
+            background-color: @ff-form-control-border-color-disabled;
+          }
+        }
+      }
+
+      input[disabled]:checked + label {
+        &:after {
+          background-color: @ff-primary-disabled;
+        }
+      }
+    }
+  }
+
+  // Disabled radio buttons
+
+  .radio,
+  .radio-inline {
+    input[disabled] + label {
+      cursor: not-allowed;
+      color: @ff-text-color-disabled;
+
+      &:before {
+        border-color: @ff-form-control-border-color-disabled;
+      }
+
+      &:hover {
+        &:before {
+          border-color: @ff-form-control-border-color-disabled;
+        }
+      }
+    }
+
+    input[disabled]:checked + label {
+      &:before {
+        border-color: @ff-primary-disabled;
+      }
+
+      &:after {
+        background-color: @ff-primary-disabled;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+extends example-template.jade
+
+block title
+  title Horizontal form
+
+block content
+  .form-container.horizontal-form.animated.fadeInDown
+    form(action='', method='post', id='horizontal-form', class='rcw-form form-horizontal container-fluid')
+      header
+        h3.form-main-heading Horizontal form
+      fieldset.row
+        .form-group.col-md-12
+          .row
+            label(for='email', class='col-sm-2 control-label') Email
+            .col-sm-10
+              //- p.form-control-static email@example.com
+              label(for='email', class='sr-only') Email address
+              input(type='email', name='email', id='email', class='form-control ff-rounded', placeholder='Email address')
+        .form-group.col-md-12
+          .row
+            label(for='new-password', class='col-sm-2 control-label') Password
+            .col-sm-10
+              input(type='password', class='form-control ff-rounded', id='new-password', placeholder='New password')
+        .form-group.col-md-12
+          .row
+            .col-sm-offset-2.col-sm-10
+              .checkbox
+                input(type='checkbox', name='remember-me', value='yes', id='remember-me', checked)
+                label(for='remember-me') Remember me
+        .form-group.col-md-12
+          .row
+            .col-sm-offset-2.col-sm-10
+              input(type='submit', name='submit', value='Log in', class='btn btn-primary ff-rounded')
+block mainjs
+  script(src='../scripts/form-horizontal.js')

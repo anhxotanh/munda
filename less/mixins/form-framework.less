@@ -1,0 +1,197 @@
+//
+// Form framework mixins
+// --------------------------------------------------
+
+// User select
+// For selecting text on the page
+
+.user-select(@select) {
+  -webkit-user-select: @select;
+     -moz-user-select: @select;
+      -ms-user-select: @select; // IE10+
+          user-select: @select;
+}
+
+// Placeholder text styles
+
+.placeholder(@color: @ff-form-control-placeholder-color) {
+  &::-moz-placeholder           { color: @color;   // Firefox
+                                  opacity: 1; } // See https://github.com/twbs/bootstrap/pull/11526
+  &:-ms-input-placeholder       { color: @color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
+}
+
+// Form control focus
+
+.form-control-focus(@color-border: @ff-form-control-border-focus; @color-bg: @ff-form-control-bg-focus) {
+  &:focus {
+    border-color: @color-border;
+    background-color: @color-bg;
+    outline: 0;
+    .placeholder(@ff-form-control-color);
+
+    & + .select-icon {
+      border-color: @ff-select-icon-focus-border;
+      background-color: @ff-select-icon-focus-bg;
+    }
+  }
+}
+
+// Disabled state
+
+.form-control-disabled() {
+  cursor:not-allowed;
+  border-color: @ff-form-control-border-color-disabled;
+}
+
+// Validation states
+
+.form-control-validation(@text-color; @border-color; @background-color) {
+  // Color the label and help text
+  .help-block {
+    color: @text-color;
+  }
+  // Set the border and background-color
+  .form-control {
+    border-color: @border-color;
+    background-color: @background-color;
+    &:focus {
+      background-color: @ff-form-bg;
+      border-color: @border-color;
+    }
+  }
+  // Optional feedback icon
+  .form-control-feedback {
+    color: @text-color;
+  }
+}
+
+// Button variants
+
+.button-variant(@color; @background) {
+  color: @color;
+  background-color: @background;
+  .box-shadow(inset 0 -2px 0 0 darken(@background, 5%));
+
+  .btn-icon-left,
+  .btn-icon-right {
+    background-color: darken(@background, 5%);
+    .box-shadow(inset 0 -2px 0 0 darken(@background, 10%));
+  }
+
+  &:hover,
+  &:focus {
+    background-color: lighten(@background, 5%);
+    .box-shadow(inset 0 -2px 0 0 @background);
+
+    .btn-icon-left,
+    .btn-icon-right {
+      background-color: @background;
+      .box-shadow(inset 0 -2px 0 0 darken(@background, 5%));
+    }
+  }
+
+  &:active,
+  &.active {
+    background-color: @ff-text-color;
+    .box-shadow(inset 0 2px 0 0 darken(@ff-text-color, 5%));
+
+    .btn-icon-left,
+    .btn-icon-right {
+      background-color: darken(@ff-text-color, 5%);
+      .box-shadow(inset 0 2px 0 0 darken(@ff-text-color, 10%));
+    }
+  }
+
+  &.disabled,
+  &[disabled] {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: desaturate(lighten(@background, 20%), 40%);
+      .box-shadow(inset 0 -2px 0 0 darken(desaturate(lighten(@background, 20%), 40%), 5%));
+
+      .btn-icon-left,
+      .btn-icon-right {
+        background-color: darken(desaturate(lighten(@background, 20%), 40%), 5%);
+        .box-shadow(inset 0 -2px 0 0 darken(desaturate(lighten(@background, 20%), 40%), 10%));
+      }
+    }
+  }
+}
+
+// Disabled buttons inside fieldset
+.fieldset-disabled-button(@color) {
+  background-color: desaturate(lighten(@color, 20%), 40%);
+  .box-shadow(inset 0 -2px 0 0 darken(desaturate(lighten(@color, 20%), 40%), 5%));
+
+  .btn-icon-left,
+  .btn-icon-right {
+    background-color: darken(desaturate(lighten(@color, 20%), 40%), 5%);
+    .box-shadow(inset 0 -2px 0 0 darken(desaturate(lighten(@color, 20%), 40%), 10%));
+  }
+}
+
+// Button size
+
+.button-size(@padding-vertical; @padding-horizontal; @height) {
+  padding: @padding-vertical @padding-horizontal;
+  height: @height;
+}
+
+// Opacity
+
+.ff-opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
+
+// ALerts
+
+.alert-variant(@background; @border; @text-color) {
+  background-color: @background;
+  border-color: @border;
+  color: @text-color;
+
+  .alert-link {
+    color: @text-color;
+  }
+
+  .close {
+    color: @background;
+  }
+}
+
+// Tables
+
+.table-row-variant(@state; @background; @color) {
+  // Exact selectors below required to override `.table-striped` and prevent
+  // inheritance to nested tables.
+  .table > thead > tr,
+  .table > tbody > tr,
+  .table > tfoot > tr {
+    > td.@{state},
+    > th.@{state},
+    &.@{state} > td,
+    &.@{state} > th {
+      background-color: @background;
+      color: @color;
+    }
+  }
+
+  // Hover states for `.table-hover`
+  // Note: this is not available for cells or rows within `thead` or `tfoot`.
+  .table-hover > tbody > tr {
+    > td.@{state}:hover,
+    > th.@{state}:hover,
+    &.@{state}:hover > td,
+    &:hover > .@{state},
+    &.@{state}:hover > th {
+      background-color: darken(@background, 5%);
+    }
+  }
+}

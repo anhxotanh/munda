@@ -1,0 +1,54 @@
+extends example-template.jade
+
+block title
+  title Input masking
+
+block content
+  .form-container.masking-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='masking-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading Input masking
+      fieldset.row
+        .col-md-12
+          legend
+            span Masking examples
+        .form-group.col-md-12.has-icon-left
+          label(for='date', class='sr-only') Date
+          input(type='text', name='date', id='date', class='form-control ff-rounded', placeholder='Date')
+          span.icon-calendar4.icon-left
+        .form-group.col-md-12.has-icon-left
+          label(for='phone', class='sr-only') Phone number
+          input(type='text', name='phone', id='phone', class='form-control ff-rounded', placeholder='Phone number')
+          span.icon-phone2.icon-left
+        .form-group.col-md-12.has-icon-left
+          label(for='phone-2', class='sr-only') Phone + ext
+          input(type='text', name='phone-2', id='phone-2', class='form-control ff-rounded', placeholder='Phone + ext')
+          span.icon-phone2.icon-left
+        .form-group.col-md-12.has-icon-left
+          label(for='tax', class='sr-only') Tax id
+          input(type='text', name='tax', id='tax', class='form-control ff-rounded', placeholder='Tax id')
+          span.icon-paperplane22.icon-left
+        .form-group.col-md-12.has-icon-left
+          label(for='ssn', class='sr-only') SSN
+          input(type='text', name='ssn', id='ssn', class='form-control ff-rounded', placeholder='SSN')
+          span.icon-vcard2.icon-left
+        .form-group.col-md-12.has-icon-left
+          label(for='product-key', class='sr-only') Product key
+          input(type='text', name='product-key', id='product-key', class='form-control ff-rounded', placeholder='Product key')
+          span.icon-key22.icon-left
+          span.help-block Product key example: s8-969-s252
+        .form-group.col-md-12.has-icon-left
+          label(for='eye-script', class='sr-only') Eye script
+          input(type='text', name='eye-script', id='eye-script', class='form-control ff-rounded', placeholder='Eye script')
+          span.icon-eye4.icon-left
+        .form-group.col-md-12.has-icon-left
+          label(for='hex-value', class='sr-only') Hex value
+          input(type='text', name='hex-value', id='hex-value', class='form-control ff-rounded', placeholder='Hex value')
+          span.icon-palette.icon-left
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Submit', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-left')
+          span.btn-icon-left.icon-cancel5.ff-rounded-l
+          | Reset
+block mainjs
+  script(src='../scripts/masking.js')

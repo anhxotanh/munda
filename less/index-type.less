@@ -1,0 +1,57 @@
+//
+// Index type styles
+// --------------------------------------------------
+
+// Heading
+h1, h2, h3, h4, h5, h6
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Oleo Script', sans-serif;
+  font-weight: @ff-font-weight-bold;
+  color: @ff-headings-color;
+}
+
+h1,
+.h1 {
+  font-size: @ff-h1-font-size; /* 47px */
+  line-height: 1.276595744680851; /* 60/47 */
+}
+
+h2,
+.h2 {
+  font-size: @ff-h2-font-size; /* 39/16 */
+  line-height: 1.384615384615385; /* 54/39 */
+}
+
+h3,
+.h3 {
+  font-size: @ff-h3-font-size; /* 33 */
+  line-height: 1.454545454545455; /* 48/33 */
+}
+
+h4,
+.h4 {
+  font-size: @ff-h4-font-size; /* 28 */
+  line-height: 1.5; /* 42/28 */
+}
+
+h5,
+.h5 {
+  font-size: @ff-h5-font-size; /* 24 */
+  line-height: 1.5; /* 36/24 */
+}
+
+h6,
+.h6 {
+  font-size: @ff-h6-font-size; /* 20 */
+  line-height: 1.5; /* 30/20 */
+}
+
+p,
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: (@ff-line-height-computed / 2);
+}
+
+p {
+  line-height: @ff-line-height-base;
+}

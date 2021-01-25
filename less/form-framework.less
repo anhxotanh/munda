@@ -1,0 +1,337 @@
+/* Form specific styles */
+
+// Use this file to add custom style for specfic forms
+
+// Hide preloader if javascript disabled
+.no-js .preloader {
+  display: none;
+}
+
+.example {
+  background-color: #212121;
+
+  // Preloader
+  .preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #f4f6f4;
+    z-index: 9999999;
+  }
+
+  .status {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: transparent url(../images/loader.gif) center center no-repeat;
+    margin: -50px 0 0 -50px;
+  }
+}
+
+.form-container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: (@ff-line-height-computed * 2);
+  padding: 0 @ff-form-container-padding-horizontal;
+  background-color: @ff-form-bg;
+  .box-shadow(0 0 40px 0 rgba(0, 0, 0, 0.20));
+  .border-radius(@ff-border-radius);
+}
+
+.main-content-modal {
+  .box-sizing(border-box);
+  margin: 30px auto 0;
+  padding: (@grid-gutter-width / 2) 20px;
+  font-family: @ff-font-family-base;
+  font-size: @ff-font-size-base;
+  color: @ff-text-color;
+  background-color: @ff-form-bg;
+
+  a {
+    color: @ff-primary;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+
+  @media (min-width: @screen-sm-min) {
+    width: 400px;
+  }
+}
+
+.login-form {
+  @media (min-width: @screen-sm-min) {
+    width: 400px;
+  }
+}
+
+.register-form {
+  @media (min-width: @screen-sm-min) {
+    width: 650px;
+  }
+  .fields-required {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+}
+
+.contact-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+
+  .fields-required {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+}
+
+.review-form {
+  @media (min-width: @screen-sm-min) {
+    width: 500px;
+  }
+}
+
+.request-quote-form {
+  @media (min-width: @screen-sm-min) {
+    width: 700px;
+  }
+
+  .fields-required {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+}
+
+.checkout-form {
+  @media (min-width: @screen-sm-min) {
+    width: 650px;
+  }
+}
+
+.comment-form {
+  @media (min-width: @screen-sm-min) {
+    width: 450px;
+  }
+}
+
+.masking-form {
+  @media (min-width: @screen-sm-min) {
+    width: 450px;
+  }
+}
+
+.slider-form {
+  @media (min-width: @screen-sm-min) {
+    width: 550px;
+  }
+
+  .amount {
+    position: relative;
+    top: (@ff-line-height-computed / 2 + 2);
+    @media (min-width: @screen-sm-min) {
+      position: absolute;
+      top: -7px;
+      right: 15px;
+    }
+  }
+}
+
+.datepicker-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+}
+
+.timepicker-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+}
+
+.colorpicker-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+}
+
+.spinner-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+}
+
+.icons-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+}
+
+.alerts-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+}
+
+.tooltips-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+}
+
+.accordion-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+}
+
+.autocomplete-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+}
+
+.buttons-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+
+  // Demo only
+  .btn {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .ui-menu {
+    width: 120px;
+  }
+}
+
+.menu-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+  .ui-menu {
+    width: 200px;
+  }
+}
+
+.tabs-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+}
+
+.state-disabled-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+}
+
+
+.state-success-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+}
+
+.state-warning-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+}
+
+.state-error-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+}
+
+.social-buttons-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+
+  .btn {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.table-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+}
+
+.embeded-content-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+}
+
+.codecanyon-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+}
+
+.inline-form {
+  @media (min-width: @screen-md-min) {
+    width: 740px;
+  }
+}
+
+.horizontal-form {
+  fieldset {
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: @screen-sm-min) {
+    width: 700px;
+  }
+}
+
+.progressbar-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+}
+
+.dialog-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+}
+
+.selectmenu-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+}
+
+.monthpicker-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+}
+
+.ui-icons-form {
+  @media (min-width: @screen-sm-min) {
+    width: 600px;
+  }
+
+  .ui-icons-demo {
+    margin: 0 6px 6px 0;
+  }
+}

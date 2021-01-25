@@ -1,0 +1,53 @@
+extends example-template.jade
+
+block title
+  title Login form
+
+block content
+  .form-container.login-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='login-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading Log in
+      fieldset.row
+        .col-md-12
+          legend
+            span Your credentials
+        .form-group.col-md-12.has-icon-left
+          label(for='email', class='sr-only') Email
+          input(type='email', name='email', id='email', class='form-control ff-rounded', placeholder='Email address')
+          span.icon-envelope7.icon-left
+        .form-group.col-md-12.has-icon-left
+          label(for='password', class='sr-only') Password
+          input(type='password', name='password', id='password', class='form-control ff-rounded', placeholder='Password')
+          span.icon-lock.icon-left
+        .form-group.col-md-12
+          .row
+            .col-sm-6
+              .checkbox-inline
+                input(type='checkbox', id='remember', checked)
+                label(for='remember') Remember me
+            .col-sm-6
+              a(href='forgot-password.html', title='Forgot password?', target='_blank') Forgot password?
+      fieldset.row
+        .col-md-12
+          legend.center
+            span Or
+        .form-group.col-md-12
+          a(href='https://www.facebook.com', title='Facebook', target='_blank', class='btn btn-block btn-facebook ff-rounded')
+            span.btn-icon-left.icon-facebook3.ff-rounded-l
+            | Log in with Facebook
+        .form-group.col-md-12
+          a(href='https://www.twitter.com', title='Twitter', target='_blank', class='btn btn-block btn-twitter ff-rounded')
+            span.btn-icon-left.icon-twitter2.ff-rounded-l
+            | Log in with Twitter
+        .form-group.col-md-12
+          a(href='https://plus.google.com/', title='Google+', target='_blank', class='btn btn-block btn-googleplus ff-rounded')
+            span.btn-icon-left.icon-googleplus6.ff-rounded-l
+            | Log in with Google+
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Log in', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-left')
+          span.btn-icon-left.icon-cancel5.ff-rounded-l
+          | Reset
+block mainjs
+  script(src='../scripts/login.js')

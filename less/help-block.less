@@ -1,0 +1,13 @@
+/* Help block */
+
+.help-block {
+  display: block; // account for any element using help-block
+  margin-top: (@ff-line-height-computed / 4);
+  // font-style: italic;
+  margin-bottom: 0;
+  color: @ff-text-color;
+  font-size: @ff-help-block-font-size;
+  &.big {
+    margin-top: @ff-line-height-computed;
+  }
+}

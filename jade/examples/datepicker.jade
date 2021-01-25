@@ -1,0 +1,120 @@
+extends example-template.jade
+
+block title
+  title Datepicker form
+
+block content
+  .form-container.datepicker-form.animated.fadeInDown
+    form(action='', method='post', enctype='multipart/form-data', id='datepicker-form', class='rcw-form container-fluid')
+      header
+        h3.form-main-heading Datepicker
+      fieldset.row
+        .col-md-12
+          legend
+            span Basic datepickers
+        .form-group.col-md-12.has-icon-left
+          label(for='basic-datepicker-1', class='sr-only') Pick date
+          input(type='text', name='basic-datepicker-1', id='basic-datepicker-1', class='form-control ff-rounded', placeholder='Pick date')
+          span.icon-calendar-alt-stroke.icon-left
+        .form-group.col-md-12.has-icon-left
+          label(for='basic-datepicker-2', class='sr-only') Pick date
+          input(type='text', name='basic-datepicker-2', id='basic-datepicker-2', class='form-control ff-rounded', placeholder='Pick date')
+          span.icon-calendar-alt-fill.icon-left
+      fieldset.row
+        .col-md-12
+          legend <span>Datepicker with month &amp; year menus</span>
+        .form-group.col-md-6.has-icon-left
+          label(for='datepicker-month-and-year-1', class='sr-only') Pick date
+          input(type='text', name='datepicker-month-and-year-1', id='datepicker-month-and-year-1', class='form-control ff-rounded', placeholder='Pick date')
+          span.icon-calendar4.icon-left
+        .form-group.col-md-6.has-icon-left
+          label(for='datepicker-month-and-year-2', class='sr-only') Pick date
+          input(type='text', name='datepicker-month-and-year-2', id='datepicker-month-and-year-2', class='form-control ff-rounded', placeholder='Pick date')
+          span.icon-calendar5.icon-left
+      fieldset.row
+        .col-md-12
+          legend <span>Display multiple months</span>
+        .form-group.col-md-12.has-icon-left
+          label(for='multiple-months', class='sr-only') Pick date
+          input(type='text', name='multiple-months', id='multiple-months', class='form-control ff-rounded', placeholder='Pick date')
+          span.icon-calendar7.icon-left
+      fieldset.row
+        .col-md-12
+          legend <span>Inline calendar</span>
+        .form-group.col-md-6
+          span.label Inline calenadar 1
+          #datepicker-inline-1
+        .form-group.col-md-6
+          span.label Inline calenadar 2
+          #datepicker-inline-2
+      fieldset.row
+        .col-md-12
+          legend <span>Date formats</span>
+        .form-group.col-md-6.has-icon-left
+          label(for='datepicker-date-formats', class='sr-only') Pick date
+          input(type='text', name='datepicker-date-formats', id='datepicker-date-formats', class='form-control ff-rounded', placeholder='Pick date')
+          span.icon-calendar9.icon-left
+        .form-group.col-md-6
+          label(for='date-format', class='sr-only')
+          select(name='date-format', id='date-format', class='form-control ff-rounded')
+            option(value='', selected) Choose format
+            option(value='mm/dd/yy') Default - mm/dd/yy
+            option(value='yy-mm-dd') ISO 8601 - yy-mm-dd
+            option(value='d M, y') Short - d M, y
+            option(value='d MM, y') Medium - d MM, y
+            option(value='DD, d MM, yy') DD, d MM, yy
+          span.select-icon.icon-arrow-down8.ff-rounded-r
+      fieldset.row
+        .col-md-12
+          legend <span>Input group</span>
+        .form-group.col-md-12
+          .input-group
+            label(for='datepicker-icon', class='input-group-addon ff-rounded-l')
+              span.icon-calendar10
+            input(type='text', name='datepicker-icon', id='datepicker-icon', placeholder='Pick date', class='form-control ff-rounded-r')
+      fieldset.row
+        .col-md-12
+          legend <span>Icon trigger</span>
+        .form-group.col-md-12.has-icon-left
+          label(for='datepicker-trigger', class='control-label sr-only')
+          .input-group
+            input(type='text', name='datepicker-trigger', id='datepicker-trigger', placeholder='Pick date', class='form-control ff-rounded-l')
+            span.input-group-btn
+              button(type='button', class='btn btn-primary ff-rounded-r', id='icon-trigger')
+                span.icon-calendar11
+          span.icon-calendar9.icon-left
+      fieldset.row
+        .col-md-12
+          legend <span>Populate alternate field</span>
+        .form-group.col-md-6.has-icon-left
+          label(for='datepicker-alternate-1', class='sr-only') Pick date
+          input(type='text', name='datepicker-alternate-1', id='datepicker-alternate-1', class='form-control ff-rounded', placeholder='Pick date')
+          span.icon-calendar-alt-stroke.icon-left
+        .form-group.col-md-6
+          label(for='alternate', class='sr-only') Alternate
+          input(type='text', name='alternate', id='alternate', class='form-control ff-rounded', placeholder='Alternate', readonly)
+      fieldset.row
+        .col-md-12
+          legend <span>Restrict date range</span>
+        .form-group.col-md-12.has-icon-left
+          label(for='datepicker-restrict', class='sr-only') Pick date
+          input(type='text', name='datepicker-restrict', id='datepicker-restrict', class='form-control ff-rounded', placeholder='Pick date')
+          span.icon-calendar4.icon-left
+      fieldset.row
+        .col-md-12
+          legend <span>Select a date range</span>
+        .form-group.col-md-6.has-icon-left
+          label(for='datepicker-from', class='sr-only') Date start
+          input(type='text', name='datepicker-from', id='datepicker-from', class='form-control ff-rounded', placeholder='Date start')
+          span.icon-calendar5.icon-left
+        .form-group.col-md-6.has-icon-left
+          label(for='datepicker-to', class='sr-only') Date end
+          input(type='text', name='datepicker-to', id='datepicker-to', class='form-control ff-rounded', placeholder='Date end')
+          span.icon-calendar5.icon-left
+      footer.ff-rounded-b
+        input(type='submit', name='submit', value='Submit', class='btn btn-primary ff-rounded', style='margin-right: 10px;')
+        button(type='reset', class='btn btn-default ff-rounded btn-has-icon-left')
+          span.btn-icon-left.icon-cancel5.ff-rounded-l
+          | Reset
+block mainjs
+  script(src='../scripts/datepicker.js')

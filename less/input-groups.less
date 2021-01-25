@@ -1,0 +1,105 @@
+/* Input groups */
+
+.rcw-form {
+  .input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+
+    .form-control {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      float: left;
+      margin-bottom: 0;
+    }
+  }
+
+  .input-group-addon,
+  .input-group-btn,
+  .input-group .from-control {
+    display: table-cell;
+  }
+
+  .input-group-addon,
+  .input-group-btn {
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle; // Match the inputs
+  }
+
+  .input-group-addon {
+    padding: 0 (@ff-input-group-addon-padding-horizontal - 2);
+    height: @ff-form-control-height-base;
+    color: @ff-input-group-addon-color;
+    text-align: center;
+    background-color: @ff-input-group-addon-bg;
+  }
+
+  .input-group-btn {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+
+    > .btn {
+      position: relative;
+      + .btn {
+        margin-left: -1px;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        z-index: 2;
+      }
+    }
+
+    &:first-child {
+      > .btn,
+      > .btn-group {
+        margin-right: -1px;
+      }
+    }
+  }
+
+  // Captcha
+  .captcha-left,
+  .captcha-right {
+    position: relative;
+
+    // Put the .form-control over the captcha
+    .form-control {
+      &:hover,
+      &:focus {
+        z-index: 1;
+      }
+    }
+  }
+  .captcha-left {
+    padding-left: (@ff-captcha-image-width - 1);
+
+    .captcha-image {
+      left: 0;
+    }
+  }
+
+  .captcha-right {
+    padding-right: (@ff-captcha-image-width - 1);
+
+    .captcha-image {
+      right: 0;
+    }
+  }
+
+  .captcha-image {
+    display: block;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    border: 1px solid @ff-form-control-border-color;
+    padding: 1px;
+    background-color: @ff-form-bg;
+  }
+}
+
+
